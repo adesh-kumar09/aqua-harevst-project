@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainwater Harvesting Education | Aqua Harvest</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Global Custom CSS (Contains ALL styles now) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- REMOVED Page-Specific CSS Link -->
+    <!-- <link rel="stylesheet" href="education.css"> -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Navbar Section (Standardized) -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/Aqua_harvest-removebg-preview.png" alt="Aqua Harvest Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown hover-dropdown"> <!-- Keep hover-dropdown class -->
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <!-- data-bs-toggle handles click -->
+                            Usage
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                            <li><a class="dropdown-item" href="residential.html">Residential Area</a></li>
+                            <li><a class="dropdown-item" href="commercial.html">Commercial Area</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li> 
+                    <!-- Mark Education as Active -->
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="education.html">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="facts.html">Facts</a></li> <!-- Link updated -->
+                    <li class="nav-item"><a class="nav-link" href="#faq-education">FAQ</a></li> <!-- Link to FAQ on this page -->
+                    <li class="nav-item"><a class="nav-link" href="update.html">Update</a></li> <!-- Link updated -->
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header-education text-white d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3 animate-on-load">Understanding Rainwater Harvesting</h1>
+            <p class="lead col-lg-9 mx-auto animate-on-load animate-delay-1">Your comprehensive guide to the principles, benefits, and practices of collecting and using rainwater.</p>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- 1. What is Rainwater Harvesting? -->
+        <section id="edu-what-is" class="py-5 fade-in-on-scroll">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-7">
+                        <h2 class="section-heading text-start mb-3">What Exactly is Rainwater Harvesting?</h2>
+                        <p class="text-muted fs-5">Rainwater harvesting (RWH) is the practice of collecting, storing, and utilizing rainwater runoff from surfaces like rooftops, driveways, or land, instead of letting it drain away.</p>
+                        <p class="text-muted">It's an ancient technique gaining modern relevance as a sustainable way to manage water resources. By capturing this free source of water, we can reduce our reliance on conventional supplies (like municipal water or groundwater wells) for various needs.</p>
+                        <p class="text-muted">Think of it as putting a valuable natural resource to work right where it falls.</p>
+                    </div>
+                    <div class="col-lg-5">
+                        <img src="images/edu-what-is-diagram.jpg" alt="Simple diagram showing rain falling on roof, going to tank" class="img-fluid rounded shadow-sm"> <!-- img-fluid already present -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Why is it Important? -->
+        <section id="edu-why-important" class="py-5 bg-light fade-in-on-scroll">
+            <div class="container">
+                <h2 class="section-heading text-center mb-5">The Importance of Harvesting Rain</h2>
+                <div class="row g-4">
+                    <!-- Using edu-point class for consistent card styling -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="edu-point h-100 p-4 border rounded bg-white text-center fade-in-on-scroll animate-delay-1">
+                            <i class="fas fa-water fa-3x text-primary-darker mb-3"></i>
+                            <h5 class="fw-semibold mb-2">Water Conservation</h5>
+                            <p class="small text-muted">Reduces strain on municipal water systems and conserves precious groundwater, especially vital during droughts.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="edu-point h-100 p-4 border rounded bg-white text-center fade-in-on-scroll animate-delay-2">
+                            <i class="fas fa-dollar-sign fa-3x text-primary-darker mb-3"></i>
+                            <h5 class="fw-semibold mb-2">Cost Savings</h5>
+                            <p class="small text-muted">Significantly lowers water bills by substituting free rainwater for non-potable uses.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="edu-point h-100 p-4 border rounded bg-white text-center fade-in-on-scroll animate-delay-3">
+                            <i class="fas fa-leaf fa-3x text-success mb-3"></i>
+                            <h5 class="fw-semibold mb-2">Environmental Protection</h5>
+                            <p class="small text-muted">Reduces stormwater runoff, minimizing erosion, pollution, and localized flooding.</p>
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="edu-point h-100 p-4 border rounded bg-white text-center fade-in-on-scroll animate-delay-1">
+                            <i class="fas fa-seedling fa-3x text-success mb-3"></i>
+                            <h5 class="fw-semibold mb-2">Improved Plant Health</h5>
+                            <p class="small text-muted">Rainwater is naturally soft and free from chlorine, making it ideal for gardens and landscapes.</p>
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="edu-point h-100 p-4 border rounded bg-white text-center fade-in-on-scroll animate-delay-2">
+                            <i class="fas fa-shield-alt fa-3x text-warning mb-3"></i>
+                            <h5 class="fw-semibold mb-2">Increased Self-Sufficiency</h5>
+                            <p class="small text-muted">Provides a degree of water independence, offering a backup supply during restrictions or emergencies.</p>
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="edu-point h-100 p-4 border rounded bg-white text-center fade-in-on-scroll animate-delay-3">
+                            <i class="fas fa-puzzle-piece fa-3x text-info mb-3"></i>
+                            <h5 class="fw-semibold mb-2">Simple & Adaptable</h5>
+                            <p class="small text-muted">Systems range from basic rain barrels to sophisticated solutions, adaptable to various needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. How it Works: Components (Visual Cards) -->
+        <section id="edu-components" class="py-5 fade-in-on-scroll">
+            <div class="container">
+                <h2 class="section-heading text-center mb-5">How the System Works: Key Components</h2>
+                <div class="row g-4">
+                    <!-- Component Card 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="component-card text-center p-3 border rounded h-100 fade-in-on-scroll animate-delay-1">
+                            <i class="fas fa-th-large fa-3x text-primary-darker mb-3"></i>
+                            <h5 class="fw-semibold mb-2">1. Catchment Surface</h5>
+                            <p class="small text-muted">Usually the roof; collects the falling rain.</p>
+                        </div>
+                    </div>
+                    <!-- Component Card 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="component-card text-center p-3 border rounded h-100 fade-in-on-scroll animate-delay-2">
+                            <i class="fas fa-stream fa-3x text-primary-darker mb-3"></i>
+                            <h5 class="fw-semibold mb-2">2. Conveyance</h5>
+                            <p class="small text-muted">Gutters & downspouts transport the water.</p>
+                        </div>
+                    </div>
+                    <!-- Component Card 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="component-card text-center p-3 border rounded h-100 fade-in-on-scroll animate-delay-3">
+                            <i class="fas fa-filter fa-3x text-primary-darker mb-3"></i>
+                            <h5 class="fw-semibold mb-2">3. Pre-Filtration</h5>
+                            <p class="small text-muted">Screens & diverters remove large debris.</p>
+                        </div>
+                    </div>
+                    <!-- Component Card 4 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="component-card text-center p-3 border rounded h-100 fade-in-on-scroll animate-delay-1">
+                            <i class="fas fa-database fa-3x text-primary-darker mb-3"></i>
+                            <h5 class="fw-semibold mb-2">4. Storage Tank</h5>
+                            <p class="small text-muted">Stores collected water (barrels, cisterns).</p>
+                        </div>
+                    </div>
+                    <!-- Component Card 5 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="component-card text-center p-3 border rounded h-100 fade-in-on-scroll animate-delay-2">
+                            <i class="fas fa-faucet fa-3x text-primary-darker mb-3"></i>
+                            <h5 class="fw-semibold mb-2">5. Distribution</h5>
+                            <p class="small text-muted">Tap or pump delivers water for use.</p>
+                        </div>
+                    </div>
+                    <!-- Component Card 6 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="component-card text-center p-3 border rounded h-100 fade-in-on-scroll animate-delay-3">
+                            <i class="fas fa-water-ladder fa-3x text-primary-darker mb-3"></i>
+                            <h5 class="fw-semibold mb-2">6. Overflow</h5>
+                            <p class="small text-muted">Safely directs excess water away when full.</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="text-center mt-4">
+                     <img src="images/edu-components-diagram.png" alt="Detailed diagram showing RWH components" class="img-fluid rounded fade-in-on-scroll" style="max-width: 600px;"> <!-- img-fluid already present -->
+                 </div>
+            </div>
+        </section>
+
+        <!-- 4. DIY Simple Setup -->
+        <section id="edu-diy" class="py-5 bg-light fade-in-on-scroll">
+            <div class="container">
+                <h2 class="section-heading text-center mb-5">DIY Simple Setup: Rain Barrel System</h2>
+                <p class="text-muted text-center col-lg-8 mx-auto mb-5">Want to start small? Setting up a basic rain barrel is a great entry point into rainwater harvesting. Here’s a simplified guide:</p>
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 order-lg-2">
+                        <img src="images/edu-diy-barrel.jpg" alt="Photo of a rain barrel connected to a downspout" class="img-fluid rounded shadow-sm"> <!-- img-fluid already present -->
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <ol class="list-group list-group-flush numbered-list"> <!-- Class already present -->
+                            <li class="list-group-item">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Choose Your Barrel</div>
+                                    Select a food-grade plastic barrel (50-100 gallons) with a lid. Ensure it's opaque to prevent algae.
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Prepare the Barrel</div>
+                                    Install a spigot near the bottom for easy water access and an overflow fitting near the top. Create an inlet hole on the lid for the downspout.
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Create a Stable Base</div>
+                                    Place the barrel on level concrete blocks or a sturdy stand to elevate the spigot for filling watering cans.
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Modify Downspout</div>
+                                    Cut your existing downspout above the barrel height and attach an elbow or flexible diverter to direct water into the barrel's inlet.
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Add Screens & Overflow Hose</div>
+                                    Place a screen over the inlet to keep out debris and mosquitoes. Attach a hose to the overflow fitting to direct excess water away from your foundation.
+                                </div>
+                            </li>
+                             <li class="list-group-item">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Maintain</div>
+                                    Regularly clean the screen and check the barrel. Drain completely before freezing weather.
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Uses of Harvested Water (Refined) -->
+        <section id="edu-uses" class="py-5 fade-in-on-scroll">
+            <div class="container">
+                <h2 class="section-heading text-center mb-5">Common Uses for Harvested Rainwater</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="p-3 border rounded h-100 bg-light fade-in-on-scroll animate-delay-1"> <!-- Added animation -->
+                            <h4 class="text-primary-darkest mb-3"><i class="fas fa-times-circle me-2 text-danger"></i> Non-Potable Uses</h4>
+                            <p class="small text-muted mb-3">(Usually require minimal treatment)</p>
+                            <ul class="list-unstyled edu-use-list">
+                                <li><i class="fas fa-check text-success me-2"></i>Landscape & Garden Irrigation</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Washing Vehicles, Patios, Sidewalks</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Topping off Swimming Pools or Ponds</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Toilet & Urinal Flushing</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Laundry (basic filtration often needed)</li>
+                                <li><i class="fas fa-check text-success me-2"></i>Dust Suppression / Outdoor Cleaning</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                         <div class="p-3 border rounded h-100 bg-light fade-in-on-scroll animate-delay-2"> <!-- Added animation -->
+                            <h4 class="text-primary-darkest mb-3"><i class="fas fa-check-circle me-2 text-success"></i> Potable Uses</h4>
+                            <p class="small text-muted mb-3">(Require advanced treatment & compliance)</p>
+                            <ul class="list-unstyled edu-use-list">
+                                <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Drinking Water</li>
+                                <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Cooking & Food Preparation</li>
+                                <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Bathing & Showering</li>
+                                <li><i class="fas fa-exclamation-triangle text-warning me-2"></i>Dishwashing</li>
+                            </ul>
+                            <p class="small text-muted fst-italic mt-3">**Important:** Potable use requires meeting strict water quality standards and local health regulations. Always consult professionals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Water Quality & Safety -->
+        <section id="edu-quality" class="py-5 bg-light fade-in-on-scroll">
+            <div class="container">
+                 <h2 class="section-heading text-center mb-5">Water Quality Considerations</h2>
+                 <div class="row align-items-center g-5">
+                     <div class="col-lg-6">
+                         <h4 class="text-primary-darker mb-3">Potential Contaminants</h4>
+                         <p class="text-muted">Rain itself is pure, but runoff can pick up:</p>
+                         <ul class="list-styled text-muted small">
+                             <li>Dust, pollen, atmospheric pollutants</li>
+                             <li>Bird droppings, insects, animal feces</li>
+                             <li>Roofing materials (particles, metals, sealants)</li>
+                             <li>Leaves, twigs, organic debris</li>
+                             <li>Bacteria, viruses, protozoa (less common)</li>
+                         </ul>
+                         <h4 class="text-primary-darker mt-4 mb-3">Ensuring Safety (Treatment Levels)</h4>
+                         <ul class="list-styled text-muted small">
+                             <li><strong>Irrigation:</strong> Basic pre-filtration (screens, first-flush).</li>
+                             <li><strong>Indoor Non-Potable:</strong> Pre-filtration + sediment filter.</li>
+                             <li><strong>Potable:</strong> Multi-stage: Pre-filtration, sediment, carbon, UV disinfection. Regular testing vital.</li>
+                         </ul>
+                     </div>
+                     <div class="col-lg-6">
+                         <img src="images/edu-filtration-stages.png" alt="Diagram showing different filtration stages for rainwater" class="img-fluid rounded shadow-sm"> <!-- img-fluid already present -->
+                     </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- 7. Common Mistakes to Avoid -->
+        <section id="edu-mistakes" class="py-5 fade-in-on-scroll">
+            <div class="container">
+                <h2 class="section-heading text-center mb-5">Common Mistakes to Avoid</h2>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="mistake-card h-100 p-3 border border-danger rounded bg-light text-center fade-in-on-scroll animate-delay-1">
+                            <i class="fas fa-times-circle fa-3x text-danger mb-3"></i>
+                            <h5 class="fw-semibold mb-2">Ignoring Pre-Filtration</h5>
+                            <p class="small text-muted">Leads to debris clogging tanks, pumps, and reducing water quality quickly.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="mistake-card h-100 p-3 border border-danger rounded bg-light text-center fade-in-on-scroll animate-delay-2">
+                            <i class="fas fa-ruler fa-3x text-danger mb-3"></i>
+                            <h5 class="fw-semibold mb-2">Incorrect Tank Sizing</h5>
+                            <p class="small text-muted">Too small limits potential; too large increases cost unnecessarily and water may sit too long.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="mistake-card h-100 p-3 border border-danger rounded bg-light text-center fade-in-on-scroll animate-delay-3">
+                            <i class="fas fa-water-ladder fa-3x text-danger mb-3"></i>
+                            <h5 class="fw-semibold mb-2">Improper Overflow</h5>
+                            <p class="small text-muted">Can cause water damage to foundations if excess water isn't directed safely away.</p>
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="mistake-card h-100 p-3 border border-danger rounded bg-light text-center fade-in-on-scroll animate-delay-1">
+                            <i class="fas fa-tools fa-3x text-danger mb-3"></i>
+                            <h5 class="fw-semibold mb-2">Neglecting Maintenance</h5>
+                            <p class="small text-muted">Clogged gutters, dirty filters, and sediment buildup reduce efficiency and water quality.</p>
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="mistake-card h-100 p-3 border border-danger rounded bg-light text-center fade-in-on-scroll animate-delay-2">
+                            <i class="fas fa-sun fa-3x text-danger mb-3"></i>
+                            <h5 class="fw-semibold mb-2">Using Clear Tanks</h5>
+                            <p class="small text-muted">Sunlight promotes algae growth inside the tank, affecting water quality and potentially clogging filters.</p>
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="mistake-card h-100 p-3 border border-danger rounded bg-light text-center fade-in-on-scroll animate-delay-3">
+                            <i class="fas fa-gavel fa-3x text-danger mb-3"></i>
+                            <h5 class="fw-semibold mb-2">Ignoring Local Regulations</h5>
+                            <p class="small text-muted">Failure to check rules can lead to issues, especially for larger systems or potable use.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Maintenance (Refined) -->
+        <section id="edu-maintenance" class="py-5 bg-light fade-in-on-scroll">
+            <div class="container">
+                <h2 class="section-heading text-center mb-5">System Maintenance is Key</h2>
+                <p class="text-muted text-center col-lg-8 mx-auto mb-5">Regular maintenance ensures efficiency and water quality. Neglect leads to clogs, poor quality, and damage.</p>
+                <div class="row g-4">
+                    <!-- Using edu-point class for consistent card styling -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="edu-point h-100 p-3 border rounded bg-white fade-in-on-scroll animate-delay-1">
+                            <h5 class="fw-semibold text-primary-darkest mb-2"><i class="fas fa-leaf me-2"></i>Gutters & Screens</h5>
+                            <p class="small text-muted">Clean regularly (2-4 times/year+) to prevent blockages.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="edu-point h-100 p-3 border rounded bg-white fade-in-on-scroll animate-delay-2">
+                            <h5 class="fw-semibold text-primary-darkest mb-2"><i class="fas fa-filter me-2"></i>Pre-Filters</h5>
+                            <p class="small text-muted">Inspect & clean first-flush/inlet filters per instructions.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="edu-point h-100 p-3 border rounded bg-white fade-in-on-scroll animate-delay-3">
+                            <h5 class="fw-semibold text-primary-darkest mb-2"><i class="fas fa-database me-2"></i>Storage Tank</h5>
+                            <p class="small text-muted">Inspect annually for sediment; clean every 2-5 years.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="edu-point h-100 p-3 border rounded bg-white fade-in-on-scroll animate-delay-1">
+                            <h5 class="fw-semibold text-primary-darkest mb-2"><i class="fas fa-pump-soap me-2"></i>Pumps & Pipes</h5>
+                            <p class="small text-muted">Check periodically for leaks and proper operation.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="edu-point h-100 p-3 border rounded bg-white fade-in-on-scroll animate-delay-2">
+                            <h5 class="fw-semibold text-primary-darkest mb-2"><i class="fas fa-vial me-2"></i>Treatment Components</h5>
+                            <p class="small text-muted">Replace filters/UV lamps on schedule. Test water if potable.</p>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4">
+                        <div class="edu-point h-100 p-3 border rounded bg-white fade-in-on-scroll animate-delay-3">
+                            <h5 class="fw-semibold text-primary-darkest mb-2"><i class="fas fa-water-ladder me-2"></i>Overflow</h5>
+                            <p class="small text-muted">Ensure outlet is clear and directs water safely away.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Planning & Calculator -->
+        <section id="edu-planning" class="py-5 fade-in-on-scroll">
+            <div class="container">
+                <h2 class="section-heading text-center mb-5">Planning Your System</h2>
+                <div class="row g-5"> <!-- Increased gap -->
+                    <div class="col-lg-6">
+                        <h4 class="text-primary-darker mb-3"><i class="fas fa-clipboard-list me-2"></i>Key Considerations</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item border-0 px-0"><i class="fas fa-cloud-rain me-2 text-info fa-fw"></i> **Rainfall:** Local annual/seasonal amounts?</li>
+                            <li class="list-group-item border-0 px-0"><i class="fas fa-ruler-combined me-2 text-info fa-fw"></i> **Catchment Area:** Roof/surface square footage?</li>
+                            <li class="list-group-item border-0 px-0"><i class="fas fa-tint me-2 text-info fa-fw"></i> **Water Demand:** How much needed & for what?</li>
+                            <li class="list-group-item border-0 px-0"><i class="fas fa-map-marked-alt me-2 text-info fa-fw"></i> **Space & Location:** Where can components fit?</li>
+                            <li class="list-group-item border-0 px-0"><i class="fas fa-balance-scale me-2 text-info fa-fw"></i> **Budget:** Installation & maintenance costs?</li>
+                            <li class="list-group-item border-0 px-0"><i class="fas fa-gavel me-2 text-info fa-fw"></i> **Regulations:** Local rules? Permits needed?</li>
+                        </ul>
+                         <a href="contact.html" class="btn btn-primary mt-4">Get Professional Planning Help</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <h4 class="text-primary-darker mb-3"><i class="fas fa-calculator me-2"></i>Estimate Your Potential Harvest</h4>
+                        <div class="calculator-box border rounded p-4 bg-light">
+                            <p class="text-muted small mb-3">Enter your details to get a rough estimate:</p>
+                            <div class="mb-3">
+                                <label for="roofArea" class="form-label">Roof/Catchment Area (sq ft):</label>
+                                <input type="number" class="form-control" id="roofArea" placeholder="e.g., 1500">
+                            </div>
+                            <div class="mb-3">
+                                <label for="rainfall" class="form-label">Average Annual Rainfall (inches):</label>
+                                <input type="number" class="form-control" id="rainfall" placeholder="e.g., 30">
+                            </div>
+                            <button class="btn btn-success w-100" id="calculateBtn">Calculate Potential Gallons</button>
+                            <div id="calculationResult" class="mt-4 text-center fs-5 fw-semibold" style="min-height: 30px;">
+                                <!-- Result will appear here -->
+                            </div>
+                             <p class="small text-muted mt-2 fst-italic text-center">Note: This is an estimate. Actual yield depends on system efficiency (~60-85%).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Further Resources (Optional) -->
+        <section id="edu-resources" class="py-5 bg-light d-none fade-in-on-scroll"> <!-- Hidden by default -->
+             <div class="container">
+                <h2 class="section-heading text-center mb-5">Learn More</h2>
+                <p class="text-muted text-center col-lg-8 mx-auto mb-4">Explore these resources for more in-depth information:</p>
+                <div class="list-group col-lg-8 mx-auto">
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-link me-2"></i> American Rainwater Catchment Systems Association (ARCSA)</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-link me-2"></i> EPA Guide to Rainwater Harvesting</a>
+                    <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-link me-2"></i> Local Extension Office or Water Authority Website</a>
+                    <!-- Add more relevant links -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. FAQ Section for Education Page -->
+        <section id="faq-education" class="py-5 fade-in-on-scroll">
+            <div class="container">
+                <h2 class="text-center mb-5 section-heading">Education FAQs</h2>
+                <div class="accordion col-lg-8 mx-auto" id="faqAccordionEducation">
+                    <!-- FAQ Item 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingEduOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEduOne" aria-expanded="false" aria-controls="collapseEduOne">
+                                Does stored rainwater go bad or get stagnant?
+                            </button>
+                        </h2>
+                        <div id="collapseEduOne" class="accordion-collapse collapse" aria-labelledby="headingEduOne" data-bs-parent="#faqAccordionEducation">
+                            <div class="accordion-body small text-muted">
+                                Properly stored rainwater in opaque, sealed tanks with good pre-filtration can last. Preventing sunlight inhibits algae. Circulation and cooler temperatures help. For long-term or potable use, additional treatment might be needed before use.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingEduTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEduTwo" aria-expanded="false" aria-controls="collapseEduTwo">
+                                What is a 'first-flush' diverter?
+                            </button>
+                        </h2>
+                        <div id="collapseEduTwo" class="accordion-collapse collapse" aria-labelledby="headingEduTwo" data-bs-parent="#faqAccordionEducation">
+                            <div class="accordion-body small text-muted">
+                                It's a device that redirects the initial runoff (which contains the most roof contaminants like dust and droppings) away from the storage tank, significantly improving the quality of the stored water.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingEduThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEduThree" aria-expanded="false" aria-controls="collapseEduThree">
+                                Can I harvest rain from surfaces other than my roof?
+                            </button>
+                        </h2>
+                        <div id="collapseEduThree" class="accordion-collapse collapse" aria-labelledby="headingEduThree" data-bs-parent="#faqAccordionEducation">
+                            <div class="accordion-body small text-muted">
+                                Yes (driveways, patios, land via swales), but water quality is generally lower than roof runoff due to ground contaminants (oils, pesticides). More robust filtration is usually needed for storage and reuse compared to roof collection.
+                            </div>
+                        </div>
+                    </div>
+                     <!-- FAQ Item 4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingEduFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEduFour" aria-expanded="false" aria-controls="collapseEduFour">
+                                How do I prevent mosquitoes from breeding in my tank/barrel?
+                            </button>
+                        </h2>
+                        <div id="collapseEduFour" class="accordion-collapse collapse" aria-labelledby="headingEduFour" data-bs-parent="#faqAccordionEducation">
+                            <div class="accordion-body small text-muted">
+                                Ensure all openings (inlets, overflows) are covered with fine mesh screens (like window screen material) to prevent mosquitoes from entering and laying eggs. Keep lids securely fastened.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- more faq button -->
+                 <div class="text-center mt-4">
+                    <a href="faq.html" class="btn btn-outline-primary faq-more-btn">View More FAQs</a>
+                </div>
+                <!-- END BUTTON -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Scroll to Top Button (Standardized) -->
+    <a href="#" id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Footer (Standardized) -->
+    <footer class="footer-home py-4">
+        <div class="container text-center">
+             <p class="mb-2">
+                <a href="index.html" class="mx-2">Home</a>|
+                <a href="#" class="mx-2">Privacy Policy</a>|
+                <a href="contact.html" class="mx-2">Contact</a>
+            </p>
+            <p class="mb-0 small">&copy; <span id="currentYear"></span> Aqua Harvest Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Global Custom JS (Handles navbar hover, scroll-to-top etc.) -->
+    <script src="app.js"></script>
+</body>
+</html>

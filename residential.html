@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residential Rainwater Harvesting | Aqua Harvest</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Global Custom CSS (Contains ALL styles now) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Navbar Section (Standardized) -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/Aqua_harvest-removebg-preview.png" alt="Aqua Harvest Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown hover-dropdown"> <!-- Keep hover-dropdown class -->
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <!-- data-bs-toggle handles click -->
+                            Usage
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                            <li><a class="dropdown-item active" aria-current="page" href="residential.html">Residential Area</a></li>
+                            <li><a class="dropdown-item" href="commercial.html">Commercial Area</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="facts.html">Facts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq-residential">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="update.html">Update</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header-residential text-white d-flex align-items-center"> <!-- Added flex -->
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3 animate-on-load">Rainwater Harvesting for Your Home</h1>
+            <p class="lead col-lg-9 mx-auto animate-on-load animate-delay-1">Empower your home with sustainable water solutions. Collect, store, and use rainwater efficiently.</p>
+             <div class="animate-on-load animate-delay-1"> <!-- Added animation -->
+                <a href="#benefits-residential" class="btn btn-primary btn-lg me-2">Explore Benefits</a>
+                <a href="#cta-residential" class="btn btn-outline-light btn-lg">Request Consultation</a>
+           </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- 1. Introduction -->
+        <section id="intro-residential" class="py-5 fade-in-on-scroll"> <!-- Added animation -->
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-7">
+                        <h2 class="section-heading text-start mb-3">What is Residential Rainwater Harvesting?</h2>
+                        <p class="text-muted fs-5">Simply put, residential rainwater harvesting is the process of collecting the rain that falls onto your home's roof and storing it in tanks or barrels for later use.</p>
+                        <p class="text-muted">Instead of letting valuable rainwater run off into storm drains, you capture it directly at the source. This collected water can then be used for various non-drinking purposes around your house and garden, helping you conserve tap water and reduce your environmental impact.</p>
+                    </div>
+                    <div class="col-lg-5">
+                        <img src="images/residential-intro-house.jpg" alt="Illustration of a house with a simple rain barrel setup" class="img-fluid rounded shadow-sm"> <!-- img-fluid already present -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Why Rainwater Harvesting is Important for Homes -->
+        <section id="why-important-residential" class="py-5 bg-light fade-in-on-scroll"> <!-- Added animation -->
+            <div class="container">
+                <h2 class="section-heading text-center mb-4">Why It Matters for Your Home</h2>
+                <p class="text-muted text-center mb-5 col-lg-8 mx-auto">Implementing rainwater harvesting offers tangible benefits beyond just collecting water. It's a proactive step towards water independence and environmental responsibility.</p>
+                <div class="row g-4 text-center">
+                    <div class="col-md-4 fade-in-on-scroll animate-delay-1"> <!-- Added animation -->
+                        <div class="p-3">
+                            <i class="fas fa-wallet fa-3x text-primary-darker mb-3"></i>
+                            <h5 class="fw-semibold benefit-title">Reduces Water Bills</h5>
+                            <p class="small text-muted">Lower your reliance on municipal water, especially for non-potable uses like gardening and cleaning.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 fade-in-on-scroll animate-delay-2"> <!-- Added animation -->
+                        <div class="p-3">
+                            <i class="fas fa-seedling fa-3x text-primary-darker mb-3"></i>
+                            <h5 class="fw-semibold benefit-title">Supports Sustainability</h5>
+                            <p class="small text-muted">Conserve precious groundwater and reduce the energy needed for water treatment and transport.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 fade-in-on-scroll animate-delay-3"> <!-- Added animation -->
+                        <div class="p-3">
+                            <i class="fas fa-shield-alt fa-3x text-primary-darker mb-3"></i>
+                            <h5 class="fw-semibold benefit-title">Provides Water Security</h5>
+                            <p class="small text-muted">Gain a backup water source during droughts, water restrictions, or emergencies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Common Residential Systems -->
+        <section id="systems-residential" class="py-5 fade-in-on-scroll"> <!-- Added animation -->
+            <div class="container">
+                <h2 class="section-heading text-center mb-5">Common Residential Systems</h2>
+                <div class="row g-4 justify-content-center">
+                    <!-- System Card 1: Rain Barrels -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 system-card shadow-sm fade-in-on-scroll animate-delay-1"> <!-- Added animation -->
+                            <img src="images/system-rain-barrel.jpg" class="card-img-top img-fluid" alt="Rain barrel connected to a downspout"> <!-- Added img-fluid -->
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-semibold"><i class="fas fa-tint me-2 text-primary-darker"></i>Rain Barrels</h5>
+                                <p class="card-text small text-muted flex-grow-1">The simplest setup. Barrels (50-100 gallons) placed under downspouts collect water, typically used for manual garden watering via a spigot.</p>
+                                <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill align-self-start">Simple & Affordable</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- System Card 2: Dry System -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 system-card shadow-sm fade-in-on-scroll animate-delay-2"> <!-- Added animation -->
+                            <img src="images/system-dry.jpg" class="card-img-top img-fluid" alt="Diagram of a dry rainwater harvesting system"> <!-- Added img-fluid -->
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-semibold"><i class="fas fa-arrow-down me-2 text-primary-darker"></i>Dry System</h5>
+                                <p class="card-text small text-muted flex-grow-1">Pipes run directly from gutters to a storage tank located nearby. Pipes empty completely after rain, preventing freezing issues in colder climates.</p>
+                                <span class="badge bg-success-subtle text-success-emphasis rounded-pill align-self-start">Efficient & Common</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- System Card 3: Wet System -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card h-100 system-card shadow-sm fade-in-on-scroll animate-delay-3"> <!-- Added animation -->
+                            <img src="images/system-wet.jpg" class="card-img-top img-fluid" alt="Diagram of a wet rainwater harvesting system with underground pipes"> <!-- Added img-fluid -->
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title fw-semibold"><i class="fas fa-water me-2 text-primary-darker"></i>Wet System</h5>
+                                <p class="card-text small text-muted flex-grow-1">Uses underground pipes connecting multiple downspouts to a tank often located further away. Pipes retain water between rains.</p>
+                                <span class="badge bg-info-subtle text-info-emphasis rounded-pill align-self-start">Flexible Tank Location</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Uses of Harvested Rainwater in Homes -->
+        <section id="uses-residential" class="py-5 bg-light fade-in-on-scroll"> <!-- Added animation -->
+            <div class="container">
+                <h2 class="text-center mb-5 section-heading">Putting Your Harvested Water to Use</h2>
+                <div class="row g-4">
+                    <!-- Use Item 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="use-item d-flex align-items-start p-3 border rounded h-100 fade-in-on-scroll animate-delay-1"> <!-- Added animation -->
+                            <i class="fas fa-leaf fa-2x text-success me-3 fa-fw"></i>
+                            <div>
+                                <h5 class="fw-semibold mb-1 fs-6 use-title">Garden & Lawn Watering</h5>
+                                <p class="small text-muted mb-0">Ideal for plants as it's naturally soft and chlorine-free.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Use Item 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="use-item d-flex align-items-start p-3 border rounded h-100 fade-in-on-scroll animate-delay-2"> <!-- Added animation -->
+                            <i class="fas fa-car fa-2x text-info me-3 fa-fw"></i>
+                            <div>
+                                <h5 class="fw-semibold mb-1 fs-6 use-title">Washing Vehicles</h5>
+                                <p class="small text-muted mb-0">Leaves fewer spots compared to hard tap water.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Use Item 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="use-item d-flex align-items-start p-3 border rounded h-100 fade-in-on-scroll animate-delay-3"> <!-- Added animation -->
+                            <i class="fas fa-shower fa-2x text-secondary me-3 fa-fw"></i>
+                            <div>
+                                <h5 class="fw-semibold mb-1 fs-6 use-title">Outdoor Cleaning</h5>
+                                <p class="small text-muted mb-0">Washing patios, sidewalks, windows, and tools.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Use Item 4 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="use-item d-flex align-items-start p-3 border rounded h-100 fade-in-on-scroll animate-delay-1"> <!-- Added animation -->
+                            <i class="fas fa-toilet fa-2x text-warning me-3 fa-fw"></i>
+                            <div>
+                                <h5 class="fw-semibold mb-1 fs-6 use-title">Toilet Flushing</h5>
+                                <p class="small text-muted mb-0">Significant indoor water savings (requires plumbing).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Use Item 5 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="use-item d-flex align-items-start p-3 border rounded h-100 fade-in-on-scroll animate-delay-2"> <!-- Added animation -->
+                            <i class="fas fa-tshirt fa-2x text-primary-darker me-3 fa-fw"></i>
+                            <div>
+                                <h5 class="fw-semibold mb-1 fs-6 use-title">Laundry</h5>
+                                <p class="small text-muted mb-0">Soft water can lead to cleaner clothes (requires filtration).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Use Item 6 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="use-item d-flex align-items-start p-3 border rounded h-100 fade-in-on-scroll animate-delay-3"> <!-- Added animation -->
+                            <i class="fas fa-swimming-pool fa-2x text-info-emphasis me-3 fa-fw"></i>
+                            <div>
+                                <h5 class="fw-semibold mb-1 fs-6 use-title">Topping Off Pools/Ponds</h5>
+                                <p class="small text-muted mb-0">A free and convenient source for maintaining water levels.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <p class="text-center text-muted small mt-5 fst-italic">*Note: Using rainwater for drinking, cooking, or bathing requires advanced purification and compliance with local health codes.</p>
+            </div>
+        </section>
+
+        <!-- 5. Steps to Set Up a Residential System -->
+        <section id="steps-residential" class="py-5 fade-in-on-scroll"> <!-- Added animation -->
+            <div class="container">
+                <h2 class="text-center mb-5 section-heading">Setting Up Your System: Key Steps</h2>
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 order-lg-2">
+                        <img src="images/rwh-diagram-steps.png" alt="Diagram illustrating the steps of rainwater harvesting" class="img-fluid rounded"> <!-- img-fluid already present -->
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <ol class="list-group list-group-flush numbered-steps-list"> <!-- Class already present -->
+                            <li class="list-group-item">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Assess & Plan</div>
+                                    Calculate roof area, check local rainfall, determine water needs, and check regulations. Choose a system type.
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Install Gutters & Downspouts</div>
+                                    Ensure they are clean, correctly sloped, and sized for your roof area. Add leaf guards.
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Set Up Pre-Filtration</div>
+                                    Install first-flush diverters and/or screen filters before the tank inlet to remove debris.
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Position & Connect Storage Tank</div>
+                                    Place the tank(s) on a stable, level base. Connect downspouts/pipes securely to the tank inlet.
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Install Overflow & Distribution</div>
+                                    Ensure an overflow pipe directs excess water away safely. Add a tap or connect a pump for distribution.
+                                </div>
+                            </li>
+                             <li class="list-group-item">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Maintain Regularly</div>
+                                    Clean gutters, filters, and tanks periodically to ensure water quality and system efficiency.
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Benefits for Homeowners (Refined) -->
+        <section id="benefits-residential" class="py-5 bg-light fade-in-on-scroll"> <!-- Added animation -->
+            <div class="container">
+                <h2 class="text-center mb-5 section-heading">Advantages for Homeowners</h2>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="benefit-card h-100 text-center p-4 border rounded bg-white fade-in-on-scroll animate-delay-1"> <!-- Added animation -->
+                            <div class="benefit-icon mb-3 fs-1 text-primary-darker"><i class="fas fa-coins"></i></div>
+                            <h5 class="fw-semibold mb-2 benefit-title">Cost Savings</h5>
+                            <p class="small text-muted">Significantly lower water bills by using free rainwater for various non-potable needs.</p>
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="benefit-card h-100 text-center p-4 border rounded bg-white fade-in-on-scroll animate-delay-2"> <!-- Added animation -->
+                            <div class="benefit-icon mb-3 fs-1 text-success"><i class="fas fa-seedling"></i></div>
+                            <h5 class="fw-semibold mb-2 benefit-title">Healthier Garden</h5>
+                            <p class="small text-muted">Provide naturally soft, chemical-free water that plants love, promoting vibrant growth.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="benefit-card h-100 text-center p-4 border rounded bg-white fade-in-on-scroll animate-delay-3"> <!-- Added animation -->
+                            <div class="benefit-icon mb-3 fs-1 text-info"><i class="fas fa-tint-slash"></i></div>
+                            <h5 class="fw-semibold mb-2 benefit-title">Reduced Runoff</h5>
+                            <p class="small text-muted">Help mitigate local flooding and pollution by capturing stormwater before it leaves your property.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="benefit-card h-100 text-center p-4 border rounded bg-white fade-in-on-scroll animate-delay-1"> <!-- Added animation -->
+                            <div class="benefit-icon mb-3 fs-1 text-warning"><i class="fas fa-shield-alt"></i></div>
+                            <h5 class="fw-semibold mb-2 benefit-title">Water Independence</h5>
+                            <p class="small text-muted">Ensure a reliable water source during municipal restrictions or unexpected shortages.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="benefit-card h-100 text-center p-4 border rounded bg-white fade-in-on-scroll animate-delay-2"> <!-- Added animation -->
+                            <div class="benefit-icon mb-3 fs-1 text-secondary"><i class="fas fa-leaf"></i></div>
+                            <h5 class="fw-semibold mb-2 benefit-title">Environmentally Friendly</h5>
+                            <p class="small text-muted">Conserve vital freshwater resources and reduce the energy footprint associated with water supply.</p>
+                        </div>
+                    </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="benefit-card h-100 text-center p-4 border rounded bg-white fade-in-on-scroll animate-delay-3"> <!-- Added animation -->
+                            <div class="benefit-icon mb-3 fs-1 text-primary-darkest"><i class="fas fa-tools"></i></div>
+                            <h5 class="fw-semibold mb-2 benefit-title">System Flexibility</h5>
+                            <p class="small text-muted">Choose from simple DIY setups to sophisticated automated systems tailored to your needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Real-Life Examples / Case Study (Optional Placeholder) -->
+        <section id="casestudy-residential" class="py-5 d-none fade-in-on-scroll"> <!-- Added animation -->
+            <div class="container">
+                <h2 class="text-center mb-5 section-heading">Real Homeowner Success Story</h2>
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-5">
+                        <img src="images/case-study-home.jpg" alt="Photo of a home with a rainwater harvesting system" class="img-fluid rounded shadow"> <!-- img-fluid already present -->
+                    </div>
+                    <div class="col-md-7">
+                        <blockquote class="blockquote fs-5 fst-italic">
+                            <p>"Installing our rainwater harvesting system was one of the best decisions we made. Our water bills dropped by 30%, and our garden has never looked better. It feels great knowing we're using water more responsibly."</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mt-2">
+                            The Smith Family, <cite title="Location">Austin, TX</cite>
+                        </figcaption>
+                        <p class="mt-3 text-muted">They installed a 1500-gallon dry system primarily for landscape irrigation, significantly reducing their reliance on city water during the hot summer months.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. FAQs Section -->
+        <section id="faq-residential" class="py-5 bg-light fade-in-on-scroll"> <!-- Added animation -->
+            <div class="container">
+                <h2 class="text-center mb-5 section-heading">Frequently Asked Questions</h2>
+                <div class="accordion col-lg-8 mx-auto" id="faqAccordionResidential">
+                    <!-- FAQ Item 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                How much water can I actually collect?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordionResidential">
+                            <div class="accordion-body small text-muted">
+                                It depends on your roof size (catchment area) and local average rainfall. A rough estimate is: <strong>Roof Area (sq ft) x Rainfall (inches) x 0.623 = Gallons Collectable</strong> (0.623 accounts for system efficiency). We can help you calculate this during a consultation.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Is harvested rainwater safe to drink?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordionResidential">
+                            <div class="accordion-body small text-muted">
+                                Not without proper treatment. Rainwater collected from roofs can contain contaminants (dust, leaves, bird droppings, roofing materials). For drinking (potable) use, it requires advanced filtration (like UV sterilizers and fine sediment filters) and must comply with local health regulations. Most residential systems are designed for non-potable uses like irrigation and cleaning.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                What maintenance is required?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordionResidential">
+                            <div class="accordion-body small text-muted">
+                                Regular maintenance is key. This includes:
+                                <ul>
+                                    <li>Cleaning gutters and leaf screens (2-4 times a year).</li>
+                                    <li>Checking and cleaning pre-tank filters (monthly or after heavy debris).</li>
+                                    <li>Inspecting the tank for sediment buildup (annually) and cleaning if necessary (every few years).</li>
+                                    <li>Checking pumps and pipes for leaks or issues.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 4 -->
+                     <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                How much does a residential system cost?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordionResidential">
+                            <div class="accordion-body small text-muted">
+                                Costs vary widely based on system size, complexity, tank type/material, and whether it's DIY or professionally installed. A simple rain barrel setup can cost $100-$300. A more comprehensive dry or wet system with larger tanks (1000+ gallons) and pumps can range from $2,000 to $10,000 or more. We offer quotes based on your specific needs.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- more faq button -->
+                <div class="text-center mt-4">
+                    <a href="faq.html" class="btn btn-outline-primary faq-more-btn">View More FAQs</a>
+                </div>
+                <!-- END BUTTON -->
+            </div>
+        </section>
+
+        <!-- 9. Call to Action -->
+        <section id="cta-residential" class="cta-home py-5 text-center text-white fade-in-on-scroll"> <!-- Added animation -->
+            <div class="container">
+                <h2 class="display-5 fw-bold mb-3">Ready to Harvest Rain at Home?</h2>
+                <p class="lead mb-4 col-lg-8 mx-auto">Take the first step towards water savings and sustainability. Contact Aqua Harvest today for expert advice and a personalized quote for your residential rainwater harvesting system.</p>
+                <a href="contact.html" class="btn btn-light btn-lg px-5 py-3 fw-semibold shadow">Get Your Free Consultation</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Scroll to Top Button (Standardized) -->
+    <a href="#" id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Footer (Standardized) -->
+    <footer class="footer-home py-4">
+        <div class="container text-center">
+             <p class="mb-2">
+                <a href="index.html" class="mx-2">Home</a>|
+                <a href="#" class="mx-2">Privacy Policy</a>|
+                <a href="contact.html" class="mx-2">Contact</a>
+            </p>
+            <p class="mb-0 small">&copy; <span id="currentYear"></span> Aqua Harvest Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Global Custom JS (Handles navbar hover, scroll-to-top etc.) -->
+    <script src="app.js"></script>
+</body>
+</html>

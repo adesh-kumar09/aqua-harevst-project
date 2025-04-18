@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Rainwater Harvesting | Aqua Harvest</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Global Custom CSS -->
+    <link rel="stylesheet" href="style.css"> <!-- All CSS rules should be in this file -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+
+    <!-- Navbar Section (Standardized - Agriculture link active) -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/Aqua_harvest-removebg-preview.png" alt="Aqua Harvest Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"> <a class="nav-link" href="index.html">Home</a> </li>
+                    <li class="nav-item dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Usage </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                            <li><a class="dropdown-item" href="residential.html">Residential Area</a></li>
+                            <li><a class="dropdown-item" href="commercial.html">Commercial Area</a></li>
+                            <li><a class="dropdown-item active" aria-current="page" href="agriculture.html">Agricultural Area</a></li> <!-- Set Active -->
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="facts.html">Facts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="update.html">Update</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header (Uses .page-header-agriculture class - CSS will be updated) -->
+    <header class="page-header-agriculture text-white d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="display-5 fw-bold mb-3 animate-on-load">Rainwater Harvesting for Agriculture</h1>
+            <p class="lead col-lg-9 mx-auto animate-on-load animate-delay-1">Securing water resources for sustainable farming and increased yields.</p>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Section 1: Introduction -->
+        <section id="intro-agriculture" class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-1 fade-in-on-scroll">
+                        <h2 class="section-heading text-start">Why Harvest Rain for Your Farm?</h2>
+                        <p class="text-muted">In agriculture, water is life. With increasing pressure on groundwater and unpredictable rainfall patterns due to climate change, rainwater harvesting offers a sustainable and cost-effective solution to supplement irrigation needs, improve soil health, and ensure crop resilience.</p>
+                        <p class="text-muted">By capturing and storing rainwater that falls on fields, rooftops of farm buildings, and surrounding areas, farmers can reduce reliance on expensive or scarce conventional water sources, leading to greater control over their water supply and potentially higher profits.</p>
+                        <a href="#agri-methods" class="btn btn-outline-primary mt-3">Explore Methods</a>
+                    </div>
+                    <div class="col-lg-6 order-lg-2 text-center fade-in-on-scroll animate-delay-1">
+                        <img src="images/agri-intro.jpg" alt="Farm field with irrigation system" class="img-fluid rounded shadow-sm">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Key Benefits for Agriculture -->
+        <section id="benefits-agriculture" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-heading text-center mb-5">Key Benefits for Farmers</h2>
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card benefit-card text-center p-4 h-100 fade-in-on-scroll animate-delay-1">
+                            <div class="benefit-icon mb-3"><i class="fas fa-tractor fa-3x"></i></div>
+                            <h5 class="benefit-title mb-2">Improved Crop Yields</h5>
+                            <p class="card-text small text-muted">Provides a supplemental water source during dry spells, reducing crop stress and potentially increasing harvest quantity and quality.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card benefit-card text-center p-4 h-100 fade-in-on-scroll animate-delay-2">
+                            <div class="benefit-icon mb-3"><i class="fas fa-coins fa-3x"></i></div>
+                            <h5 class="benefit-title mb-2">Reduced Water Costs</h5>
+                            <p class="card-text small text-muted">Lowers dependence on expensive municipal water, borewells (reducing electricity costs for pumping), or canal water fees.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card benefit-card text-center p-4 h-100 fade-in-on-scroll animate-delay-3">
+                            <div class="benefit-icon mb-3"><i class="fas fa-droplet fa-3x"></i></div>
+                            <h5 class="benefit-title mb-2">Groundwater Recharge</h5>
+                            <p class="card-text small text-muted">Methods like check dams and percolation ponds help replenish local groundwater tables, benefiting the entire community.</p>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card benefit-card text-center p-4 h-100 fade-in-on-scroll animate-delay-1">
+                            <div class="benefit-icon mb-3"><i class="fas fa-earth-asia fa-3x"></i></div>
+                            <h5 class="benefit-title mb-2">Improved Soil Health</h5>
+                            <p class="card-text small text-muted">Reduces soil erosion caused by runoff and provides naturally soft water, which can be better for soil structure than hard groundwater.</p>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card benefit-card text-center p-4 h-100 fade-in-on-scroll animate-delay-2">
+                            <div class="benefit-icon mb-3"><i class="fas fa-shield-alt fa-3x"></i></div>
+                            <h5 class="benefit-title mb-2">Climate Resilience</h5>
+                            <p class="card-text small text-muted">Creates a buffer against drought and unpredictable rainfall, making farming operations more stable and sustainable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Common Agricultural RWH Methods -->
+        <section id="agri-methods" class="py-5">
+            <div class="container">
+                <h2 class="section-heading text-center mb-5">Common Agricultural RWH Methods</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                        <div class="card method-card h-100 fade-in-on-scroll animate-delay-1">
+                            <img src="images/agri-method-pond.jpg" class="card-img-top" alt="Farm pond collecting water">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title"><i class="fas fa-water me-2"></i>Farm Ponds / Tanks</h5>
+                                <p class="card-text flex-grow-1">Excavated ponds or constructed tanks collect surface runoff from fields or channels. Often lined to prevent seepage, used for irrigation or livestock.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                        <div class="card method-card h-100 fade-in-on-scroll animate-delay-2">
+                            <img src="images/agri-method-checkdam.jpg" class="card-img-top" alt="Small check dam in a gully">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title"><i class="fas fa-dam me-2"></i>Check Dams / Gully Plugs</h5>
+                                <p class="card-text flex-grow-1">Small barriers built across gullies or streams to slow water flow, trap sediment, and increase water infiltration into the soil and groundwater.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                        <div class="card method-card h-100 fade-in-on-scroll animate-delay-3">
+                            <img src="images/agri-method-rooftop.jpg" class="card-img-top" alt="Rainwater collection from a barn roof">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title"><i class="fas fa-warehouse me-2"></i>Rooftop Harvesting (Farm Buildings)</h5>
+                                <p class="card-text flex-grow-1">Collecting rainwater from the roofs of barns, sheds, and other farm structures into tanks for livestock watering, equipment washing, or small-scale irrigation.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                        <div class="card method-card h-100 fade-in-on-scroll animate-delay-1">
+                            <img src="images/agri-method-bunding.jpg" class="card-img-top" alt="Contour bunds on a sloping field">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title"><i class="fas fa-layer-group me-2"></i>Contour Bunding / Terracing</h5>
+                                <p class="card-text flex-grow-1">Creating earthen ridges or stone walls along the contours of sloping land to slow runoff, prevent soil erosion, and increase water absorption.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                        <div class="card method-card h-100 fade-in-on-scroll animate-delay-2">
+                            <img src="images/agri-method-percolation.jpg" class="card-img-top" alt="Percolation tank near agricultural fields">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title"><i class="fas fa-arrow-down-short-wide me-2"></i>Percolation Tanks</h5>
+                                <p class="card-text flex-grow-1">Similar to farm ponds but specifically designed with permeable beds to maximize the recharge of groundwater aquifers.</p>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+                        <div class="card method-card h-100 fade-in-on-scroll animate-delay-3">
+                            <img src="images/agri-method-irrigation.jpg" class="card-img-top" alt="Drip irrigation system connected to a water tank">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title"><i class="fas fa-hand-holding-droplet me-2"></i>Integration with Efficient Irrigation</h5>
+                                <p class="card-text flex-grow-1">Combining stored rainwater with efficient methods like drip irrigation or sprinklers ensures the harvested water is used effectively for crops.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- / .row -->
+            </div> <!-- / .container -->
+        </section>
+
+        <!-- *** NEW Section 4: Applications in Agriculture *** -->
+        <section id="agri-uses" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-heading text-center mb-5">Applications on the Farm</h2>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="use-item d-flex align-items-start p-3 border rounded h-100 fade-in-on-scroll animate-delay-1">
+                            <i class="fas fa-seedling fa-2x text-primary me-3 fa-fw"></i>
+                            <div>
+                                <h5 class="fw-semibold mb-1 fs-6 use-title">Supplemental Irrigation</h5>
+                                <p class="small text-muted mb-0">Primary use, especially crucial during dry spells or for high-value crops.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="use-item d-flex align-items-start p-3 border rounded h-100 fade-in-on-scroll animate-delay-2">
+                            <i class="fas fa-cow fa-2x text-primary me-3 fa-fw"></i>
+                            <div>
+                                <h5 class="fw-semibold mb-1 fs-6 use-title">Livestock Watering</h5>
+                                <p class="small text-muted mb-0">Provides a reliable source of water for cattle, poultry, and other animals.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="use-item d-flex align-items-start p-3 border rounded h-100 fade-in-on-scroll animate-delay-3">
+                            <i class="fas fa-tractor fa-2x text-primary me-3 fa-fw"></i>
+                            <div>
+                                <h5 class="fw-semibold mb-1 fs-6 use-title">Equipment Washing</h5>
+                                <p class="small text-muted mb-0">Cleaning tractors, tools, and farm machinery without using potable water.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="use-item d-flex align-items-start p-3 border rounded h-100 fade-in-on-scroll animate-delay-1">
+                            <i class="fas fa-spray-can-sparkles fa-2x text-primary me-3 fa-fw"></i>
+                            <div>
+                                <h5 class="fw-semibold mb-1 fs-6 use-title">Pesticide/Fertilizer Mixing</h5>
+                                <p class="small text-muted mb-0">Using soft rainwater can sometimes improve the efficacy of certain sprays.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="use-item d-flex align-items-start p-3 border rounded h-100 fade-in-on-scroll animate-delay-2">
+                            <i class="fas fa-fire-extinguisher fa-2x text-primary me-3 fa-fw"></i>
+                            <div>
+                                <h5 class="fw-semibold mb-1 fs-6 use-title">Fire Protection</h5>
+                                <p class="small text-muted mb-0">Maintaining reserves in dedicated tanks for emergency fire suppression.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="use-item d-flex align-items-start p-3 border rounded h-100 fade-in-on-scroll animate-delay-3">
+                            <i class="fas fa-fish fa-2x text-primary me-3 fa-fw"></i>
+                            <div>
+                                <h5 class="fw-semibold mb-1 fs-6 use-title">Aquaculture / Fish Farming</h5>
+                                <p class="small text-muted mb-0">Maintaining water levels in fish ponds (quality needs careful management).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <p class="text-center text-muted small mt-5 fst-italic">*Note: Water quality requirements vary by application. Basic filtration is often sufficient for irrigation/washing, but livestock/aquaculture may need more attention.</p>
+            </div>
+        </section>
+
+        <!-- Section 5: Steps to Implement Farm RWH (Was Considerations) -->
+        <section id="agri-steps" class="py-5"> <!-- Renamed ID -->
+            <div class="container">
+                <h2 class="section-heading text-center mb-5">Steps to Implement Farm RWH</h2>
+                 <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <p class="text-center text-muted mb-4">Implementing rainwater harvesting on a farm requires careful planning. Follow these key steps:</p>
+                        <ol class="list-group list-group-flush numbered-steps-list"> <!-- Reusing numbered list style -->
+                            <li class="list-group-item fade-in-on-scroll animate-delay-1">
+                                <div>
+                                    <span class="fw-bold">1. Assess Water Needs & Supply:</span> Estimate crop/livestock water demand vs. potential rainwater supply based on catchment area and local rainfall data.
+                                </div>
+                            </li>
+                            <li class="list-group-item fade-in-on-scroll animate-delay-2">
+                                <div>
+                                    <span class="fw-bold">2. Site Analysis:</span> Evaluate topography, soil type, available space, and potential locations for ponds, dams, or tanks.
+                                </div>
+                            </li>
+                            <li class="list-group-item fade-in-on-scroll animate-delay-3">
+                                <div>
+                                    <span class="fw-bold">3. Choose Appropriate Methods:</span> Select the most suitable RWH techniques (ponds, check dams, rooftop, etc.) based on site conditions and water needs.
+                                </div>
+                            </li>
+                            <li class="list-group-item fade-in-on-scroll animate-delay-1">
+                                <div>
+                                    <span class="fw-bold">4. Design & Engineering:</span> Develop detailed plans for construction, including sizing of components, materials, and necessary permits.
+                                </div>
+                            </li>
+                             <li class="list-group-item fade-in-on-scroll animate-delay-2">
+                                <div>
+                                    <span class="fw-bold">5. Construction & Installation:</span> Build or install the chosen system components according to the design specifications.
+                                </div>
+                            </li>
+                             <li class="list-group-item fade-in-on-scroll animate-delay-3">
+                                <div>
+                                    <span class="fw-bold">6. Integrate Distribution & Use:</span> Connect storage to irrigation systems (drip, sprinkler) or watering points. Install pumps if needed.
+                                </div>
+                            </li>
+                             <li class="list-group-item fade-in-on-scroll animate-delay-1">
+                                <div>
+                                    <span class="fw-bold">7. Plan for Maintenance:</span> Establish a regular schedule for cleaning channels, desilting ponds, checking filters, and inspecting the system.
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- *** NEW Section 6: Case Study (Optional Placeholder) *** -->
+        <section id="casestudy-agriculture" class="py-5 bg-light d-none"> <!-- Hidden by default -->
+            <div class="container">
+                <h2 class="section-heading text-center mb-5">Agricultural Success Story</h2>
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-5">
+                        <img src="images/case-study-agri.jpg" alt="Photo of a farm utilizing rainwater harvesting" class="img-fluid rounded shadow">
+                    </div>
+                    <div class="col-md-7">
+                        <blockquote class="blockquote fs-5 fst-italic">
+                            <p>"Building farm ponds and check dams transformed our rain-fed farm. We now have water for critical irrigation during dry spells, significantly boosting our vegetable yields and income."</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mt-2">
+                            Farmer, <cite title="Location">Rural Punjab (Example)</cite>
+                        </figcaption>
+                        <p class="mt-3 text-muted">This farm implemented multiple small check dams and a lined farm pond, capturing monsoon runoff that previously caused erosion. The stored water now supports an extra cropping cycle.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- *** NEW Section 7: Agricultural FAQs *** -->
+        <section id="faq-agriculture" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5 section-heading">Agricultural FAQs</h2>
+                <div class="accordion col-lg-8 mx-auto" id="faqAccordionAgriculture">
+                    <!-- FAQ Item 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingAgriOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAgriOne" aria-expanded="false" aria-controls="collapseAgriOne">
+                                How large should a farm pond or tank be?
+                            </button>
+                        </h2>
+                        <div id="collapseAgriOne" class="accordion-collapse collapse" aria-labelledby="headingAgriOne" data-bs-parent="#faqAccordionAgriculture">
+                            <div class="accordion-body small text-muted">
+                                Size depends heavily on rainfall, catchment area, water demand (crop type, area, livestock numbers), and evaporation rates. Professional calculation considering these factors is recommended for optimal sizing.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingAgriTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAgriTwo" aria-expanded="false" aria-controls="collapseAgriTwo">
+                                Do I need to line my farm pond?
+                            </button>
+                        </h2>
+                        <div id="collapseAgriTwo" class="accordion-collapse collapse" aria-labelledby="headingAgriTwo" data-bs-parent="#faqAccordionAgriculture">
+                            <div class="accordion-body small text-muted">
+                                It depends on the soil type. In porous or sandy soils, lining (with clay, plastic liners, or concrete) is often necessary to prevent excessive water loss through seepage. In heavy clay soils, lining might not be required.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingAgriThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAgriThree" aria-expanded="false" aria-controls="collapseAgriThree">
+                                What are the main maintenance tasks for agricultural RWH?
+                            </button>
+                        </h2>
+                        <div id="collapseAgriThree" class="accordion-collapse collapse" aria-labelledby="headingAgriThree" data-bs-parent="#faqAccordionAgriculture">
+                            <div class="accordion-body small text-muted">
+                                Key tasks include: regularly cleaning inlet/outlet channels, desilting ponds and check dams periodically (every few years), inspecting structures for damage, managing vegetation around ponds, and maintaining any pumps or filters used.
+                            </div>
+                        </div>
+                    </div>
+                     <!-- FAQ Item 4 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingAgriFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAgriFour" aria-expanded="false" aria-controls="collapseAgriFour">
+                                Can RWH completely replace my existing irrigation source?
+                            </button>
+                        </h2>
+                        <div id="collapseAgriFour" class="accordion-collapse collapse" aria-labelledby="headingAgriFour" data-bs-parent="#faqAccordionAgriculture">
+                            <div class="accordion-body small text-muted">
+                                In most cases, RWH serves as a valuable *supplemental* source, especially in areas with distinct rainy and dry seasons. Relying solely on RWH depends entirely on rainfall reliability, storage capacity, and crop water requirements. It's often best used conjunctively with other sources.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- more faq button -->
+                 <div class="text-center mt-4">
+                    <a href="faq.html" class="btn btn-outline-primary faq-more-btn">View More FAQs</a>
+                </div>
+                <!-- END BUTTON -->
+            </div>
+        </section>
+
+        <!-- Optional CTA -->
+        <section class="cta-home py-5 text-center text-white fade-in-on-scroll">
+            <div class="container">
+                <h2 class="display-5 fw-bold mb-3">Ready to Boost Your Farm's Water Security?</h2>
+                <p class="lead mb-4 col-lg-8 mx-auto">Discuss your specific agricultural needs with our rainwater harvesting specialists.</p>
+                <a href="contact.html" class="btn btn-light btn-lg px-5 py-3 fw-semibold shadow">Get Expert Advice</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <a href="#" id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Footer -->
+    <footer class="footer-home py-4">
+        <div class="container text-center">
+             <p class="mb-2">
+                <a href="index.html" class="mx-2">Home</a>|
+                <a href="#" class="mx-2">Privacy Policy</a>|
+                <a href="contact.html" class="mx-2">Contact</a>
+            </p>
+            <p class="mb-0 small">&copy; <span id="currentYear"></span> Aqua Harvest Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Global Custom JS -->
+    <script src="app.js"></script>
+
+</body>
+</html>

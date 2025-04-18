@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainwater Harvesting - Home | Aqua Harvest</title> <!-- Added Brand Name -->
+
+    <!-- Bootstrap CSS (Using 5.3.3 consistently) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Global Custom CSS (Contains ALL styles now) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Navbar Section (Standardized) -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/Aqua_harvest-removebg-preview.png" alt="Aqua Harvest Logo" height="50"> <!-- Adjusted height -->
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown hover-dropdown"> <!-- Keep hover-dropdown class for   CSS targeting -->
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <!-- data-bs-toggle handles click -->
+                            Usage
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                            <li><a class="dropdown-item" href="residential.html">Residential Area</a></li>
+                            <li><a class="dropdown-item" href="commercial.html">Commercial Area</a></li>
+                            <li><a class="dropdown-item" href="agricultural.html">Agricultural Area</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li> <!-- Link updated -->
+                    <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li> <!-- Link updated -->
+                    <li class="nav-item"><a class="nav-link" href="facts.html">Facts</a></li> <!-- Link updated -->
+                    <li class="nav-item"><a class="nav-link" href="#faq-home">FAQ</a></li> <!-- Link updated -->
+                    <li class="nav-item"><a class="nav-link" href="update.html">Update</a></li> <!-- Link updated -->
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> <!-- Link updated -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-home text-white text-center d-flex align-items-center"> <!-- Added flex classes -->
+        <div class="container">
+            <h1 class="display-4 fw-bold animate-on-load">Harvest the Rain, Sustain the Future</h1>
+            <p class="lead my-4 col-lg-9 mx-auto animate-on-load animate-delay-1">Discover efficient and eco-friendly rainwater harvesting solutions for your home, business, or farm.</p> <!-- Adjusted width -->
+            <div class="animate-on-load animate-delay-1"> <!-- Added div wrapper for buttons & animation -->
+                <a href="#benefits-home" class="btn btn-primary btn-lg me-2">Learn the Benefits</a>
+                <a href="#cta-home" class="btn btn-outline-light btn-lg">Get a Quote</a> <!-- Updated ID -->
+            </div>
+        </div>
+    </header>
+
+    <main> <!-- Added main tag -->
+
+        <!-- Introduction Section -->
+        <section class="intro-home py-5 fade-in-on-scroll"> <!-- Added animation class -->
+            <div class="container">
+                <div class="row align-items-center g-5"> <!-- Added gap -->
+                    <div class="col-lg-7"> <!-- Adjusted column size -->
+                        <h2 class="section-heading text-start mb-3">What is Rainwater Harvesting?</h2>
+                        <p class="text-muted fs-5">Rainwater harvesting is the simple process of collecting and storing rainwater that falls on rooftops, land surfaces, or rock catchments, rather than allowing it to run off.</p> <!-- Increased font size -->
+                        <p class="text-muted">This collected water can then be used for various purposes, such as irrigation, washing, toilet flushing, and even drinking after proper treatment. It's a sustainable practice that conserves precious groundwater resources, reduces reliance on municipal water supplies, and helps mitigate stormwater runoff issues.</p>
+                        <a href="#" class="btn btn-outline-primary mt-3">Explore Systems</a> <!-- Added margin-top -->
+                    </div>
+                    <div class="col-lg-5"> <!-- Adjusted column size -->
+                        <img src="https://www.mdpi.com/sustainability/sustainability-15-14568/article_deploy/html/images/sustainability-15-14568-g001.png" alt="Rainwater collection system diagram" class="img-fluid rounded shadow-sm"> <!-- Added img-fluid & shadow -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section id="benefits-home" class="benefits-home py-5 bg-light fade-in-on-scroll"> <!-- Added animation class -->
+            <div class="container">
+                <h2 class="section-heading text-center mb-5">Why Choose Rainwater Harvesting?</h2>
+                <div class="row g-4">
+                    <!-- Using Font Awesome Icons and consistent structure -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="benefit-card h-100 text-center p-4 border rounded bg-white fade-in-on-scroll animate-delay-1"> <!-- Added animation classes -->
+                            <div class="benefit-icon mb-3 fs-1 text-primary-darker"><i class="fas fa-tint"></i></div>
+                            <h5 class="fw-semibold mb-2 benefit-title">Conserves Water</h5>
+                            <p class="small text-muted">Reduces demand on municipal water supplies and preserves groundwater levels.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="benefit-card h-100 text-center p-4 border rounded bg-white fade-in-on-scroll animate-delay-2"> <!-- Added animation classes -->
+                            <div class="benefit-icon mb-3 fs-1 text-primary-darker"><i class="fas fa-coins"></i></div>
+                            <h5 class="fw-semibold mb-2 benefit-title">Saves Money</h5>
+                            <p class="small text-muted">Lower your water bills significantly by using free rainwater for non-potable needs.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="benefit-card h-100 text-center p-4 border rounded bg-white fade-in-on-scroll animate-delay-3"> <!-- Added animation classes -->
+                            <div class="benefit-icon mb-3 fs-1 text-success"><i class="fas fa-seedling"></i></div>
+                            <h5 class="fw-semibold mb-2 benefit-title">Healthier Plants</h5>
+                            <p class="small text-muted">Rainwater is naturally soft and free from chlorine, promoting vibrant plant growth.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="benefit-card h-100 text-center p-4 border rounded bg-white fade-in-on-scroll animate-delay-1"> <!-- Added animation classes -->
+                            <div class="benefit-icon mb-3 fs-1 text-info"><i class="fas fa-water"></i></div>
+                            <h5 class="fw-semibold mb-2 benefit-title">Reduces Runoff</h5>
+                            <p class="small text-muted">Helps control stormwater runoff, reducing erosion, pollution, and local flooding.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="benefit-card h-100 text-center p-4 border rounded bg-white fade-in-on-scroll animate-delay-2"> <!-- Added animation classes -->
+                            <div class="benefit-icon mb-3 fs-1 text-secondary"><i class="fas fa-leaf"></i></div>
+                            <h5 class="fw-semibold mb-2 benefit-title">Eco-Friendly</h5>
+                            <p class="small text-muted">A sustainable practice that lessens your environmental footprint and promotes self-sufficiency.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="benefit-card h-100 text-center p-4 border rounded bg-white fade-in-on-scroll animate-delay-3"> <!-- Added animation classes -->
+                            <div class="benefit-icon mb-3 fs-1 text-primary-darkest"><i class="fas fa-tools"></i></div>
+                            <h5 class="fw-semibold mb-2 benefit-title">Simple Technology</h5>
+                            <p class="small text-muted">Systems range from basic rain barrels to complex setups, but the core principles are reliable.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works-home py-5 fade-in-on-scroll"> <!-- Added animation class -->
+            <div class="container">
+                <h2 class="section-heading text-center mb-5">How a Typical System Works</h2>
+                <div class="row align-items-center g-5"> <!-- Added gap -->
+                    <div class="col-lg-6 order-lg-2">
+                        <img src="images/how-it-works-placeholder.png" alt="Diagram showing rainwater harvesting process" class="img-fluid rounded"> <!-- Added img-fluid -->
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <!-- Applying the numbered-list class for styling -->
+                        <ol class="list-group list-group-flush numbered-list"> <!-- Added numbered-list class -->
+                            <li class="list-group-item">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Catchment Area</div>
+                                    Rain falls onto a surface (usually a roof) and is collected.
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Conveyance System</div>
+                                    Gutters and downspouts channel the water towards storage.
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Pre-filtration</div>
+                                    Leaf guards and first-flush diverters remove debris before storage.
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Storage Tank</div>
+                                    Water is stored in tanks (barrels, cisterns) for later use.
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold">Distribution</div>
+                                    Water is accessed via gravity, a tap, or a pump for various uses. Further filtration may be needed for potable use.
+                                </div>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section class="video-home py-5 bg-light fade-in-on-scroll"> <!-- Added animation class -->
+            <div class="container text-center">
+                <h2 class="section-heading mb-4">See Rainwater Harvesting in Action</h2>
+                <p class="text-muted mb-5 col-lg-8 mx-auto">Watch this short video to understand the basics and benefits.</p> <!-- Adjusted width -->
+                <div class="video-container shadow">
+                    <!-- YouTube video ID -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/I4V0QiyKAYs?si=6T1lnD7nVr1J47mM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section for Homepage -->
+        <section id="faq-home" class="py-5 fade-in-on-scroll"> <!-- Added animation class -->
+            <div class="container">
+                <h2 class="text-center mb-5 section-heading">General Rainwater Harvesting FAQs</h2>
+                <div class="accordion col-lg-8 mx-auto" id="faqAccordionHome">
+                    <!-- FAQ Item 1 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingHomeOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHomeOne" aria-expanded="false" aria-controls="collapseHomeOne">
+                                Is rainwater harvesting legal?
+                            </button>
+                        </h2>
+                        <div id="collapseHomeOne" class="accordion-collapse collapse" aria-labelledby="headingHomeOne" data-bs-parent="#faqAccordionHome">
+                            <div class="accordion-body small text-muted">
+                                In most places, yes! However, regulations can vary significantly by state, county, or city, especially regarding potable use or large-scale collection. Some areas even offer incentives. It's always best to check with your local authorities or a professional installer like Aqua Harvest.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingHomeTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHomeTwo" aria-expanded="false" aria-controls="collapseHomeTwo">
+                                What can I use harvested rainwater for?
+                            </button>
+                        </h2>
+                        <div id="collapseHomeTwo" class="accordion-collapse collapse" aria-labelledby="headingHomeTwo" data-bs-parent="#faqAccordionHome">
+                            <div class="accordion-body small text-muted">
+                                The most common uses are non-potable, such as watering gardens and lawns, washing cars, outdoor cleaning, and flushing toilets. With proper, advanced treatment and compliance with health codes, it can potentially be used for drinking, cooking, and bathing, but this requires a more complex system.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingHomeThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHomeThree" aria-expanded="false" aria-controls="collapseHomeThree">
+                                How much rain do I need for it to be worthwhile?
+                            </button>
+                        </h2>
+                        <div id="collapseHomeThree" class="accordion-collapse collapse" aria-labelledby="headingHomeThree" data-bs-parent="#faqAccordionHome">
+                            <div class="accordion-body small text-muted">
+                                Even areas with moderate rainfall can collect substantial amounts of water. A 1,000 sq ft roof can capture over 600 gallons from just one inch of rain. The key factors are your roof size (catchment area) and your local average rainfall. We can help calculate your potential harvest.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 4 -->
+                     <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingHomeFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseHomeFour" aria-expanded="false" aria-controls="collapseHomeFour">
+                                Is installing a rainwater harvesting system difficult or expensive?
+                            </button>
+                        </h2>
+                        <div id="collapseHomeFour" class="accordion-collapse collapse" aria-labelledby="headingHomeFour" data-bs-parent="#faqAccordionHome">
+                            <div class="accordion-body small text-muted">
+                                It varies! A simple rain barrel setup is very affordable and easy DIY. Larger, integrated systems for whole-home or commercial use require professional design and installation and involve a higher initial investment, but offer greater savings and capacity over time. Costs depend on size, complexity, and materials.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- more faq button -->
+                <div class="text-center mt-4">
+                    <a href="faq.html" class="btn btn-outline-primary faq-more-btn">View More FAQs</a>
+                </div>
+                <!-- END BUTTON -->
+            </div>
+        </section>
+
+        <!-- Call to Action (CTA) Section -->
+        <section id="cta-home" class="cta-home py-5 text-center text-white fade-in-on-scroll"> <!-- Added animation class, Updated ID -->
+            <div class="container">
+                <h2 class="display-5 fw-bold mb-3">Ready to Start Harvesting Rain?</h2>
+                <p class="lead mb-4 col-lg-8 mx-auto">Contact Aqua Harvest today for a free consultation and quote tailored to your specific needs, whether residential or commercial.</p> <!-- Adjusted text -->
+                <a href="contact.html" class="btn btn-light btn-lg px-5 py-3 fw-semibold shadow">Request Consultation</a> <!-- Matched button style from other pages -->
+            </div>
+        </section>
+
+    </main> <!-- Added main tag -->
+
+     <!-- Scroll to Top Button (Standardized) -->
+     <a href="#" id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Footer (Standardized) -->
+    <footer class="footer-home py-4">
+        <div class="container text-center">
+             <p class="mb-2">
+                <a href="index.html" class="mx-2">Home</a>|
+                <a href="#" class="mx-2">Privacy Policy</a>|
+                <a href="contact.html" class="mx-2">Contact</a>
+            </p>
+            <p class="mb-0 small">&copy; <span id="currentYear"></span> Aqua Harvest Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle (Using 5.3.3 consistently) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Global Custom JS (Handles navbar hover, scroll-to-top etc.) -->
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Rainwater Harvesting | Aqua Harvest</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Global Custom CSS -->
+    <link rel="stylesheet" href="style.css"> <!-- All CSS rules should be in this file -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+
+    <!-- Navbar Section (Standardized - FAQ link active) -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/Aqua_harvest-removebg-preview.png" alt="Aqua Harvest Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"> <a class="nav-link" href="index.html">Home</a> </li>
+                    <li class="nav-item dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Usage </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                            <li><a class="dropdown-item" href="residential.html">Residential Area</a></li>
+                            <li><a class="dropdown-item" href="commercial.html">Commercial Area</a></li>
+                            <li><a class="dropdown-item" href="agriculture.html">Agricultural Area</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="facts.html">Facts</a></li>
+                    <!-- Mark FAQ as Active -->
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="update.html">Update</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header-faq text-white d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="display-5 fw-bold mb-3 animate-on-load">Frequently Asked Questions</h1>
+            <p class="lead col-lg-9 mx-auto animate-on-load animate-delay-1">Find answers to common questions about rainwater harvesting systems, installation, maintenance, and more.</p>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Main FAQ Content Area -->
+        <section id="faq-content-area" class="py-5">
+            <div class="container">
+
+                <!-- HEADING MOVED HERE - Above the row -->
+                <h2 class="section-heading text-center mb-5">General & Technical FAQs</h2>
+
+                <div class="row">
+
+                    <!-- Left Column: FAQs -->
+                    <div class="col-lg-8">
+                        <!-- Removed H2 from here -->
+                        <div class="accordion" id="faqAccordionMain">
+
+                            <!-- FAQ Item 1: Safety -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFaqOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqOne" aria-expanded="false" aria-controls="collapseFaqOne">
+                                        Is harvested rainwater safe to drink?
+                                    </button>
+                                </h2>
+                                <div id="collapseFaqOne" class="accordion-collapse collapse" aria-labelledby="headingFaqOne" data-bs-parent="#faqAccordionMain">
+                                    <div class="accordion-body small text-muted">
+                                        Untreated rainwater collected from most surfaces is **not** considered safe for drinking (potable use) without proper treatment. It can contain bacteria, viruses, pollutants from the air, debris from the roof (like bird droppings), and chemicals leached from roofing materials. For drinking, cooking, or bathing, a multi-stage treatment process including filtration (sediment, carbon) and disinfection (like UV light or chlorination) is essential. Always test treated water regularly if intended for potable use. See our <a href="education.html#edu-quality">Water Quality section</a> for more details.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 2: Maintenance Frequency -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFaqTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqTwo" aria-expanded="false" aria-controls="collapseFaqTwo">
+                                        How often does a rainwater harvesting system need maintenance?
+                                    </button>
+                                </h2>
+                                <div id="collapseFaqTwo" class="accordion-collapse collapse" aria-labelledby="headingFaqTwo" data-bs-parent="#faqAccordionMain">
+                                    <div class="accordion-body small text-muted">
+                                        Maintenance frequency varies. Key tasks include cleaning gutters/filters (2-4 times/year or after rains), inspecting tanks annually (desludging every 2-5 years), replacing post-filters (6-12 months typically), and checking pumps/components yearly. See the Maintenance Tips card on this page for a summary.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 3: Tank Material -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFaqThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqThree" aria-expanded="false" aria-controls="collapseFaqThree">
+                                        What's the best material for a rainwater storage tank?
+                                    </button>
+                                </h2>
+                                <div id="collapseFaqThree" class="accordion-collapse collapse" aria-labelledby="headingFaqThree" data-bs-parent="#faqAccordionMain">
+                                    <div class="accordion-body small text-muted">
+                                        There's no single "best" material; it depends on budget, space, climate, and intended use. Common options include Polyethylene (plastic - common, affordable), Fiberglass (durable, good for underground), Concrete (very durable, large scale), and Metal (large scale, needs lining). Always choose food-grade, opaque materials for better water quality.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 4: Freezing Climates -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFaqFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqFour" aria-expanded="false" aria-controls="collapseFaqFour">
+                                        Can I use rainwater harvesting in freezing climates?
+                                    </button>
+                                </h2>
+                                <div id="collapseFaqFour" class="accordion-collapse collapse" aria-labelledby="headingFaqFour" data-bs-parent="#faqAccordionMain">
+                                    <div class="accordion-body small text-muted">
+                                        Yes, but precautions are needed. Use underground tanks, drain above-ground systems before winter, use tank heaters, or ensure proper pipe drainage and insulation for mild freezes.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 5: Permits -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFaqFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqFive" aria-expanded="false" aria-controls="collapseFaqFive">
+                                        Do I need a permit to install a rainwater harvesting system?
+                                    </button>
+                                </h2>
+                                <div id="collapseFaqFive" class="accordion-collapse collapse" aria-labelledby="headingFaqFive" data-bs-parent="#faqAccordionMain">
+                                    <div class="accordion-body small text-muted">
+                                        Regulations vary significantly. Simple rain barrels often don't need permits. Larger systems, especially those connected to plumbing or involving excavation, usually do. Always check with your local building department or planning authority *before* installation.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 6: ROI -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFaqSix">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqSix" aria-expanded="false" aria-controls="collapseFaqSix">
+                                        What is the typical return on investment (ROI) for an RWH system?
+                                    </button>
+                                </h2>
+                                <div id="collapseFaqSix" class="accordion-collapse collapse" aria-labelledby="headingFaqSix" data-bs-parent="#faqAccordionMain">
+                                    <div class="accordion-body small text-muted">
+                                        ROI depends on system cost, rainfall, municipal water cost, and usage. Simple systems pay back quickly via water savings. Larger, complex systems have longer payback periods (10-20+ years), but offer benefits like water security and environmental impact.
+                                    </div>
+                                </div>
+                            </div>
+
+                             <!-- FAQ Item 7: First Flush -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFaqSeven">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqSeven" aria-expanded="false" aria-controls="collapseFaqSeven">
+                                        What is a 'first flush diverter' and is it necessary?
+                                    </button>
+                                </h2>
+                                <div id="collapseFaqSeven" class="accordion-collapse collapse" aria-labelledby="headingFaqSeven" data-bs-parent="#faqAccordionMain">
+                                    <div class="accordion-body small text-muted">
+                                        It's a device redirecting the initial, most polluted rainwater away from the tank. While not mandatory for basic garden use, it's **highly recommended** for better stored water quality, less tank sediment, and reduced filter load.
+                                    </div>
+                                </div>
+                            </div>
+
+                             <!-- FAQ Item 8: Algae -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFaqEight">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqEight" aria-expanded="false" aria-controls="collapseFaqEight">
+                                        How do I prevent algae growth in my storage tank?
+                                    </button>
+                                </h2>
+                                <div id="collapseFaqEight" class="accordion-collapse collapse" aria-labelledby="headingFaqEight" data-bs-parent="#faqAccordionMain">
+                                    <div class="accordion-body small text-muted">
+                                        Use an **opaque (light-blocking) tank**. Most commercial RWH tanks are opaque. If yours isn't, paint it dark or enclose it. Also, ensure inlets/overflows are screened to keep out organic debris.
+                                    </div>
+                                </div>
+                            </div>
+
+                             <!-- FAQ Item 9: Pump Needed? -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFaqNine">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqNine" aria-expanded="false" aria-controls="collapseFaqNine">
+                                        Do I always need a pump for my RWH system?
+                                    </button>
+                                </h2>
+                                <div id="collapseFaqNine" class="accordion-collapse collapse" aria-labelledby="headingFaqNine" data-bs-parent="#faqAccordionMain">
+                                    <div class="accordion-body small text-muted">
+                                        Not always. Gravity feed works if the tank is significantly higher than the point of use. However, for consistent pressure (toilets, washing machines, hoses) or if the tank is level with or below the use point, a pump is usually required.
+                                    </div>
+                                </div>
+                            </div>
+
+                             <!-- FAQ Item 10: Small Spaces -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFaqTen">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqTen" aria-expanded="false" aria-controls="collapseFaqTen">
+                                        Can I harvest rainwater if I have limited space?
+                                    </button>
+                                </h2>
+                                <div id="collapseFaqTen" class="accordion-collapse collapse" aria-labelledby="headingFaqTen" data-bs-parent="#faqAccordionMain">
+                                    <div class="accordion-body small text-muted">
+                                        Yes! Options include slimline tanks, under-deck bladders/tanks, wall-mounted tanks, modular systems, and decorative rain barrels.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 11: Calculation -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFaqEleven">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqEleven" aria-expanded="false" aria-controls="collapseFaqEleven">
+                                        How do I calculate how much water I can harvest?
+                                    </button>
+                                </h2>
+                                <div id="collapseFaqEleven" class="accordion-collapse collapse" aria-labelledby="headingFaqEleven" data-bs-parent="#faqAccordionMain">
+                                    <div class="accordion-body small text-muted">
+                                        A basic calculation is: **Catchment Area (sq ft) x Rainfall (inches) x 0.623 = Gallons Harvested**. Remember to account for system efficiency (typically 75-90%) which reduces the actual amount stored. Catchment area is the horizontal footprint of your roof or collection surface. Use average annual or monthly rainfall data for your location. Our <a href="education.html#edu-calculator">calculator tool</a> can help estimate this.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 12: Roof Materials -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFaqTwelve">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqTwelve" aria-expanded="false" aria-controls="collapseFaqTwelve">
+                                        Are some roof materials better than others for harvesting?
+                                    </button>
+                                </h2>
+                                <div id="collapseFaqTwelve" class="accordion-collapse collapse" aria-labelledby="headingFaqTwelve" data-bs-parent="#faqAccordionMain">
+                                    <div class="accordion-body small text-muted">
+                                        Yes. Smooth, non-toxic surfaces are best. Metal (steel, aluminum), clay tiles, and concrete tiles are generally good. Asphalt shingles can leach some chemicals initially and shed granules, requiring better filtration. Wood shingles can leach tannins and support biological growth. Avoid roofs treated with chemical moss killers or lead-based paints if aiming for higher quality water.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 13: Overflow -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFaqThirteen">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqThirteen" aria-expanded="false" aria-controls="collapseFaqThirteen">
+                                        What happens when the storage tank is full?
+                                    </button>
+                                </h2>
+                                <div id="collapseFaqThirteen" class="accordion-collapse collapse" aria-labelledby="headingFaqThirteen" data-bs-parent="#faqAccordionMain">
+                                    <div class="accordion-body small text-muted">
+                                        All properly designed systems must have an **overflow mechanism**. When the tank reaches capacity, excess water is safely directed away from the tank and building foundation via an overflow pipe. This pipe should be screened to prevent pests and ideally discharge to a suitable location like a garden bed, swale, soakaway pit, or back into the existing stormwater drain system (check local regulations).
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 14: Pressure -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFaqFourteen">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqFourteen" aria-expanded="false" aria-controls="collapseFaqFourteen">
+                                        Will I have enough water pressure from my RWH system?
+                                    </button>
+                                </h2>
+                                <div id="collapseFaqFourteen" class="accordion-collapse collapse" aria-labelledby="headingFaqFourteen" data-bs-parent="#faqAccordionMain">
+                                    <div class="accordion-body small text-muted">
+                                        Gravity feed systems (tank higher than use point) provide low pressure, suitable for simple garden watering. For household use or standard hose pressure, a pump is almost always necessary. Pumps come in various types (submersible, external) and sizes, chosen based on required pressure (PSI or head) and flow rate (gallons/liters per minute).
+                                    </div>
+                                </div>
+                            </div>
+
+                             <!-- FAQ Item 15: Incentives -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFaqFifteen">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqFifteen" aria-expanded="false" aria-controls="collapseFaqFifteen">
+                                        Are there any government incentives or rebates for installing RWH?
+                                    </button>
+                                </h2>
+                                <div id="collapseFaqFifteen" class="accordion-collapse collapse" aria-labelledby="headingFaqFifteen" data-bs-parent="#faqAccordionMain">
+                                    <div class="accordion-body small text-muted">
+                                        This varies greatly by region. Some municipalities, states/provinces, or even national governments offer rebates, tax credits, or subsidies to encourage rainwater harvesting, especially in water-stressed areas. It's worth researching programs offered by your local water authority, environmental agencies, or government websites.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 16: System Lifespan -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFaqSixteen">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqSixteen" aria-expanded="false" aria-controls="collapseFaqSixteen">
+                                        How long does a rainwater harvesting system typically last?
+                                    </button>
+                                </h2>
+                                <div id="collapseFaqSixteen" class="accordion-collapse collapse" aria-labelledby="headingFaqSixteen" data-bs-parent="#faqAccordionMain">
+                                    <div class="accordion-body small text-muted">
+                                        Lifespan depends on the quality of components and maintenance.
+                                        <ul>
+                                            <li><strong>Tanks:</strong> Poly tanks often last 20+ years, fiberglass and concrete can last much longer (30-50+ years).</li>
+                                            <li><strong>Gutters/Pipes:</strong> Depends on material (PVC, metal), typically 15-30 years.</li>
+                                            <li><strong>Pumps:</strong> Usually 5-15 years, depending on type and usage.</li>
+                                            <li><strong>Filters/UV:</strong> Housings last long, but cartridges/bulbs need regular replacement.</li>
+                                        </ul>
+                                        Proper installation and regular maintenance significantly extend the life of all components.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 17: Combining with Solar -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFaqSeventeen">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqSeventeen" aria-expanded="false" aria-controls="collapseFaqSeventeen">
+                                        Can I combine rainwater harvesting with solar power?
+                                    </button>
+                                </h2>
+                                <div id="collapseFaqSeventeen" class="accordion-collapse collapse" aria-labelledby="headingFaqSeventeen" data-bs-parent="#faqAccordionMain">
+                                    <div class="accordion-body small text-muted">
+                                        Yes, absolutely! This is a very common and beneficial combination, especially for systems requiring pumps. Solar panels can power the pump needed to distribute the harvested water, making the system even more sustainable and potentially off-grid capable. This is particularly popular in agricultural and remote settings.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 18: Water Testing -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFaqEighteen">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqEighteen" aria-expanded="false" aria-controls="collapseFaqEighteen">
+                                        How often should I test my harvested rainwater?
+                                    </button>
+                                </h2>
+                                <div id="collapseFaqEighteen" class="accordion-collapse collapse" aria-labelledby="headingFaqEighteen" data-bs-parent="#faqAccordionMain">
+                                    <div class="accordion-body small text-muted">
+                                        If the water is **only** used for basic outdoor irrigation, testing is usually not necessary. If used for livestock, occasional basic tests might be wise. If treated and intended for **potable use** (drinking, cooking), regular testing is crucial. Test initially after system setup/treatment installation, and then at least annually (or more frequently, e.g., quarterly) for bacteria (like E. coli) and potentially other contaminants relevant to your area (e.g., lead if you have old plumbing/roofing). Consult local health guidelines or labs for specific recommendations.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- FAQ Item 19: Mosquitoes -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingFaqNineteen">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqNineteen" aria-expanded="false" aria-controls="collapseFaqNineteen">
+                                        How do I prevent mosquitoes from breeding in my tank?
+                                    </button>
+                                </h2>
+                                <div id="collapseFaqNineteen" class="accordion-collapse collapse" aria-labelledby="headingFaqNineteen" data-bs-parent="#faqAccordionMain">
+                                    <div class="accordion-body small text-muted">
+                                        Mosquito prevention relies on sealing the system. Ensure all entry points (tank inlet, overflow pipe outlet, inspection hatches) are covered with fine mesh screens (mosquito-proof mesh). Keep lids securely closed. An opaque tank also discourages breeding. Avoid leaving open containers of harvested water standing around.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div> <!-- / accordion -->
+
+                        <!-- Contact Link if FAQ not found -->
+                        <p class="text-center mt-5 text-muted">
+                            Can't find the answer you're looking for? <a href="contact.html">Contact us</a> directly!
+                        </p>
+
+                    </div> <!-- / col-lg-8 -->
+
+                    <!-- Right Column: Maintenance Tips Card -->
+                    <div class="col-lg-4">
+                        <div class="maintenance-card sticky-top">
+                            <img src="images/maintenance-card-img.jpg" class="img-fluid rounded-top" alt="Rainwater harvesting system maintenance">
+                            <div class="maintenance-card-body">
+                                <h5 class="card-title">System Maintenance Tips</h5>
+                                <p class="card-text">Keep your system running smoothly and ensure water quality with these regular checks:</p>
+                                <ul class="maintenance-tip-list">
+                                    <li class="maintenance-tip-item">
+                                        <i class="fas fa-broom fa-fw"></i>
+                                        <div>
+                                            <h6 class="tip-title">Clean Gutters & Roof</h6>
+                                            <p>Remove leaves/debris 2-4 times/year.</p>
+                                        </div>
+                                    </li>
+                                    <li class="maintenance-tip-item">
+                                        <i class="fas fa-filter fa-fw"></i>
+                                        <div>
+                                            <h6 class="tip-title">Check Pre-Filters</h6>
+                                            <p>Clean leaf screens & first flush regularly.</p>
+                                        </div>
+                                    </li>
+                                    <li class="maintenance-tip-item">
+                                        <i class="fas fa-eye fa-fw"></i>
+                                        <div>
+                                            <h6 class="tip-title">Inspect Tank</h6>
+                                            <p>Check sediment annually; desludge every 2-5 yrs.</p>
+                                        </div>
+                                    </li>
+                                     <li class="maintenance-tip-item">
+                                        <i class="fas fa-recycle fa-fw"></i>
+                                        <div>
+                                            <h6 class="tip-title">Replace Post-Filters</h6>
+                                            <p>Change cartridges per manufacturer advice (6-12 mo).</p>
+                                        </div>
+                                    </li>
+                                     <li class="maintenance-tip-item">
+                                        <i class="fas fa-wrench fa-fw"></i>
+                                        <div>
+                                            <h6 class="tip-title">Inspect Components</h6>
+                                            <p>Check pumps, pipes, UV bulbs annually.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div> <!-- / col-lg-4 -->
+
+                </div> <!-- / row -->
+            </div> <!-- / container -->
+        </section>
+
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <a href="#" id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Footer -->
+    <footer class="footer-home py-4">
+        <div class="container text-center">
+             <p class="mb-2">
+                <a href="index.html" class="mx-2">Home</a>|
+                <a href="#" class="mx-2">Privacy Policy</a>|
+                <a href="contact.html" class="mx-2">Contact</a>
+            </p>
+            <p class="mb-0 small">&copy; <span id="currentYear"></span> Aqua Harvest Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Global Custom JS -->
+    <script src="app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Residential RWH Products | Aqua Harvest</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Global Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <style>
+        /* Optional: Style for modal titles if needed */
+        .modal-title {
+            color: var(--theme-primary-darkest);
+            font-weight: 600;
+        }
+        .modal-body .text-muted.small { /* Style metadata inside modal */
+            font-style: italic;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .modal-body img.modal-product-image { /* Style for image inside modal */
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Navbar Section (Standardized - Products link active) -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/Aqua_harvest-removebg-preview.png" alt="Aqua Harvest Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"> <a class="nav-link" href="index.html">Home</a> </li>
+                    <li class="nav-item dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Usage </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                            <li><a class="dropdown-item" href="residential.html">Residential Area</a></li>
+                            <li><a class="dropdown-item" href="commercial.html">Commercial Area</a></li>
+                            <li><a class="dropdown-item" href="agriculture.html">Agricultural Area</a></li>
+                        </ul>
+                    </li>
+                    <!-- Mark Products as Active -->
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="facts.html">Facts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="update.html">Update</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Simplified Page Header -->
+    <header class="page-header-simple py-4 bg-light border-bottom">
+        <div class="container">
+            <h1 class="display-6 fw-bold mb-1">Residential System Products</h1>
+            <p class="text-muted mb-0">Browse components suitable for home rainwater harvesting systems.</p>
+        </div>
+    </header>
+
+    <main class="py-5">
+        <div class="container">
+
+            <!-- Filter/Sort Controls (Still requires JS for functionality) -->
+            <div class="filter-controls bg-light p-3 mb-4 rounded border">
+                <form id="productFilterForm">
+                     <div class="row g-2 align-items-end">
+                        <div class="col-lg-4 col-md-12">
+                            <label for="productSearch" class="form-label small visually-hidden">Search Products</label>
+                            <input type="search" class="form-control form-control-sm" id="productSearch" placeholder="Search products...">
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <label for="productCategory" class="form-label small visually-hidden">Category</label>
+                            <select class="form-select form-select-sm" id="productCategory">
+                                <option selected value="">All Categories</option>
+                                <option value="tanks">Tanks & Storage</option>
+                                <option value="prefilters">Pre-Filtration</option>
+                                <option value="postfilters">Post-Filtration</option>
+                                <option value="pumps">Pumps</option>
+                                <option value="pipes">Pipes & Fittings</option>
+                                <option value="accessories">Accessories</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-3 col-md-4">
+                            <label for="productSort" class="form-label small visually-hidden">Sort By</label>
+                            <select class="form-select form-select-sm" id="productSort">
+                                <option selected value="default">Default Sorting</option>
+                                <option value="price-asc">Price: Low to High</option>
+                                <option value="price-desc">Price: High to Low</option>
+                                <option value="name-asc">Name: A to Z</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-2 col-md-4 text-end">
+                            <button type="submit" class="btn btn-primary btn-sm w-100">Apply</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- End Filter/Sort Controls -->
+
+            <!-- Product Listing Grid -->
+            <div class="row g-4">
+
+                <!-- Product Card 1: Slimline Tank -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card product-card h-100">
+                        <img src="images/product-tank-slim.jpg" class="card-img-top" alt="Slimline Poly Tank">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><i class="fas fa-box-archive me-2"></i>Slimline Poly Tank - 1000L</h5>
+                            <p class="card-text small text-muted flex-grow-1">Space-saving design, ideal for narrow areas. UV-stabilized food-grade polyethylene.</p>
+                            <p class="fw-bold mb-2">Rs. 15,000</p>
+                            <!-- MODAL TRIGGER ADDED -->
+                            <button type="button" class="btn btn-sm btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal1">
+                              View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2: Leaf Diverter -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card product-card h-100">
+                        <img src="images/product-leaf-diverter.jpg" class="card-img-top" alt="Leaf Diverter">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><i class="fas fa-leaf me-2"></i>Downpipe Leaf Diverter</h5>
+                            <p class="card-text small text-muted flex-grow-1">Removes leaves and large debris before water enters the pipe. Easy to install and clean.</p>
+                            <p class="fw-bold mb-2">Rs. 1,200</p>
+                            <!-- MODAL TRIGGER ADDED -->
+                            <button type="button" class="btn btn-sm btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal2">
+                              View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3: First Flush Diverter -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card product-card h-100">
+                        <img src="images/product-first-flush.jpg" class="card-img-top" alt="First Flush Diverter">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><i class="fas fa-filter-circle-xmark me-2"></i>First Flush Diverter Kit (90mm)</h5>
+                            <p class="card-text small text-muted flex-grow-1">Diverts the initial, most contaminated rainwater away from the tank. Improves stored water quality.</p>
+                            <p class="fw-bold mb-2">Rs. 3,500</p>
+                             <!-- MODAL TRIGGER ADDED -->
+                            <button type="button" class="btn btn-sm btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal3">
+                              View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 4: Sediment Filter -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card product-card h-100">
+                        <img src="images/product-sediment-filter.jpg" class="card-img-top" alt="Sediment Filter Cartridge">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><i class="fas fa-filter me-2"></i>Sediment Filter Cartridge (5 Micron)</h5>
+                            <p class="card-text small text-muted flex-grow-1">Removes fine particles like sand, silt, and rust. Standard 10-inch size.</p>
+                            <p class="fw-bold mb-2">Rs. 800</p>
+                             <!-- MODAL TRIGGER ADDED -->
+                            <button type="button" class="btn btn-sm btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal4">
+                              View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 5: Pressure Pump -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card product-card h-100">
+                        <img src="images/product-pressure-pump.jpg" class="card-img-top" alt="Pressure Pump">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><i class="fas fa-gauge-high me-2"></i>Automatic Pressure Pump (0.5 HP)</h5>
+                            <p class="card-text small text-muted flex-grow-1">Provides consistent water pressure for household use (toilets, washing machine). Self-priming.</p>
+                            <p class="fw-bold mb-2">Rs. 12,500</p>
+                             <!-- MODAL TRIGGER ADDED -->
+                            <button type="button" class="btn btn-sm btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal5">
+                              View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Product Card 6: Round Poly Tank -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card product-card h-100">
+                        <img src="images/product-tank-round.jpg" class="card-img-top" alt="Round Poly Tank">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><i class="fas fa-box-archive me-2"></i>Round Poly Tank - 2000L</h5>
+                            <p class="card-text small text-muted flex-grow-1">Standard round tank, durable and cost-effective storage. UV-stabilized food-grade polyethylene.</p>
+                            <p class="fw-bold mb-2">Rs. 22,000</p>
+                             <!-- MODAL TRIGGER ADDED -->
+                            <button type="button" class="btn btn-sm btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal6">
+                              View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Product Card 7: Tank Tap -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card product-card h-100">
+                        <img src="images/product-tank-tap.jpg" class="card-img-top" alt="Tank Tap">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><i class="fas fa-faucet me-2"></i>Brass Tank Tap (3/4 inch)</h5>
+                            <p class="card-text small text-muted flex-grow-1">Durable brass tap for easy water extraction from the tank outlet. Standard thread size.</p>
+                            <p class="fw-bold mb-2">Rs. 650</p>
+                             <!-- MODAL TRIGGER ADDED -->
+                            <button type="button" class="btn btn-sm btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal7">
+                              View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Product Card 8: Carbon Filter -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card product-card h-100">
+                        <img src="images/product-carbon-filter.jpg" class="card-img-top" alt="Carbon Filter Cartridge">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><i class="fas fa-filter me-2"></i>Activated Carbon Filter Cartridge</h5>
+                            <p class="card-text small text-muted flex-grow-1">Removes chlorine, odors, and improves taste. Standard 10-inch size.</p>
+                            <p class="fw-bold mb-2">Rs. 1,100</p>
+                             <!-- MODAL TRIGGER ADDED -->
+                            <button type="button" class="btn btn-sm btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal8">
+                              View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Product Card 9: UV Disinfection Unit -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card product-card h-100">
+                        <img src="images/product-uv-filter.jpg" class="card-img-top" alt="UV Disinfection Unit">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><i class="fas fa-lightbulb me-2"></i>UV Water Sterilizer (6 GPM)</h5>
+                            <p class="card-text small text-muted flex-grow-1">Disinfects water by killing bacteria and viruses. Essential for potable use. Stainless steel chamber.</p>
+                            <p class="fw-bold mb-2">Rs. 18,000</p>
+                             <!-- MODAL TRIGGER ADDED -->
+                            <button type="button" class="btn btn-sm btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal9">
+                              View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Product Card 10: Tank Level Indicator -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card product-card h-100">
+                        <img src="images/product-level-indicator.jpg" class="card-img-top" alt="Tank Level Indicator">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><i class="fas fa-gauge-simple me-2"></i>Float Tank Level Indicator</h5>
+                            <p class="card-text small text-muted flex-grow-1">Simple mechanical indicator to show the water level in the tank. Easy to install.</p>
+                            <p class="fw-bold mb-2">Rs. 900</p>
+                             <!-- MODAL TRIGGER ADDED -->
+                            <button type="button" class="btn btn-sm btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal10">
+                              View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Product Card 11: Submersible Pump -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card product-card h-100">
+                        <img src="images/product-submersible-pump.jpg" class="card-img-top" alt="Submersible Pump">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><i class="fas fa-arrow-down-to-water me-2"></i>Submersible RWH Pump</h5>
+                            <p class="card-text small text-muted flex-grow-1">Placed inside the tank for quiet operation. Suitable for garden irrigation or transfer.</p>
+                            <p class="fw-bold mb-2">Rs. 9,800</p>
+                             <!-- MODAL TRIGGER ADDED -->
+                            <button type="button" class="btn btn-sm btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal11">
+                              View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Product Card 12: Pipe Fittings Kit -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card product-card h-100">
+                        <img src="images/product-pipe-fittings.jpg" class="card-img-top" alt="Pipe Fittings Kit">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><i class="fas fa-toolbox me-2"></i>PVC Pipe Fittings Kit (Basic)</h5>
+                            <p class="card-text small text-muted flex-grow-1">Assortment of common PVC elbows, connectors, and adapters for system plumbing.</p>
+                            <p class="fw-bold mb-2">Rs. 1,500</p>
+                             <!-- MODAL TRIGGER ADDED -->
+                            <button type="button" class="btn btn-sm btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal12">
+                              View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Product Card 13: Rain Barrel -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card product-card h-100">
+                        <img src="images/product-rain-barrel.jpg" class="card-img-top" alt="Rain Barrel">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><i class="fas fa-box-archive me-2"></i>Basic Rain Barrel (200L)</h5>
+                            <p class="card-text small text-muted flex-grow-1">Simple, affordable option for collecting small amounts of water for garden use. Includes tap and lid.</p>
+                            <p class="fw-bold mb-2">Rs. 4,500</p>
+                             <!-- MODAL TRIGGER ADDED -->
+                            <button type="button" class="btn btn-sm btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal13">
+                              View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Product Card 14: Filter Housing -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card product-card h-100">
+                        <img src="images/product-filter-housing.jpg" class="card-img-top" alt="Filter Housing">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><i class="fas fa-filter me-2"></i>Filter Housing (10-inch Standard)</h5>
+                            <p class="card-text small text-muted flex-grow-1">Standard housing for sediment or carbon filter cartridges. Includes wrench and bracket.</p>
+                            <p class="fw-bold mb-2">Rs. 2,200</p>
+                             <!-- MODAL TRIGGER ADDED -->
+                            <button type="button" class="btn btn-sm btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal14">
+                              View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Product Card 15: Tank Overflow Kit -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card product-card h-100">
+                        <img src="images/product-overflow-kit.jpg" class="card-img-top" alt="Tank Overflow Kit">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><i class="fas fa-water me-2"></i>Tank Overflow Kit with Screen</h5>
+                            <p class="card-text small text-muted flex-grow-1">Safely directs excess water away when the tank is full. Includes screened outlet to prevent pests.</p>
+                            <p class="fw-bold mb-2">Rs. 1,000</p>
+                             <!-- MODAL TRIGGER ADDED -->
+                            <button type="button" class="btn btn-sm btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal15">
+                              View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Product Card 16: Rain Chain -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div class="card product-card h-100">
+                        <img src="images/product-rain-chain.jpg" class="card-img-top" alt="Rain Chain">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title"><i class="fas fa-link me-2"></i>Decorative Rain Chain (Copper Finish)</h5>
+                            <p class="card-text small text-muted flex-grow-1">Aesthetic alternative to downspouts, guiding water visibly. Standard length.</p>
+                            <p class="fw-bold mb-2">Rs. 5,500</p>
+                             <!-- MODAL TRIGGER ADDED -->
+                            <button type="button" class="btn btn-sm btn-outline-primary mt-auto" data-bs-toggle="modal" data-bs-target="#productModal16">
+                              View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- / .row -->
+
+            <!-- Pagination (Still requires JS for functionality) -->
+            <nav aria-label="Product navigation" class="mt-5 d-flex justify-content-center">
+                <ul class="pagination">
+                    <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a></li>
+                    <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+            <!-- End Pagination -->
+
+        </div> <!-- / .container -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-home py-4">
+        <div class="container text-center">
+             <p class="mb-2">
+                <a href="index.html" class="mx-2">Home</a>|
+                <a href="#" class="mx-2">Privacy Policy</a>|
+                <a href="contact.html" class="mx-2">Contact</a>
+            </p>
+            <p class="mb-0 small">&copy; <span id="currentYear"></span> Aqua Harvest Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- MODALS START HERE (One for each product) -->
+
+    <!-- Modal 1: Slimline Tank -->
+    <div class="modal fade" id="productModal1" tabindex="-1" aria-labelledby="productModal1Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModal1Label">Slimline Poly Tank - 1000L</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+                <div class="col-md-5">
+                    <img src="images/product-tank-slim.jpg" class="modal-product-image" alt="Slimline Poly Tank">
+                </div>
+                <div class="col-md-7">
+                    <p class="fw-bold fs-4 text-primary">Rs. 15,000</p>
+                    <p>This 1000-liter slimline tank is perfect for residential properties with limited space. Its narrow profile allows installation along walls or in tight corridors. Made from high-quality, UV-stabilized, food-grade polyethylene, ensuring durability and water safety.</p>
+                    <h6>Key Features:</h6>
+                    <ul>
+                        <li>Capacity: 1000 Liters (approx. 264 Gallons)</li>
+                        <li>Material: Food-Grade Polyethylene</li>
+                        <li>UV Stabilized for longevity</li>
+                        <li>Opaque color to prevent algae growth</li>
+                        <li>Includes standard inlet screen and outlet fitting</li>
+                        <li>Dimensions: [Add Approx. Dimensions Here, e.g., 200cm H x 80cm W x 60cm D]</li>
+                    </ul>
+                    <button class="btn btn-primary">Add to Inquiry</button> <!-- Or link to contact -->
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 2: Leaf Diverter -->
+    <div class="modal fade" id="productModal2" tabindex="-1" aria-labelledby="productModal2Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModal2Label">Downpipe Leaf Diverter</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             <div class="row">
+                <div class="col-md-5">
+                    <img src="images/product-leaf-diverter.jpg" class="modal-product-image" alt="Leaf Diverter">
+                </div>
+                <div class="col-md-7">
+                    <p class="fw-bold fs-4 text-primary">Rs. 1,200</p>
+                    <p>An essential pre-filtration component. This diverter installs easily onto standard downpipes (specify size, e.g., 90mm/110mm) and uses a screen to separate leaves, twigs, and large debris, allowing cleaner water to flow towards your tank. Helps prevent clogs and reduces tank sediment.</p>
+                    <h6>Key Features:</h6>
+                    <ul>
+                        <li>Material: Durable UV-resistant plastic</li>
+                        <li>Fits standard downpipe sizes (e.g., 90mm/110mm)</li>
+                        <li>Removable screen for easy cleaning</li>
+                        <li>Simple installation</li>
+                    </ul>
+                     <button class="btn btn-primary">Add to Inquiry</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 3: First Flush Diverter -->
+    <div class="modal fade" id="productModal3" tabindex="-1" aria-labelledby="productModal3Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModal3Label">First Flush Diverter Kit (90mm)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             <div class="row">
+                <div class="col-md-5">
+                    <img src="images/product-first-flush.jpg" class="modal-product-image" alt="First Flush Diverter">
+                </div>
+                <div class="col-md-7">
+                    <p class="fw-bold fs-4 text-primary">Rs. 3,500</p>
+                    <p>Improves water quality significantly by diverting the initial, most contaminated rainwater (containing dust, pollen, bird droppings) away from your storage tank. This kit includes the chamber, ball valve, and necessary fittings for a standard 90mm downpipe setup.</p>
+                    <h6>Key Features:</h6>
+                    <ul>
+                        <li>Improves stored water quality</li>
+                        <li>Reduces tank sediment buildup</li>
+                        <li>Adjustable diversion volume (depending on model)</li>
+                        <li>Includes chamber, sealing ball, outlet</li>
+                        <li>Suitable for 90mm pipes</li>
+                    </ul>
+                     <button class="btn btn-primary">Add to Inquiry</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 4: Sediment Filter -->
+    <div class="modal fade" id="productModal4" tabindex="-1" aria-labelledby="productModal4Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModal4Label">Sediment Filter Cartridge (5 Micron)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             <div class="row">
+                <div class="col-md-5">
+                    <img src="images/product-sediment-filter.jpg" class="modal-product-image" alt="Sediment Filter Cartridge">
+                </div>
+                <div class="col-md-7">
+                    <p class="fw-bold fs-4 text-primary">Rs. 800</p>
+                    <p>A standard 10-inch replacement cartridge designed to remove fine particles like sand, silt, rust, and dirt down to 5 microns. Typically used after the storage tank and pump to protect appliances and improve water clarity.</p>
+                    <h6>Key Features:</h6>
+                    <ul>
+                        <li>Filtration Rating: 5 Micron</li>
+                        <li>Size: Standard 10" x 2.5"</li>
+                        <li>Material: Spun Polypropylene</li>
+                        <li>Removes suspended solids</li>
+                        <li>Recommended replacement every 6-12 months (depending on water quality)</li>
+                    </ul>
+                     <button class="btn btn-primary">Add to Inquiry</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 5: Pressure Pump -->
+    <div class="modal fade" id="productModal5" tabindex="-1" aria-labelledby="productModal5Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModal5Label">Automatic Pressure Pump (0.5 HP)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             <div class="row">
+                <div class="col-md-5">
+                    <img src="images/product-pressure-pump.jpg" class="modal-product-image" alt="Pressure Pump">
+                </div>
+                <div class="col-md-7">
+                    <p class="fw-bold fs-4 text-primary">Rs. 12,500</p>
+                    <p>This 0.5 HP automatic pressure pump is ideal for residential RWH systems supplying water to toilets, washing machines, or garden hoses. It features an integrated pressure switch that automatically starts the pump when pressure drops (e.g., tap opens) and stops it when pressure builds up (tap closes).</p>
+                    <h6>Key Features:</h6>
+                    <ul>
+                        <li>Power: 0.5 Horsepower</li>
+                        <li>Automatic operation with pressure switch</li>
+                        <li>Self-priming capability</li>
+                        <li>Suitable for boosting pressure from tanks</li>
+                        <li>Max Head: [Add Spec, e.g., 30 meters]</li>
+                        <li>Max Flow Rate: [Add Spec, e.g., 40 Liters/min]</li>
+                    </ul>
+                     <button class="btn btn-primary">Add to Inquiry</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 6: Round Poly Tank -->
+    <div class="modal fade" id="productModal6" tabindex="-1" aria-labelledby="productModal6Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModal6Label">Round Poly Tank - 2000L</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             <div class="row">
+                <div class="col-md-5">
+                    <img src="images/product-tank-round.jpg" class="modal-product-image" alt="Round Poly Tank">
+                </div>
+                <div class="col-md-7">
+                    <p class="fw-bold fs-4 text-primary">Rs. 22,000</p>
+                    <p>A standard, durable 2000-liter round polyethylene tank. Offers excellent value for rainwater storage capacity. Made from UV-stabilized, food-grade material suitable for storing water for non-potable uses.</p>
+                    <h6>Key Features:</h6>
+                    <ul>
+                        <li>Capacity: 2000 Liters (approx. 528 Gallons)</li>
+                        <li>Material: Food-Grade Polyethylene</li>
+                        <li>UV Stabilized</li>
+                        <li>Opaque color</li>
+                        <li>Includes inlet screen and outlet fitting</li>
+                        <li>Dimensions: [Add Approx. Dimensions Here, e.g., 150cm Diameter x 140cm H]</li>
+                    </ul>
+                     <button class="btn btn-primary">Add to Inquiry</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 7: Tank Tap -->
+    <div class="modal fade" id="productModal7" tabindex="-1" aria-labelledby="productModal7Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModal7Label">Brass Tank Tap (3/4 inch)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             <div class="row">
+                <div class="col-md-5">
+                    <img src="images/product-tank-tap.jpg" class="modal-product-image" alt="Tank Tap">
+                </div>
+                <div class="col-md-7">
+                    <p class="fw-bold fs-4 text-primary">Rs. 650</p>
+                    <p>A robust brass tap (spigot) designed for rainwater tanks. Provides a reliable connection point for hoses or for filling watering cans. Features a standard 3/4 inch BSP thread compatible with most tank outlets and hose connectors.</p>
+                    <h6>Key Features:</h6>
+                    <ul>
+                        <li>Material: Brass</li>
+                        <li>Thread Size: 3/4 inch BSP Male</li>
+                        <li>Lever handle for easy operation</li>
+                        <li>Includes sealing washer</li>
+                        <li>Durable and corrosion-resistant</li>
+                    </ul>
+                     <button class="btn btn-primary">Add to Inquiry</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 8: Carbon Filter -->
+    <div class="modal fade" id="productModal8" tabindex="-1" aria-labelledby="productModal8Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModal8Label">Activated Carbon Filter Cartridge</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             <div class="row">
+                <div class="col-md-5">
+                    <img src="images/product-carbon-filter.jpg" class="modal-product-image" alt="Carbon Filter Cartridge">
+                </div>
+                <div class="col-md-7">
+                    <p class="fw-bold fs-4 text-primary">Rs. 1,100</p>
+                    <p>Standard 10-inch activated carbon block filter cartridge. Effectively removes chlorine, unpleasant tastes, odors, and some organic compounds from water. Often used after a sediment filter in systems supplying water for laundry or potentially higher-quality non-potable uses.</p>
+                    <h6>Key Features:</h6>
+                    <ul>
+                        <li>Type: Activated Carbon Block (CTO)</li>
+                        <li>Size: Standard 10" x 2.5"</li>
+                        <li>Improves taste and odor</li>
+                        <li>Reduces chlorine</li>
+                        <li>Recommended replacement every 6-12 months</li>
+                    </ul>
+                     <button class="btn btn-primary">Add to Inquiry</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 9: UV Disinfection Unit -->
+    <div class="modal fade" id="productModal9" tabindex="-1" aria-labelledby="productModal9Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModal9Label">UV Water Sterilizer (6 GPM)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             <div class="row">
+                <div class="col-md-5">
+                    <img src="images/product-uv-filter.jpg" class="modal-product-image" alt="UV Disinfection Unit">
+                </div>
+                <div class="col-md-7">
+                    <p class="fw-bold fs-4 text-primary">Rs. 18,000</p>
+                    <p>Ultraviolet (UV) water sterilizer designed to kill harmful microorganisms like bacteria, viruses, and protozoa without using chemicals. Essential final step for treating rainwater intended for potable use. This 6 Gallon Per Minute (GPM) unit is suitable for typical household flow rates.</p>
+                    <h6>Key Features:</h6>
+                    <ul>
+                        <li>Disinfection Method: UV-C Light</li>
+                        <li>Flow Rate: 6 GPM (approx. 22 LPM)</li>
+                        <li>Chamber Material: Stainless Steel</li>
+                        <li>Includes UV lamp, quartz sleeve, and ballast</li>
+                        <li>Requires pre-filtration (sediment/carbon) for optimal performance</li>
+                        <li>Lamp replacement typically required annually</li>
+                    </ul>
+                     <button class="btn btn-primary">Add to Inquiry</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 10: Tank Level Indicator -->
+    <div class="modal fade" id="productModal10" tabindex="-1" aria-labelledby="productModal10Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModal10Label">Float Tank Level Indicator</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             <div class="row">
+                <div class="col-md-5">
+                    <img src="images/product-level-indicator.jpg" class="modal-product-image" alt="Tank Level Indicator">
+                </div>
+                <div class="col-md-7">
+                    <p class="fw-bold fs-4 text-primary">Rs. 900</p>
+                    <p>A simple, reliable mechanical device to visually indicate the water level inside your storage tank. Uses a float connected to an external pointer. Easy to install on most poly tanks.</p>
+                    <h6>Key Features:</h6>
+                    <ul>
+                        <li>Type: Mechanical Float Indicator</li>
+                        <li>Easy-to-read external dial</li>
+                        <li>Simple installation (requires drilling tank)</li>
+                        <li>No power required</li>
+                        <li>Suitable for various tank heights (check compatibility)</li>
+                    </ul>
+                     <button class="btn btn-primary">Add to Inquiry</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 11: Submersible Pump -->
+    <div class="modal fade" id="productModal11" tabindex="-1" aria-labelledby="productModal11Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModal11Label">Submersible RWH Pump</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             <div class="row">
+                <div class="col-md-5">
+                    <img src="images/product-submersible-pump.jpg" class="modal-product-image" alt="Submersible Pump">
+                </div>
+                <div class="col-md-7">
+                    <p class="fw-bold fs-4 text-primary">Rs. 9,800</p>
+                    <p>This submersible pump is designed to be placed directly inside the rainwater tank. Offers quiet operation and is suitable for transferring water or supplying garden irrigation systems. Often includes a float switch for automatic shut-off when water level is low.</p>
+                    <h6>Key Features:</h6>
+                    <ul>
+                        <li>Type: Submersible Centrifugal</li>
+                        <li>Quiet operation</li>
+                        <li>Often includes float switch for dry-run protection</li>
+                        <li>Suitable for clean water</li>
+                        <li>Max Head: [Add Spec, e.g., 10 meters]</li>
+                        <li>Max Flow Rate: [Add Spec, e.g., 60 Liters/min]</li>
+                    </ul>
+                     <button class="btn btn-primary">Add to Inquiry</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 12: Pipe Fittings Kit -->
+    <div class="modal fade" id="productModal12" tabindex="-1" aria-labelledby="productModal12Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModal12Label">PVC Pipe Fittings Kit (Basic)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             <div class="row">
+                <div class="col-md-5">
+                    <img src="images/product-pipe-fittings.jpg" class="modal-product-image" alt="Pipe Fittings Kit">
+                </div>
+                <div class="col-md-7">
+                    <p class="fw-bold fs-4 text-primary">Rs. 1,500</p>
+                    <p>A convenient starter kit containing a selection of common PVC fittings (e.g., elbows, couplings, tees, adapters) needed for plumbing a basic residential rainwater harvesting system. Specify pipe size (e.g., 90mm, 110mm, 1 inch).</p>
+                    <h6>Key Features:</h6>
+                    <ul>
+                        <li>Material: PVC</li>
+                        <li>Includes common fittings (specify types/sizes)</li>
+                        <li>Suitable for solvent welding</li>
+                        <li>Simplifies sourcing basic plumbing parts</li>
+                    </ul>
+                     <button class="btn btn-primary">Add to Inquiry</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 13: Rain Barrel -->
+    <div class="modal fade" id="productModal13" tabindex="-1" aria-labelledby="productModal13Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModal13Label">Basic Rain Barrel (200L)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             <div class="row">
+                <div class="col-md-5">
+                    <img src="images/product-rain-barrel.jpg" class="modal-product-image" alt="Rain Barrel">
+                </div>
+                <div class="col-md-7">
+                    <p class="fw-bold fs-4 text-primary">Rs. 4,500</p>
+                    <p>An easy and affordable way to start harvesting rainwater. This 200-liter (approx. 55-gallon) barrel connects directly to a downspout and stores water primarily for garden use. Includes a removable lid/screen and a bottom tap.</p>
+                    <h6>Key Features:</h6>
+                    <ul>
+                        <li>Capacity: 200 Liters</li>
+                        <li>Material: Durable Plastic (often recycled)</li>
+                        <li>Includes lid/screen and tap</li>
+                        <li>Easy DIY installation</li>
+                        <li>Ideal for small gardens</li>
+                    </ul>
+                     <button class="btn btn-primary">Add to Inquiry</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 14: Filter Housing -->
+    <div class="modal fade" id="productModal14" tabindex="-1" aria-labelledby="productModal14Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModal14Label">Filter Housing (10-inch Standard)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             <div class="row">
+                <div class="col-md-5">
+                    <img src="images/product-filter-housing.jpg" class="modal-product-image" alt="Filter Housing">
+                </div>
+                <div class="col-md-7">
+                    <p class="fw-bold fs-4 text-primary">Rs. 2,200</p>
+                    <p>Standard 10-inch filter housing used to hold sediment or carbon filter cartridges. Typically installed after the pump. Features standard inlet/outlet ports (e.g., 3/4" or 1"). Includes housing wrench for easy cartridge changes and mounting bracket.</p>
+                    <h6>Key Features:</h6>
+                    <ul>
+                        <li>Size: Fits Standard 10" x 2.5" Cartridges</li>
+                        <li>Material: Durable Polypropylene</li>
+                        <li>Includes Housing, Cap, Wrench, Bracket</li>
+                        <li>Pressure Relief Button (optional)</li>
+                        <li>Standard Port Sizes (e.g., 3/4" NPT)</li>
+                    </ul>
+                     <button class="btn btn-primary">Add to Inquiry</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 15: Tank Overflow Kit -->
+    <div class="modal fade" id="productModal15" tabindex="-1" aria-labelledby="productModal15Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModal15Label">Tank Overflow Kit with Screen</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             <div class="row">
+                <div class="col-md-5">
+                    <img src="images/product-overflow-kit.jpg" class="modal-product-image" alt="Tank Overflow Kit">
+                </div>
+                <div class="col-md-7">
+                    <p class="fw-bold fs-4 text-primary">Rs. 1,000</p>
+                    <p>A crucial component for any sealed tank system. This kit provides the fitting to install an overflow pipe, allowing excess water to exit safely when the tank is full. Includes a screen to prevent mosquitoes and pests from entering the tank via the overflow.</p>
+                    <h6>Key Features:</h6>
+                    <ul>
+                        <li>Allows safe discharge of excess water</li>
+                        <li>Includes tank fitting and screened outlet</li>
+                        <li>Prevents pest entry</li>
+                        <li>Available for various pipe sizes (e.g., 90mm)</li>
+                    </ul>
+                     <button class="btn btn-primary">Add to Inquiry</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal 16: Rain Chain -->
+    <div class="modal fade" id="productModal16" tabindex="-1" aria-labelledby="productModal16Label" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productModal16Label">Decorative Rain Chain (Copper Finish)</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             <div class="row">
+                <div class="col-md-5">
+                    <img src="images/product-rain-chain.jpg" class="modal-product-image" alt="Rain Chain">
+                </div>
+                <div class="col-md-7">
+                    <p class="fw-bold fs-4 text-primary">Rs. 5,500</p>
+                    <p>Replace a standard downspout with this elegant rain chain. Water visibly cascades down the cups or links, creating a pleasing visual and auditory effect. Guides water into a collection basin, barrel, or decorative feature. Copper finish adds aesthetic appeal.</p>
+                    <h6>Key Features:</h6>
+                    <ul>
+                        <li>Material: Metal with Copper Finish</li>
+                        <li>Length: Standard (e.g., 8.5 feet)</li>
+                        <li>Aesthetic alternative to downspouts</li>
+                        <li>Easy installation (includes gutter clip)</li>
+                        <li>Guides water flow</li>
+                    </ul>
+                     <button class="btn btn-primary">Add to Inquiry</button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ADD MORE MODALS HERE FOR PRODUCTS 17-20 IF NEEDED -->
+ 
+    <!-- MODALS END HERE -->
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Global Custom JS -->
+    <script src="app.js"></script>
+    <!-- Add specific JS for filtering/sorting later if needed -->
+     <script>
+        // Basic JS to prevent form submission for filters (actual filtering needs more JS)
+        const filterForm = document.getElementById('productFilterForm');
+        if (filterForm) {
+            filterForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                console.log('Filter apply clicked. Filtering logic needs to be implemented.');
+                // Add actual filtering/sorting JS here in the future
+            });
+        }
+    </script>
+
+</body>
+</html>

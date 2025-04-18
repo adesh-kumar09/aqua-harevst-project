@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWH News & Updates | Aqua Harvest</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Global Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <style>
+        /* Optional: Style for modal titles if needed */
+        .modal-title {
+            color: var(--theme-primary-darkest);
+            font-weight: 600;
+        }
+        .modal-body .text-muted.small { /* Style metadata inside modal */
+            font-style: italic;
+            margin-bottom: 1rem;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Section (Standardized - Update link active) -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/Aqua_harvest-removebg-preview.png" alt="Aqua Harvest Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"> <a class="nav-link" href="index.html">Home</a> </li>
+                    <li class="nav-item dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Usage </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                            <li><a class="dropdown-item" href="residential.html">Residential Area</a></li>
+                            <li><a class="dropdown-item" href="commercial.html">Commercial Area</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="facts.html">Facts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="update.html">Update</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header-update text-white d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="display-5 fw-bold mb-3 animate-on-load">Rainwater Harvesting Updates</h1>
+            <p class="lead col-lg-9 mx-auto animate-on-load animate-delay-1">Latest news, policies, technologies, and trends related to rainwater harvesting worldwide.</p>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Section 1: Latest News & Developments -->
+        <section id="rwh-news" class="py-5">
+            <div class="container">
+                <h2 class="section-heading text-center mb-5">Recent News & Developments</h2>
+                <div class="row g-4">
+
+                    <!-- News Card 1 (General) -->
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="card update-card h-100 fade-in-on-scroll">
+                            <img src="images/update-news-1.jpg" class="card-img-top" alt="Water Purification Tech">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Advancements in UV-C LED Water Purification</h5>
+                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> July 15, 2024 | Source: WaterTech Online</p>
+                                <p class="card-text flex-grow-1">Breakthroughs in UV-C LED tech promise energy-efficient, compact water disinfection, potentially lowering costs for potable RWH systems.</p>
+                                <!-- Modal Trigger Button -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#newsModal1"> <!-- UNIQUE TARGET -->
+                                  Read More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Card 2 (Pakistan Example) -->
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="card update-card h-100 fade-in-on-scroll animate-delay-1">
+                            <img src="images/update-pk-news-1.jpg" class="card-img-top" alt="Karachi Water Scarcity">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Karachi Explores RWH Amidst Water Shortages</h5>
+                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> July 20, 2024 | Source: Local News Outlet (Example)</p>
+                                <p class="card-text flex-grow-1">Experts highlight rainwater harvesting potential in Karachi to supplement supply amidst distribution challenges and low dam levels.</p>
+                                <!-- Modal Trigger Button -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#newsModal2"> <!-- UNIQUE TARGET -->
+                                  Read More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Card 3 (General) -->
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="card update-card h-100 fade-in-on-scroll animate-delay-2">
+                            <img src="images/update-news-2.jpg" class="card-img-top" alt="Smart RWH System">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Smart RWH Systems Gain Traction in Urban Areas Globally</h5>
+                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> July 5, 2024 | Source: Sustainable Cities Collective</p>
+                                <p class="card-text flex-grow-1">IoT-enabled systems help cities manage stormwater, providing real-time data on collection, storage, and water quality.</p>
+                                <!-- Modal Trigger Button -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#newsModal3"> <!-- UNIQUE TARGET -->
+                                  Read More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Card 4 (Pakistan Example) -->
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="card update-card h-100 fade-in-on-scroll animate-delay-3">
+                            <img src="images/update-pk-news-2.jpg" class="card-img-top" alt="Punjab Agriculture RWH">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Punjab Agriculture Dept. Promotes RWH for Small Farms</h5>
+                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> July 10, 2024 | Source: National Agri News (Example)</p>
+                                <p class="card-text flex-grow-1">Pilot projects in rain-fed areas demonstrate low-cost RWH techniques like pond lining and check dams to support crop irrigation.</p>
+                                <!-- Modal Trigger Button -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#newsModal4"> <!-- UNIQUE TARGET -->
+                                  Read More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Card 5 (General) -->
+                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="card update-card h-100 fade-in-on-scroll">
+                            <img src="images/update-news-3.jpg" class="card-img-top" alt="Rainwater for Agriculture">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Innovative RWH Techniques Boost Crop Yields in Arid Regions</h5>
+                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> June 20, 2024 | Source: Global Farming Today</p>
+                                <p class="card-text flex-grow-1">Farmers worldwide adopt advanced catchment and storage methods, combined with efficient irrigation, to thrive despite water scarcity.</p>
+                                <!-- Modal Trigger Button -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#newsModal5"> <!-- UNIQUE TARGET -->
+                                  Read More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- News Card 6 (Pakistan Example) -->
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="card update-card h-100 fade-in-on-scroll animate-delay-1">
+                            <img src="images/update-pk-news-3.jpg" class="card-img-top" alt="Islamabad RWH Project">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">CDA Completes RWH Project at F-9 Park, Islamabad</h5>
+                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> June 25, 2024 | Source: CDA Press Release (Example)</p>
+                                <p class="card-text flex-grow-1">The Capital Development Authority (CDA) finished installing a system to collect rainwater runoff for irrigating Fatima Jinnah Park (F-9 Park).</p>
+                                <!-- Modal Trigger Button -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#newsModal6"> <!-- UNIQUE TARGET -->
+                                  Read More
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- / .row -->
+            </div> <!-- / .container -->
+        </section>
+
+        <!-- Section 2: Policies & Initiatives -->
+        <section id="rwh-policies" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="section-heading text-center mb-5">Policies & Initiatives</h2>
+                <div class="row g-4">
+
+                    <!-- Policy Card 1 (General - US Example) -->
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="card update-card h-100 fade-in-on-scroll">
+                            <img src="images/update-policy-1.jpg" class="card-img-top" alt="City Rebate Program">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title"><i class="fas fa-hand-holding-usd me-2 text-success"></i> US Residential Rebate Programs Expand</h5>
+                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> July 1, 2024 | Region: California, USA</p>
+                                <p class="card-text flex-grow-1">Several major Californian cities increased funding for homeowner rebates covering rain barrels and cistern installations to combat drought conditions.</p>
+                                <!-- Modal Trigger Button -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#policyModal1"> <!-- UNIQUE TARGET -->
+                                  More Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Policy Card 2 (Pakistan Example) -->
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="card update-card h-100 fade-in-on-scroll animate-delay-1">
+                             <img src="images/update-pk-policy-2.jpg" class="card-img-top" alt="National Water Policy">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title"><i class="fas fa-landmark me-2 text-primary-darkest"></i> National Water Policy (2018) Emphasis</h5>
+                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> Existing Policy | Region: Pakistan</p>
+                                <p class="card-text flex-grow-1">Pakistan's National Water Policy (2018) mentions promoting rainwater harvesting for water conservation and groundwater recharge.</p>
+                                <!-- Modal Trigger Button -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#policyModal2"> <!-- UNIQUE TARGET -->
+                                  More Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Policy Card 3 (General - EU Example) -->
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="card update-card h-100 fade-in-on-scroll animate-delay-2">
+                            <img src="images/update-policy-2.jpg" class="card-img-top" alt="Commercial Building Code">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title"><i class="fas fa-building me-2 text-info"></i> EU Building Codes Increasingly Include RWH</h5>
+                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> Trend | Region: European Union</p>
+                                <p class="card-text flex-grow-1">Several EU member states are updating building regulations to require or incentivize RWH in new commercial and residential constructions.</p>
+                                <!-- Modal Trigger Button -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#policyModal3"> <!-- UNIQUE TARGET -->
+                                  More Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Policy Card 4 (Pakistan Example) -->
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="card update-card h-100 fade-in-on-scroll animate-delay-3">
+                            <img src="images/update-pk-policy-3.jpg" class="card-img-top" alt="NGO Initiatives">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title"><i class="fas fa-hands-helping me-2 text-success"></i> NGO & Development Sector Projects in Pakistan</h5>
+                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> Ongoing | Region: Various (esp. Rural Sindh/Balochistan)</p>
+                                <p class="card-text flex-grow-1">National and international NGOs continue implementing community-based RWH projects, focusing on drinking water access and small-scale irrigation.</p>
+                                <!-- Modal Trigger Button -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#policyModal4"> <!-- UNIQUE TARGET -->
+                                  More Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Policy Card 5 (General) -->
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="card update-card h-100 fade-in-on-scroll">
+                             <img src="images/update-policy-5.jpg" class="card-img-top" alt="Water Neutrality Target">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title"><i class="fas fa-balance-scale me-2 text-primary"></i> Corporate Water Neutrality Targets Drive RWH</h5>
+                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> Global Trend | Sector: Corporations</p>
+                                <p class="card-text flex-grow-1">Increasingly, multinational corporations set water neutrality goals, leading them to invest in RWH at facilities to offset water consumption.</p>
+                                <!-- Modal Trigger Button -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#policyModal5"> <!-- UNIQUE TARGET -->
+                                  More Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- / .row -->
+            </div> <!-- / .container -->
+        </section>
+
+        <!-- Section 3: Market Trends & Pricing -->
+        <section id="rwh-market" class="py-5">
+            <div class="container">
+                <h2 class="section-heading text-center mb-5">Market Trends & Pricing</h2>
+                <div class="row g-4">
+
+                    <!-- Market Card 1 (General) -->
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="card update-card h-100 fade-in-on-scroll">
+                            <img src="images/update-market-1.jpg" class="card-img-top" alt="Tank Prices">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title"><i class="fas fa-tags me-2 text-secondary"></i> Poly Tank Prices See Moderate Increase Globally</h5>
+                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> Q2 2024 Report | Source: Plastics Market Watch</p>
+                                <p class="card-text flex-grow-1">Rising raw material costs have led to a slight increase (5-8%) in the average price of polyethylene storage tanks compared to the previous year.</p>
+                                <!-- Modal Trigger Button -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#marketModal1"> <!-- UNIQUE TARGET -->
+                                  More Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Market Card 2 (Pakistan Example) -->
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="card update-card h-100 fade-in-on-scroll animate-delay-1">
+                            <img src="images/update-pk-market-1.jpg" class="card-img-top" alt="Fiberglass Tanks">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title"><i class="fas fa-industry me-2 text-secondary"></i> Increased Availability of Local Fiberglass Tanks</h5>
+                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> Recent Trend | Market: Pakistan Cities</p>
+                                <p class="card-text flex-grow-1">More local manufacturers are producing fiberglass water storage tanks, offering an alternative to traditional concrete or imported poly tanks.</p>
+                                <!-- Modal Trigger Button -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#marketModal2"> <!-- UNIQUE TARGET -->
+                                  More Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Market Card 3 (General) -->
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="card update-card h-100 fade-in-on-scroll animate-delay-2">
+                            <img src="images/update-market-2.jpg" class="card-img-top" alt="Smart Controller">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title"><i class="fas fa-microchip me-2 text-danger"></i> Demand Grows for Smart RWH Controllers</h5>
+                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> July 10, 2024 | Source: Home Automation Insider</p>
+                                <p class="card-text flex-grow-1">Consumers and businesses increasingly seek integrated controllers that automate pump operation, track water levels, and monitor quality via apps.</p>
+                                <!-- Modal Trigger Button -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#marketModal3"> <!-- UNIQUE TARGET -->
+                                  More Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Market Card 4 (Pakistan Example) -->
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="card update-card h-100 fade-in-on-scroll animate-delay-3">
+                            <img src="images/update-pk-market-2.jpg" class="card-img-top" alt="Solar Pumps">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title"><i class="fas fa-solar-panel me-2 text-warning"></i> Integration with Solar Pumps Gaining Interest</h5>
+                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> Trend | Sector: Pakistan Agriculture & Off-Grid</p>
+                                <p class="card-text flex-grow-1">Combining RWH systems with solar-powered water pumps is becoming popular for off-grid applications and reducing operational costs for farmers.</p>
+                                <!-- Modal Trigger Button -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#marketModal4"> <!-- UNIQUE TARGET -->
+                                  More Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Market Card 5 (General) -->
+                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="card update-card h-100 fade-in-on-scroll">
+                            <img src="images/update-market-4.jpg" class="card-img-top" alt="Filtration Systems">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title"><i class="fas fa-filter me-2 text-info"></i> Multi-Stage Filtration Systems Becoming Standard</h5>
+                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> Q2 2024 | Source: RWH System Integrators</p>
+                                <p class="card-text flex-grow-1">For indoor non-potable use, systems incorporating sediment and carbon filters post-storage are increasingly common for better water quality.</p>
+                                <!-- Modal Trigger Button -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#marketModal5"> <!-- UNIQUE TARGET -->
+                                  More Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Market Card 6 (Pakistan Example) -->
+                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+                        <div class="card update-card h-100 fade-in-on-scroll animate-delay-1">
+                            <img src="images/update-pk-market-3.jpg" class="card-img-top" alt="Basic Filter Costs">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title"><i class="fas fa-filter me-2 text-info"></i> Basic Filtration Components Remain Affordable</h5>
+                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> Q2 2024 | Market: Pakistan Retail</p>
+                                <p class="card-text flex-grow-1">Costs for basic components like leaf diverters, first flush devices, and simple mesh/sediment filters generally remain accessible for DIY setups.</p>
+                                <!-- Modal Trigger Button -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#marketModal6"> <!-- UNIQUE TARGET -->
+                                  More Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> <!-- / .row -->
+            </div> <!-- / .container -->
+        </section>
+
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <a href="#" id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Footer -->
+    <footer class="footer-home py-4">
+        <div class="container text-center">
+             <p class="mb-2">
+                <a href="index.html" class="mx-2">Home</a>|
+                <a href="#" class="mx-2">Privacy Policy</a>|
+                <a href="contact.html" class="mx-2">Contact</a>
+            </p>
+            <p class="mb-0 small">&copy; <span id="currentYear"></span> Aqua Harvest Solutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- MODALS START HERE (Place near end of body) -->
+
+    <!-- News Modals -->
+    <div class="modal fade" id="newsModal1" tabindex="-1" aria-labelledby="newsModal1Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="newsModal1Label">Advancements in UV-C LED Water Purification</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted small"><i class="far fa-calendar-alt me-1"></i> July 15, 2024 | Source: WaterTech Online</p>
+            <p>Breakthroughs in UV-C LED tech promise energy-efficient, compact water disinfection, potentially lowering costs for potable RWH systems.</p>
+            <p>This new generation of LEDs operates at optimal wavelengths for germicidal irradiation, requires less power than traditional mercury lamps, and has a longer lifespan. Integration into smaller point-of-use systems for homes and businesses is becoming more viable, addressing safety concerns for drinking harvested rainwater.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="newsModal2" tabindex="-1" aria-labelledby="newsModal2Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="newsModal2Label">Karachi Explores RWH Amidst Water Shortages</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted small"><i class="far fa-calendar-alt me-1"></i> July 20, 2024 | Source: Local News Outlet (Example)</p>
+            <p>Experts highlight rainwater harvesting potential in Karachi to supplement supply amidst distribution challenges and low dam levels.</p>
+            <p>With Hub Dam levels frequently dropping and reliance on Indus River water, localized RWH, especially in housing societies and industrial areas, is seen as a crucial step towards water resilience in the megacity. Challenges include initial cost and lack of widespread implementation guidelines.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="newsModal3" tabindex="-1" aria-labelledby="newsModal3Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="newsModal3Label">Smart RWH Systems Gain Traction in Urban Areas Globally</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+             <p class="text-muted small"><i class="far fa-calendar-alt me-1"></i> July 5, 2024 | Source: Sustainable Cities Collective</p>
+             <p>IoT-enabled systems help cities manage stormwater, providing real-time data on collection, storage, and water quality.</p>
+             <p>These systems often include sensors for tank levels, rainfall intensity, and basic quality parameters (like turbidity). Data is transmitted wirelessly, allowing for optimized water use (e.g., prioritizing RWH for irrigation before using municipal water) and better flood mitigation planning by utility managers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="newsModal4" tabindex="-1" aria-labelledby="newsModal4Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="newsModal4Label">Punjab Agriculture Dept. Promotes RWH for Small Farms</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted small"><i class="far fa-calendar-alt me-1"></i> July 10, 2024 | Source: National Agri News (Example)</p>
+            <p>Pilot projects in rain-fed (barani) areas of Punjab demonstrate low-cost RWH techniques like pond lining and check dams to support crop irrigation.</p>
+            <p>These initiatives aim to reduce reliance on unpredictable rainfall and depleting groundwater by capturing monsoon runoff. Training programs are being offered to farmers on constructing and maintaining these simple but effective systems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="newsModal5" tabindex="-1" aria-labelledby="newsModal5Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="newsModal5Label">Innovative RWH Techniques Boost Crop Yields in Arid Regions</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted small"><i class="far fa-calendar-alt me-1"></i> June 20, 2024 | Source: Global Farming Today</p>
+            <p>Farmers worldwide adopt advanced catchment and storage methods, combined with efficient irrigation, to thrive despite water scarcity.</p>
+            <p>Techniques include contour bunding, check dams, and subsurface storage combined with drip irrigation systems, proving crucial for food security in water-stressed zones.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="newsModal6" tabindex="-1" aria-labelledby="newsModal6Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="newsModal6Label">CDA Completes RWH Project at F-9 Park, Islamabad</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted small"><i class="far fa-calendar-alt me-1"></i> June 25, 2024 | Source: CDA Press Release (Example)</p>
+            <p>The Capital Development Authority (CDA) finished installing a system to collect rainwater runoff for irrigating Fatima Jinnah Park (F-9 Park).</p>
+            <p>This project aims to conserve potable water previously used for park maintenance and serves as a model for other public spaces in the capital. The system includes collection channels and storage tanks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Policy Modals -->
+    <div class="modal fade" id="policyModal1" tabindex="-1" aria-labelledby="policyModal1Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="policyModal1Label"><i class="fas fa-hand-holding-usd me-2 text-success"></i> US Residential Rebate Programs Expand</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted small"><i class="far fa-calendar-alt me-1"></i> July 1, 2024 | Region: California, USA</p>
+            <p>Several major Californian cities increased funding for homeowner rebates covering rain barrels and cistern installations to combat drought conditions.</p>
+            <p>Increased rebate amounts and streamlined application processes aim to accelerate adoption. Check local water district websites for details.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="policyModal2" tabindex="-1" aria-labelledby="policyModal2Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="policyModal2Label"><i class="fas fa-landmark me-2 text-primary-darkest"></i> National Water Policy (2018) Emphasis</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Existing Policy | Region: Pakistan</p>
+            <p>Pakistan's National Water Policy (2018) mentions promoting rainwater harvesting for water conservation and groundwater recharge.</p>
+            <p>The policy calls for developing guidelines and promoting RWH techniques suitable for different regions, although large-scale federal implementation programs based solely on this are still evolving. Provincial actions often drive specific projects.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="policyModal3" tabindex="-1" aria-labelledby="policyModal3Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="policyModal3Label"><i class="fas fa-building me-2 text-info"></i> EU Building Codes Increasingly Include RWH</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Trend | Region: European Union</p>
+            <p>Several EU member states are updating building regulations to require or incentivize RWH in new commercial and residential constructions.</p>
+            <p>Driven by water scarcity concerns and circular economy goals, these regulations often target non-potable uses like toilet flushing and irrigation, varying by country and building type.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="policyModal4" tabindex="-1" aria-labelledby="policyModal4Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="policyModal4Label"><i class="fas fa-hands-helping me-2 text-success"></i> NGO & Development Sector Projects in Pakistan</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Ongoing | Region: Various (esp. Rural Sindh/Balochistan)</p>
+            <p>National and international NGOs continue implementing community-based RWH projects, focusing on drinking water access and small-scale irrigation.</p>
+            <p>Organizations often work with local communities to build rooftop collection systems, bio-sand filters, and small dams, frequently funded by international aid agencies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="policyModal5" tabindex="-1" aria-labelledby="policyModal5Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="policyModal5Label"><i class="fas fa-balance-scale me-2 text-primary"></i> Corporate Water Neutrality Targets Drive RWH</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Global Trend | Sector: Corporations</p>
+            <p>Increasingly, multinational corporations set water neutrality goals, leading them to invest in RWH at facilities to offset water consumption.</p>
+            <p>Driven by ESG reporting and sustainability commitments, companies see RWH as a tangible way to reduce their water footprint, particularly in water-stressed regions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Market Modals -->
+    <div class="modal fade" id="marketModal1" tabindex="-1" aria-labelledby="marketModal1Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="marketModal1Label"><i class="fas fa-tags me-2 text-secondary"></i> Poly Tank Prices See Moderate Increase Globally</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Q2 2024 Report | Source: Plastics Market Watch</p>
+            <p>Rising raw material costs have led to a slight increase (5-8%) in the average price of polyethylene storage tanks compared to the previous year.</p>
+            <p>While demand remains strong, supply chain factors and energy costs impacting polymer production are reflected in consumer pricing for common RWH tank sizes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="marketModal2" tabindex="-1" aria-labelledby="marketModal2Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="marketModal2Label"><i class="fas fa-industry me-2 text-secondary"></i> Increased Availability of Local Fiberglass Tanks</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Recent Trend | Market: Pakistan Cities</p>
+            <p>More local manufacturers are producing fiberglass water storage tanks, offering an alternative to traditional concrete or imported poly tanks.</p>
+            <p>Fiberglass tanks offer durability and corrosion resistance. Increased local production may lead to more competitive pricing compared to imports, although initial cost can still be higher than basic poly tanks.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="marketModal3" tabindex="-1" aria-labelledby="marketModal3Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="marketModal3Label"><i class="fas fa-microchip me-2 text-danger"></i> Demand Grows for Smart RWH Controllers</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted small"><i class="far fa-calendar-alt me-1"></i> July 10, 2024 | Source: Home Automation Insider</p>
+            <p>Consumers and businesses increasingly seek integrated controllers that automate pump operation, track water levels, and monitor quality via apps.</p>
+            <p>Features like predictive rainfall integration (delaying irrigation if rain is forecast) and leak detection alerts are driving adoption of these higher-tech control units.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="marketModal4" tabindex="-1" aria-labelledby="marketModal4Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="marketModal4Label"><i class="fas fa-solar-panel me-2 text-warning"></i> Integration with Solar Pumps Gaining Interest</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Trend | Sector: Pakistan Agriculture & Off-Grid</p>
+            <p>Combining RWH systems with solar-powered water pumps is becoming popular for off-grid applications and reducing operational costs for farmers.</p>
+            <p>With rising electricity costs and grid instability in some areas, solar pumps provide a sustainable way to distribute harvested rainwater without relying on conventional power sources.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="marketModal5" tabindex="-1" aria-labelledby="marketModal5Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="marketModal5Label"><i class="fas fa-filter me-2 text-info"></i> Multi-Stage Filtration Systems Becoming Standard</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Q2 2024 | Source: RWH System Integrators</p>
+            <p>For indoor non-potable use, systems incorporating sediment and carbon filters post-storage are increasingly common for better water quality and appliance protection.</p>
+            <p>Adding finer filtration stages improves clarity, reduces potential odors, and prevents sediment buildup in pipes and appliances like washing machines or toilets.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="marketModal6" tabindex="-1" aria-labelledby="marketModal6Label" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="marketModal6Label"><i class="fas fa-filter me-2 text-info"></i> Basic Filtration Components Remain Affordable</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="text-muted small"><i class="far fa-calendar-alt me-1"></i> Q2 2024 | Market: Pakistan Retail</p>
+            <p>Costs for basic components like leaf diverters, first flush devices, and simple mesh/sediment filters generally remain accessible for DIY setups.</p>
+            <p>Essential pre-filtration and basic post-storage sediment filters are widely available at hardware stores and plumbing suppliers at reasonable price points locally.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODALS END HERE -->
+
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Global Custom JS (No changes needed for this page's base functionality) -->
+    <script src="app.js"></script>
+
+</body>
+</html>
