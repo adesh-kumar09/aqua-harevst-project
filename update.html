@@ -15,24 +15,13 @@
     <link rel="stylesheet" href="style.css">
 
     <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/Favicon img.png" type="image/x-icon">
 
-    <style>
-        /* Optional: Style for modal titles if needed */
-        .modal-title {
-            color: var(--theme-primary-darkest);
-            font-weight: 600;
-        }
-        .modal-body .text-muted.small { /* Style metadata inside modal */
-            font-style: italic;
-            margin-bottom: 1rem;
-            display: block;
-        }
-    </style>
+    
 </head>
 <body>
 
-    <!-- Navbar Section (Standardized - Update link active) -->
+    <!-- Navbar Section -->
     <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -49,6 +38,7 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
                             <li><a class="dropdown-item" href="residential.html">Residential Area</a></li>
                             <li><a class="dropdown-item" href="commercial.html">Commercial Area</a></li>
+                            <li><a class="dropdown-item" href="agricultural.html">Agricultural Area</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
@@ -61,6 +51,7 @@
             </div>
         </div>
     </nav>
+    <!-- Navbar Section End -->
 
     <!-- Page Header -->
     <header class="page-header-update text-white d-flex align-items-center">
@@ -69,6 +60,7 @@
             <p class="lead col-lg-9 mx-auto animate-on-load animate-delay-1">Latest news, policies, technologies, and trends related to rainwater harvesting worldwide.</p>
         </div>
     </header>
+    <!-- Page Header End -->
 
     <main>
 
@@ -78,105 +70,56 @@
                 <h2 class="section-heading text-center mb-5">Recent News & Developments</h2>
                 <div class="row g-4">
 
-                    <!-- News Card 1 (General) -->
+                    <!-- News Card 1 -->
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                         <div class="card update-card h-100 fade-in-on-scroll">
-                            <img src="images/update-news-1.jpg" class="card-img-top" alt="Water Purification Tech">
+                            <img src="images/water trch.jpg" class="card-img-top" alt="Water Purification Tech">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Advancements in UV-C LED Water Purification</h5>
                                 <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> July 15, 2024 | Source: WaterTech Online</p>
                                 <p class="card-text flex-grow-1">Breakthroughs in UV-C LED tech promise energy-efficient, compact water disinfection, potentially lowering costs for potable RWH systems.</p>
-                                <!-- Modal Trigger Button -->
-                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#newsModal1"> <!-- UNIQUE TARGET -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#newsModal1">
                                   Read More
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- News Card 2 (Pakistan Example) -->
+                    <!-- News Card 2 -->
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                         <div class="card update-card h-100 fade-in-on-scroll animate-delay-1">
-                            <img src="images/update-pk-news-1.jpg" class="card-img-top" alt="Karachi Water Scarcity">
+                            <img src="images/karachi water security.jpg" class="card-img-top" alt="Karachi Water Scarcity">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title">Karachi Explores RWH Amidst Water Shortages</h5>
                                 <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> July 20, 2024 | Source: Local News Outlet (Example)</p>
                                 <p class="card-text flex-grow-1">Experts highlight rainwater harvesting potential in Karachi to supplement supply amidst distribution challenges and low dam levels.</p>
-                                <!-- Modal Trigger Button -->
-                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#newsModal2"> <!-- UNIQUE TARGET -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#newsModal2">
                                   Read More
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- News Card 3 (General) -->
+                    <!-- News Card 3 -->
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                         <div class="card update-card h-100 fade-in-on-scroll animate-delay-2">
-                            <img src="images/update-news-2.jpg" class="card-img-top" alt="Smart RWH System">
+                            <img src="images/smart rwh system.jpg" class="card-img-top" alt="Smart RWH System">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Smart RWH Systems Gain Traction in Urban Areas Globally</h5>
+                                <h5 class="card-title">Smart RWH Systems Gain Traction Globally</h5>
                                 <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> July 5, 2024 | Source: Sustainable Cities Collective</p>
-                                <p class="card-text flex-grow-1">IoT-enabled systems help cities manage stormwater, providing real-time data on collection, storage, and water quality.</p>
-                                <!-- Modal Trigger Button -->
-                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#newsModal3"> <!-- UNIQUE TARGET -->
+                                <p class="card-text flex-grow-1">IoT-enabled systems help manage stormwater, providing real-time data on collection, storage, and water quality.</p>
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#newsModal3">
                                   Read More
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- News Card 4 (Pakistan Example) -->
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                        <div class="card update-card h-100 fade-in-on-scroll animate-delay-3">
-                            <img src="images/update-pk-news-2.jpg" class="card-img-top" alt="Punjab Agriculture RWH">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Punjab Agriculture Dept. Promotes RWH for Small Farms</h5>
-                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> July 10, 2024 | Source: National Agri News (Example)</p>
-                                <p class="card-text flex-grow-1">Pilot projects in rain-fed areas demonstrate low-cost RWH techniques like pond lining and check dams to support crop irrigation.</p>
-                                <!-- Modal Trigger Button -->
-                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#newsModal4"> <!-- UNIQUE TARGET -->
-                                  Read More
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- News Card 5 (General) -->
-                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                        <div class="card update-card h-100 fade-in-on-scroll">
-                            <img src="images/update-news-3.jpg" class="card-img-top" alt="Rainwater for Agriculture">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">Innovative RWH Techniques Boost Crop Yields in Arid Regions</h5>
-                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> June 20, 2024 | Source: Global Farming Today</p>
-                                <p class="card-text flex-grow-1">Farmers worldwide adopt advanced catchment and storage methods, combined with efficient irrigation, to thrive despite water scarcity.</p>
-                                <!-- Modal Trigger Button -->
-                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#newsModal5"> <!-- UNIQUE TARGET -->
-                                  Read More
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- News Card 6 (Pakistan Example) -->
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                        <div class="card update-card h-100 fade-in-on-scroll animate-delay-1">
-                            <img src="images/update-pk-news-3.jpg" class="card-img-top" alt="Islamabad RWH Project">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title">CDA Completes RWH Project at F-9 Park, Islamabad</h5>
-                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> June 25, 2024 | Source: CDA Press Release (Example)</p>
-                                <p class="card-text flex-grow-1">The Capital Development Authority (CDA) finished installing a system to collect rainwater runoff for irrigating Fatima Jinnah Park (F-9 Park).</p>
-                                <!-- Modal Trigger Button -->
-                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#newsModal6"> <!-- UNIQUE TARGET -->
-                                  Read More
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
+                   
                 </div> <!-- / .row -->
             </div> <!-- / .container -->
         </section>
+        <!-- Section 1 End -->
 
         <!-- Section 2: Policies & Initiatives -->
         <section id="rwh-policies" class="py-5 bg-light">
@@ -184,89 +127,56 @@
                 <h2 class="section-heading text-center mb-5">Policies & Initiatives</h2>
                 <div class="row g-4">
 
-                    <!-- Policy Card 1 (General - US Example) -->
+                    <!-- Policy Card 1 -->
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                         <div class="card update-card h-100 fade-in-on-scroll">
-                            <img src="images/update-policy-1.jpg" class="card-img-top" alt="City Rebate Program">
+                            <img src="images/city rebate.jpg" class="card-img-top" alt="City Rebate Program">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><i class="fas fa-hand-holding-usd me-2 text-success"></i> US Residential Rebate Programs Expand</h5>
                                 <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> July 1, 2024 | Region: California, USA</p>
                                 <p class="card-text flex-grow-1">Several major Californian cities increased funding for homeowner rebates covering rain barrels and cistern installations to combat drought conditions.</p>
-                                <!-- Modal Trigger Button -->
-                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#policyModal1"> <!-- UNIQUE TARGET -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#policyModal1">
                                   More Details
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Policy Card 2 (Pakistan Example) -->
+                    <!-- Policy Card 2 -->
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                         <div class="card update-card h-100 fade-in-on-scroll animate-delay-1">
-                             <img src="images/update-pk-policy-2.jpg" class="card-img-top" alt="National Water Policy">
+                             <img src="images/national water.jpg" class="card-img-top" alt="National Water Policy">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><i class="fas fa-landmark me-2 text-primary-darkest"></i> National Water Policy (2018) Emphasis</h5>
                                 <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> Existing Policy | Region: Pakistan</p>
                                 <p class="card-text flex-grow-1">Pakistan's National Water Policy (2018) mentions promoting rainwater harvesting for water conservation and groundwater recharge.</p>
-                                <!-- Modal Trigger Button -->
-                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#policyModal2"> <!-- UNIQUE TARGET -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#policyModal2">
                                   More Details
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Policy Card 3 (General - EU Example) -->
+                    <!-- Policy Card 3 -->
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                         <div class="card update-card h-100 fade-in-on-scroll animate-delay-2">
-                            <img src="images/update-policy-2.jpg" class="card-img-top" alt="Commercial Building Code">
+                            <img src="images/commercial building.jpg" class="card-img-top" alt="Commercial Building Code">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><i class="fas fa-building me-2 text-info"></i> EU Building Codes Increasingly Include RWH</h5>
                                 <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> Trend | Region: European Union</p>
                                 <p class="card-text flex-grow-1">Several EU member states are updating building regulations to require or incentivize RWH in new commercial and residential constructions.</p>
-                                <!-- Modal Trigger Button -->
-                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#policyModal3"> <!-- UNIQUE TARGET -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#policyModal3">
                                   More Details
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                     <!-- Policy Card 4 (Pakistan Example) -->
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                        <div class="card update-card h-100 fade-in-on-scroll animate-delay-3">
-                            <img src="images/update-pk-policy-3.jpg" class="card-img-top" alt="NGO Initiatives">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title"><i class="fas fa-hands-helping me-2 text-success"></i> NGO & Development Sector Projects in Pakistan</h5>
-                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> Ongoing | Region: Various (esp. Rural Sindh/Balochistan)</p>
-                                <p class="card-text flex-grow-1">National and international NGOs continue implementing community-based RWH projects, focusing on drinking water access and small-scale irrigation.</p>
-                                <!-- Modal Trigger Button -->
-                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#policyModal4"> <!-- UNIQUE TARGET -->
-                                  More Details
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                     <!-- Policy Card 5 (General) -->
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                        <div class="card update-card h-100 fade-in-on-scroll">
-                             <img src="images/update-policy-5.jpg" class="card-img-top" alt="Water Neutrality Target">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title"><i class="fas fa-balance-scale me-2 text-primary"></i> Corporate Water Neutrality Targets Drive RWH</h5>
-                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> Global Trend | Sector: Corporations</p>
-                                <p class="card-text flex-grow-1">Increasingly, multinational corporations set water neutrality goals, leading them to invest in RWH at facilities to offset water consumption.</p>
-                                <!-- Modal Trigger Button -->
-                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#policyModal5"> <!-- UNIQUE TARGET -->
-                                  More Details
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
+                    
                 </div> <!-- / .row -->
             </div> <!-- / .container -->
         </section>
+        <!-- Section 2 End -->
 
         <!-- Section 3: Market Trends & Pricing -->
         <section id="rwh-market" class="py-5">
@@ -274,96 +184,45 @@
                 <h2 class="section-heading text-center mb-5">Market Trends & Pricing</h2>
                 <div class="row g-4">
 
-                    <!-- Market Card 1 (General) -->
+                    <!-- Market Card 1 -->
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                         <div class="card update-card h-100 fade-in-on-scroll">
-                            <img src="images/update-market-1.jpg" class="card-img-top" alt="Tank Prices">
+                            <img src="images/tank price.jpg" class="card-img-top" alt="Tank Prices">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title"><i class="fas fa-tags me-2 text-secondary"></i> Poly Tank Prices See Moderate Increase Globally</h5>
+                                <h5 class="card-title"><i class="fas fa-tags me-2 text-secondary"></i> Poly Tank Prices See Moderate Increase</h5>
                                 <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> Q2 2024 Report | Source: Plastics Market Watch</p>
                                 <p class="card-text flex-grow-1">Rising raw material costs have led to a slight increase (5-8%) in the average price of polyethylene storage tanks compared to the previous year.</p>
-                                <!-- Modal Trigger Button -->
-                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#marketModal1"> <!-- UNIQUE TARGET -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#marketModal1">
                                   More Details
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Market Card 2 (Pakistan Example) -->
+                    <!-- Market Card 2 -->
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                         <div class="card update-card h-100 fade-in-on-scroll animate-delay-1">
-                            <img src="images/update-pk-market-1.jpg" class="card-img-top" alt="Fiberglass Tanks">
+                            <img src="images/fiberglass tank.jpg" class="card-img-top" alt="Fiberglass Tanks">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><i class="fas fa-industry me-2 text-secondary"></i> Increased Availability of Local Fiberglass Tanks</h5>
                                 <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> Recent Trend | Market: Pakistan Cities</p>
                                 <p class="card-text flex-grow-1">More local manufacturers are producing fiberglass water storage tanks, offering an alternative to traditional concrete or imported poly tanks.</p>
-                                <!-- Modal Trigger Button -->
-                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#marketModal2"> <!-- UNIQUE TARGET -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#marketModal2">
                                   More Details
                                 </button>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Market Card 3 (General) -->
+                    <!-- Market Card 3 -->
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                         <div class="card update-card h-100 fade-in-on-scroll animate-delay-2">
-                            <img src="images/update-market-2.jpg" class="card-img-top" alt="Smart Controller">
+                            <img src="images/smart controler.jpg" class="card-img-top" alt="Smart Controller">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><i class="fas fa-microchip me-2 text-danger"></i> Demand Grows for Smart RWH Controllers</h5>
                                 <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> July 10, 2024 | Source: Home Automation Insider</p>
                                 <p class="card-text flex-grow-1">Consumers and businesses increasingly seek integrated controllers that automate pump operation, track water levels, and monitor quality via apps.</p>
-                                <!-- Modal Trigger Button -->
-                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#marketModal3"> <!-- UNIQUE TARGET -->
-                                  More Details
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                     <!-- Market Card 4 (Pakistan Example) -->
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                        <div class="card update-card h-100 fade-in-on-scroll animate-delay-3">
-                            <img src="images/update-pk-market-2.jpg" class="card-img-top" alt="Solar Pumps">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title"><i class="fas fa-solar-panel me-2 text-warning"></i> Integration with Solar Pumps Gaining Interest</h5>
-                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> Trend | Sector: Pakistan Agriculture & Off-Grid</p>
-                                <p class="card-text flex-grow-1">Combining RWH systems with solar-powered water pumps is becoming popular for off-grid applications and reducing operational costs for farmers.</p>
-                                <!-- Modal Trigger Button -->
-                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#marketModal4"> <!-- UNIQUE TARGET -->
-                                  More Details
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                     <!-- Market Card 5 (General) -->
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                        <div class="card update-card h-100 fade-in-on-scroll">
-                            <img src="images/update-market-4.jpg" class="card-img-top" alt="Filtration Systems">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title"><i class="fas fa-filter me-2 text-info"></i> Multi-Stage Filtration Systems Becoming Standard</h5>
-                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> Q2 2024 | Source: RWH System Integrators</p>
-                                <p class="card-text flex-grow-1">For indoor non-potable use, systems incorporating sediment and carbon filters post-storage are increasingly common for better water quality.</p>
-                                <!-- Modal Trigger Button -->
-                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#marketModal5"> <!-- UNIQUE TARGET -->
-                                  More Details
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Market Card 6 (Pakistan Example) -->
-                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                        <div class="card update-card h-100 fade-in-on-scroll animate-delay-1">
-                            <img src="images/update-pk-market-3.jpg" class="card-img-top" alt="Basic Filter Costs">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title"><i class="fas fa-filter me-2 text-info"></i> Basic Filtration Components Remain Affordable</h5>
-                                <p class="card-text small text-muted mb-2"><i class="far fa-calendar-alt me-1"></i> Q2 2024 | Market: Pakistan Retail</p>
-                                <p class="card-text flex-grow-1">Costs for basic components like leaf diverters, first flush devices, and simple mesh/sediment filters generally remain accessible for DIY setups.</p>
-                                <!-- Modal Trigger Button -->
-                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#marketModal6"> <!-- UNIQUE TARGET -->
+                                <button type="button" class="btn btn-outline-primary btn-sm mt-auto" data-bs-toggle="modal" data-bs-target="#marketModal3">
                                   More Details
                                 </button>
                             </div>
@@ -373,29 +232,82 @@
                 </div> <!-- / .row -->
             </div> <!-- / .container -->
         </section>
+        <!-- Section 3 End -->
 
     </main>
 
     <!-- Scroll to Top Button -->
     <a href="#" id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
+    <!-- Scroll to Top Button End -->
 
     <!-- Footer -->
-    <footer class="footer-home py-4">
-        <div class="container text-center">
-             <p class="mb-2">
-                <a href="index.html" class="mx-2">Home</a>|
-                <a href="#" class="mx-2">Privacy Policy</a>|
-                <a href="contact.html" class="mx-2">Contact</a>
-            </p>
-            <p class="mb-0 small">&copy; <span id="currentYear"></span> Aqua Harvest Solutions. All Rights Reserved.</p>
+    <footer class="footer-section pt-5 pb-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Column 1: Brand/About -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <a class="navbar-brand mb-3 d-inline-block" href="index.html">
+                        <img src="images/Aqua_harvest-removebg-preview.png" alt="Aqua Harvest Logo" height="60">
+                    </a>
+                    <p class="footer-text">Providing sustainable rainwater harvesting solutions for a greener future in Pakistan.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li> <!-- Placeholder Link -->
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Usage Areas -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Usage Areas</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="residential.html">Residential</a></li>
+                        <li><a href="commercial.html">Commercial</a></li>
+                        <li><a href="agricultural.html">Agricultural</a></li>
+                        <li><a href="education.html">Education Center</a></li>
+                        <li><a href="update.html">Updates</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Info -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Contact Us</h5>
+                    <ul class="list-unstyled footer-contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Korangi Industrial Area, Karachi, Pakistan</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+922131234567">+92 21 31234567</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@aquaharvest.pk">info@aquaharvest.pk</a></li>
+                        <li><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="text-center footer-bottom-text">
+                &copy; <span id="currentYear"></span> Aqua Harvest Solutions. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> <!-- Placeholder -->
+            </div>
         </div>
     </footer>
+    <!-- Footer End -->
 
-    <!-- MODALS START HERE (Place near end of body) -->
+    <!-- MODALS START HERE -->
 
     <!-- News Modals -->
     <div class="modal fade" id="newsModal1" tabindex="-1" aria-labelledby="newsModal1Label" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="newsModal1Label">Advancements in UV-C LED Water Purification</h5>
@@ -411,7 +323,7 @@
     </div>
 
     <div class="modal fade" id="newsModal2" tabindex="-1" aria-labelledby="newsModal2Label" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="newsModal2Label">Karachi Explores RWH Amidst Water Shortages</h5>
@@ -427,10 +339,10 @@
     </div>
 
     <div class="modal fade" id="newsModal3" tabindex="-1" aria-labelledby="newsModal3Label" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="newsModal3Label">Smart RWH Systems Gain Traction in Urban Areas Globally</h5>
+            <h5 class="modal-title" id="newsModal3Label">Smart RWH Systems Gain Traction Globally</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -443,7 +355,7 @@
     </div>
 
     <div class="modal fade" id="newsModal4" tabindex="-1" aria-labelledby="newsModal4Label" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="newsModal4Label">Punjab Agriculture Dept. Promotes RWH for Small Farms</h5>
@@ -459,10 +371,10 @@
     </div>
 
     <div class="modal fade" id="newsModal5" tabindex="-1" aria-labelledby="newsModal5Label" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="newsModal5Label">Innovative RWH Techniques Boost Crop Yields in Arid Regions</h5>
+            <h5 class="modal-title" id="newsModal5Label">Innovative RWH Techniques Boost Crop Yields</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -475,7 +387,7 @@
     </div>
 
     <div class="modal fade" id="newsModal6" tabindex="-1" aria-labelledby="newsModal6Label" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="newsModal6Label">CDA Completes RWH Project at F-9 Park, Islamabad</h5>
@@ -492,7 +404,7 @@
 
     <!-- Policy Modals -->
     <div class="modal fade" id="policyModal1" tabindex="-1" aria-labelledby="policyModal1Label" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="policyModal1Label"><i class="fas fa-hand-holding-usd me-2 text-success"></i> US Residential Rebate Programs Expand</h5>
@@ -508,7 +420,7 @@
     </div>
 
     <div class="modal fade" id="policyModal2" tabindex="-1" aria-labelledby="policyModal2Label" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="policyModal2Label"><i class="fas fa-landmark me-2 text-primary-darkest"></i> National Water Policy (2018) Emphasis</h5>
@@ -524,7 +436,7 @@
     </div>
 
     <div class="modal fade" id="policyModal3" tabindex="-1" aria-labelledby="policyModal3Label" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="policyModal3Label"><i class="fas fa-building me-2 text-info"></i> EU Building Codes Increasingly Include RWH</h5>
@@ -540,7 +452,7 @@
     </div>
 
     <div class="modal fade" id="policyModal4" tabindex="-1" aria-labelledby="policyModal4Label" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="policyModal4Label"><i class="fas fa-hands-helping me-2 text-success"></i> NGO & Development Sector Projects in Pakistan</h5>
@@ -556,7 +468,7 @@
     </div>
 
     <div class="modal fade" id="policyModal5" tabindex="-1" aria-labelledby="policyModal5Label" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="policyModal5Label"><i class="fas fa-balance-scale me-2 text-primary"></i> Corporate Water Neutrality Targets Drive RWH</h5>
@@ -573,10 +485,10 @@
 
     <!-- Market Modals -->
     <div class="modal fade" id="marketModal1" tabindex="-1" aria-labelledby="marketModal1Label" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="marketModal1Label"><i class="fas fa-tags me-2 text-secondary"></i> Poly Tank Prices See Moderate Increase Globally</h5>
+            <h5 class="modal-title" id="marketModal1Label"><i class="fas fa-tags me-2 text-secondary"></i> Poly Tank Prices See Moderate Increase</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -589,7 +501,7 @@
     </div>
 
     <div class="modal fade" id="marketModal2" tabindex="-1" aria-labelledby="marketModal2Label" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="marketModal2Label"><i class="fas fa-industry me-2 text-secondary"></i> Increased Availability of Local Fiberglass Tanks</h5>
@@ -605,7 +517,7 @@
     </div>
 
     <div class="modal fade" id="marketModal3" tabindex="-1" aria-labelledby="marketModal3Label" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="marketModal3Label"><i class="fas fa-microchip me-2 text-danger"></i> Demand Grows for Smart RWH Controllers</h5>
@@ -621,7 +533,7 @@
     </div>
 
     <div class="modal fade" id="marketModal4" tabindex="-1" aria-labelledby="marketModal4Label" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="marketModal4Label"><i class="fas fa-solar-panel me-2 text-warning"></i> Integration with Solar Pumps Gaining Interest</h5>
@@ -637,10 +549,10 @@
     </div>
 
     <div class="modal fade" id="marketModal5" tabindex="-1" aria-labelledby="marketModal5Label" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="marketModal5Label"><i class="fas fa-filter me-2 text-info"></i> Multi-Stage Filtration Systems Becoming Standard</h5>
+            <h5 class="modal-title" id="marketModal5Label"><i class="fas fa-filter me-2 text-info"></i> Multi-Stage Filtration Becoming Standard</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -653,7 +565,7 @@
     </div>
 
     <div class="modal fade" id="marketModal6" tabindex="-1" aria-labelledby="marketModal6Label" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered"> <!-- Centering Class Added -->
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="marketModal6Label"><i class="fas fa-filter me-2 text-info"></i> Basic Filtration Components Remain Affordable</h5>
@@ -674,7 +586,7 @@
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <!-- Global Custom JS (No changes needed for this page's base functionality) -->
+    <!-- Global Custom JS -->
     <script src="app.js"></script>
 
 </body>

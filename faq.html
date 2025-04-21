@@ -12,15 +12,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Global Custom CSS -->
-    <link rel="stylesheet" href="style.css"> <!-- All CSS rules should be in this file -->
+    <link rel="stylesheet" href="style.css">
 
     <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/Favicon img.png" type="image/x-icon">
 
 </head>
 <body>
 
-    <!-- Navbar Section (Standardized - FAQ link active) -->
+    <!-- Navbar Section -->
     <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -37,13 +37,12 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
                             <li><a class="dropdown-item" href="residential.html">Residential Area</a></li>
                             <li><a class="dropdown-item" href="commercial.html">Commercial Area</a></li>
-                            <li><a class="dropdown-item" href="agriculture.html">Agricultural Area</a></li>
+                            <li><a class="dropdown-item" href="agricultural.html">Agricultural Area</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="facts.html">Facts</a></li>
-                    <!-- Mark FAQ as Active -->
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="faq.html">FAQ</a></li>
                     <li class="nav-item"><a class="nav-link" href="update.html">Update</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -51,6 +50,7 @@
             </div>
         </div>
     </nav>
+    <!-- Navbar Section End -->
 
     <!-- Page Header -->
     <header class="page-header-faq text-white d-flex align-items-center">
@@ -59,6 +59,7 @@
             <p class="lead col-lg-9 mx-auto animate-on-load animate-delay-1">Find answers to common questions about rainwater harvesting systems, installation, maintenance, and more.</p>
         </div>
     </header>
+    <!-- Page Header End -->
 
     <main>
 
@@ -66,17 +67,14 @@
         <section id="faq-content-area" class="py-5">
             <div class="container">
 
-                <!-- HEADING MOVED HERE - Above the row -->
                 <h2 class="section-heading text-center mb-5">General & Technical FAQs</h2>
 
                 <div class="row">
 
                     <!-- Left Column: FAQs -->
                     <div class="col-lg-8">
-                        <!-- Removed H2 from here -->
                         <div class="accordion" id="faqAccordionMain">
 
-                            <!-- FAQ Item 1: Safety -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFaqOne">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqOne" aria-expanded="false" aria-controls="collapseFaqOne">
@@ -85,12 +83,11 @@
                                 </h2>
                                 <div id="collapseFaqOne" class="accordion-collapse collapse" aria-labelledby="headingFaqOne" data-bs-parent="#faqAccordionMain">
                                     <div class="accordion-body small text-muted">
-                                        Untreated rainwater collected from most surfaces is **not** considered safe for drinking (potable use) without proper treatment. It can contain bacteria, viruses, pollutants from the air, debris from the roof (like bird droppings), and chemicals leached from roofing materials. For drinking, cooking, or bathing, a multi-stage treatment process including filtration (sediment, carbon) and disinfection (like UV light or chlorination) is essential. Always test treated water regularly if intended for potable use. See our <a href="education.html#edu-quality">Water Quality section</a> for more details.
+                                        Untreated rainwater collected from most surfaces is <strong>not</strong> considered safe for drinking (potable use) without proper treatment. It can contain bacteria, viruses, pollutants from the air, debris from the roof (like bird droppings), and chemicals leached from roofing materials. For drinking, cooking, or bathing, a multi-stage treatment process including filtration (sediment, carbon) and disinfection (like UV light or chlorination) is essential. Always test treated water regularly if intended for potable use. See our <a href="education.html#edu-quality">Water Quality section</a> for more details.
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- FAQ Item 2: Maintenance Frequency -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFaqTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqTwo" aria-expanded="false" aria-controls="collapseFaqTwo">
@@ -104,7 +101,6 @@
                                 </div>
                             </div>
 
-                            <!-- FAQ Item 3: Tank Material -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFaqThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqThree" aria-expanded="false" aria-controls="collapseFaqThree">
@@ -118,7 +114,6 @@
                                 </div>
                             </div>
 
-                            <!-- FAQ Item 4: Freezing Climates -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFaqFour">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqFour" aria-expanded="false" aria-controls="collapseFaqFour">
@@ -132,7 +127,6 @@
                                 </div>
                             </div>
 
-                            <!-- FAQ Item 5: Permits -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFaqFive">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqFive" aria-expanded="false" aria-controls="collapseFaqFive">
@@ -141,12 +135,11 @@
                                 </h2>
                                 <div id="collapseFaqFive" class="accordion-collapse collapse" aria-labelledby="headingFaqFive" data-bs-parent="#faqAccordionMain">
                                     <div class="accordion-body small text-muted">
-                                        Regulations vary significantly. Simple rain barrels often don't need permits. Larger systems, especially those connected to plumbing or involving excavation, usually do. Always check with your local building department or planning authority *before* installation.
+                                        Regulations vary significantly. Simple rain barrels often don't need permits. Larger systems, especially those connected to plumbing or involving excavation, usually do. Always check with your local building department or planning authority <strong>before</strong> installation.
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- FAQ Item 6: ROI -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFaqSix">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqSix" aria-expanded="false" aria-controls="collapseFaqSix">
@@ -160,7 +153,6 @@
                                 </div>
                             </div>
 
-                             <!-- FAQ Item 7: First Flush -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFaqSeven">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqSeven" aria-expanded="false" aria-controls="collapseFaqSeven">
@@ -169,12 +161,11 @@
                                 </h2>
                                 <div id="collapseFaqSeven" class="accordion-collapse collapse" aria-labelledby="headingFaqSeven" data-bs-parent="#faqAccordionMain">
                                     <div class="accordion-body small text-muted">
-                                        It's a device redirecting the initial, most polluted rainwater away from the tank. While not mandatory for basic garden use, it's **highly recommended** for better stored water quality, less tank sediment, and reduced filter load.
+                                        It's a device redirecting the initial, most polluted rainwater away from the tank. While not mandatory for basic garden use, it's <strong>highly recommended</strong> for better stored water quality, less tank sediment, and reduced filter load.
                                     </div>
                                 </div>
                             </div>
 
-                             <!-- FAQ Item 8: Algae -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFaqEight">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqEight" aria-expanded="false" aria-controls="collapseFaqEight">
@@ -183,12 +174,11 @@
                                 </h2>
                                 <div id="collapseFaqEight" class="accordion-collapse collapse" aria-labelledby="headingFaqEight" data-bs-parent="#faqAccordionMain">
                                     <div class="accordion-body small text-muted">
-                                        Use an **opaque (light-blocking) tank**. Most commercial RWH tanks are opaque. If yours isn't, paint it dark or enclose it. Also, ensure inlets/overflows are screened to keep out organic debris.
+                                        Use an <strong>opaque (light-blocking) tank</strong>. Most commercial RWH tanks are opaque. If yours isn't, paint it dark or enclose it. Also, ensure inlets/overflows are screened to keep out organic debris.
                                     </div>
                                 </div>
                             </div>
 
-                             <!-- FAQ Item 9: Pump Needed? -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFaqNine">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqNine" aria-expanded="false" aria-controls="collapseFaqNine">
@@ -202,7 +192,6 @@
                                 </div>
                             </div>
 
-                             <!-- FAQ Item 10: Small Spaces -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFaqTen">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqTen" aria-expanded="false" aria-controls="collapseFaqTen">
@@ -216,7 +205,6 @@
                                 </div>
                             </div>
 
-                            <!-- FAQ Item 11: Calculation -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFaqEleven">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqEleven" aria-expanded="false" aria-controls="collapseFaqEleven">
@@ -225,12 +213,11 @@
                                 </h2>
                                 <div id="collapseFaqEleven" class="accordion-collapse collapse" aria-labelledby="headingFaqEleven" data-bs-parent="#faqAccordionMain">
                                     <div class="accordion-body small text-muted">
-                                        A basic calculation is: **Catchment Area (sq ft) x Rainfall (inches) x 0.623 = Gallons Harvested**. Remember to account for system efficiency (typically 75-90%) which reduces the actual amount stored. Catchment area is the horizontal footprint of your roof or collection surface. Use average annual or monthly rainfall data for your location. Our <a href="education.html#edu-calculator">calculator tool</a> can help estimate this.
+                                        A basic calculation is: <strong>Catchment Area (sq ft) x Rainfall (inches) x 0.623 = Gallons Harvested</strong>. Remember to account for system efficiency (typically 75-90%) which reduces the actual amount stored. Catchment area is the horizontal footprint of your roof or collection surface. Use average annual or monthly rainfall data for your location. Our <a href="education.html#edu-planning">calculator tool</a> can help estimate this.
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- FAQ Item 12: Roof Materials -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFaqTwelve">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqTwelve" aria-expanded="false" aria-controls="collapseFaqTwelve">
@@ -244,7 +231,6 @@
                                 </div>
                             </div>
 
-                            <!-- FAQ Item 13: Overflow -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFaqThirteen">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqThirteen" aria-expanded="false" aria-controls="collapseFaqThirteen">
@@ -253,12 +239,11 @@
                                 </h2>
                                 <div id="collapseFaqThirteen" class="accordion-collapse collapse" aria-labelledby="headingFaqThirteen" data-bs-parent="#faqAccordionMain">
                                     <div class="accordion-body small text-muted">
-                                        All properly designed systems must have an **overflow mechanism**. When the tank reaches capacity, excess water is safely directed away from the tank and building foundation via an overflow pipe. This pipe should be screened to prevent pests and ideally discharge to a suitable location like a garden bed, swale, soakaway pit, or back into the existing stormwater drain system (check local regulations).
+                                        All properly designed systems must have an <strong>overflow mechanism</strong>. When the tank reaches capacity, excess water is safely directed away from the tank and building foundation via an overflow pipe. This pipe should be screened to prevent pests and ideally discharge to a suitable location like a garden bed, swale, soakaway pit, or back into the existing stormwater drain system (check local regulations).
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- FAQ Item 14: Pressure -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFaqFourteen">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqFourteen" aria-expanded="false" aria-controls="collapseFaqFourteen">
@@ -272,7 +257,6 @@
                                 </div>
                             </div>
 
-                             <!-- FAQ Item 15: Incentives -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFaqFifteen">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqFifteen" aria-expanded="false" aria-controls="collapseFaqFifteen">
@@ -286,7 +270,6 @@
                                 </div>
                             </div>
 
-                            <!-- FAQ Item 16: System Lifespan -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFaqSixteen">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqSixteen" aria-expanded="false" aria-controls="collapseFaqSixteen">
@@ -307,7 +290,6 @@
                                 </div>
                             </div>
 
-                            <!-- FAQ Item 17: Combining with Solar -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFaqSeventeen">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqSeventeen" aria-expanded="false" aria-controls="collapseFaqSeventeen">
@@ -321,7 +303,6 @@
                                 </div>
                             </div>
 
-                            <!-- FAQ Item 18: Water Testing -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFaqEighteen">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqEighteen" aria-expanded="false" aria-controls="collapseFaqEighteen">
@@ -330,12 +311,11 @@
                                 </h2>
                                 <div id="collapseFaqEighteen" class="accordion-collapse collapse" aria-labelledby="headingFaqEighteen" data-bs-parent="#faqAccordionMain">
                                     <div class="accordion-body small text-muted">
-                                        If the water is **only** used for basic outdoor irrigation, testing is usually not necessary. If used for livestock, occasional basic tests might be wise. If treated and intended for **potable use** (drinking, cooking), regular testing is crucial. Test initially after system setup/treatment installation, and then at least annually (or more frequently, e.g., quarterly) for bacteria (like E. coli) and potentially other contaminants relevant to your area (e.g., lead if you have old plumbing/roofing). Consult local health guidelines or labs for specific recommendations.
+                                        If the water is <strong>only</strong> used for basic outdoor irrigation, testing is usually not necessary. If used for livestock, occasional basic tests might be wise. If treated and intended for <strong>potable use</strong> (drinking, cooking), regular testing is crucial. Test initially after system setup/treatment installation, and then at least annually (or more frequently, e.g., quarterly) for bacteria (like E. coli) and potentially other contaminants relevant to your area (e.g., lead if you have old plumbing/roofing). Consult local health guidelines or labs for specific recommendations.
                                     </div>
                                 </div>
                             </div>
 
-                            <!-- FAQ Item 19: Mosquitoes -->
                             <div class="accordion-item">
                                 <h2 class="accordion-header" id="headingFaqNineteen">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFaqNineteen" aria-expanded="false" aria-controls="collapseFaqNineteen">
@@ -349,23 +329,22 @@
                                 </div>
                             </div>
 
-                        </div> <!-- / accordion -->
+                        </div>
 
-                        <!-- Contact Link if FAQ not found -->
                         <p class="text-center mt-5 text-muted">
                             Can't find the answer you're looking for? <a href="contact.html">Contact us</a> directly!
                         </p>
 
-                    </div> <!-- / col-lg-8 -->
+                    </div>
 
                     <!-- Right Column: Maintenance Tips Card -->
                     <div class="col-lg-4">
-                        <div class="maintenance-card sticky-top">
-                            <img src="images/maintenance-card-img.jpg" class="img-fluid rounded-top" alt="Rainwater harvesting system maintenance">
+                        <div class="maintenance-card sticky-top text-center">
+                            <img src="images/maintanance.jpg" class="img-fluid rounded-top" alt="Rainwater harvesting system maintenance">
                             <div class="maintenance-card-body">
                                 <h5 class="card-title">System Maintenance Tips</h5>
                                 <p class="card-text">Keep your system running smoothly and ensure water quality with these regular checks:</p>
-                                <ul class="maintenance-tip-list">
+                                <ul class="maintenance-tip-list text-start">
                                     <li class="maintenance-tip-item">
                                         <i class="fas fa-broom fa-fw"></i>
                                         <div>
@@ -404,28 +383,81 @@
                                 </ul>
                             </div>
                         </div>
-                    </div> <!-- / col-lg-4 -->
+                    </div>
 
-                </div> <!-- / row -->
-            </div> <!-- / container -->
+                </div>
+            </div>
         </section>
+        <!-- Main FAQ Content Area End -->
 
     </main>
 
     <!-- Scroll to Top Button -->
     <a href="#" id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
+    <!-- Scroll to Top Button End -->
 
     <!-- Footer -->
-    <footer class="footer-home py-4">
-        <div class="container text-center">
-             <p class="mb-2">
-                <a href="index.html" class="mx-2">Home</a>|
-                <a href="#" class="mx-2">Privacy Policy</a>|
-                <a href="contact.html" class="mx-2">Contact</a>
-            </p>
-            <p class="mb-0 small">&copy; <span id="currentYear"></span> Aqua Harvest Solutions. All Rights Reserved.</p>
+    <footer class="footer-section pt-5 pb-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Column 1: Brand/About -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <a class="navbar-brand mb-3 d-inline-block" href="index.html">
+                        <img src="images/Aqua_harvest-removebg-preview.png" alt="Aqua Harvest Logo" height="60">
+                    </a>
+                    <p class="footer-text">Providing sustainable rainwater harvesting solutions for a greener future in Pakistan.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li> <!-- Placeholder Link -->
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services/Usage -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Usage Areas</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="residential.html">Residential</a></li>
+                        <li><a href="commercial.html">Commercial</a></li>
+                        <li><a href="agricultural.html">Agricultural</a></li>
+                        <li><a href="education.html">Education Center</a></li>
+                        <li><a href="update.html">Updates</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Info -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Contact Us</h5>
+                    <ul class="list-unstyled footer-contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Korangi Industrial Area, Karachi, Pakistan</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+922131234567">+92 21 31234567</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@aquaharvest.pk">info@aquaharvest.pk</a></li>
+                        <li><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="text-center footer-bottom-text">
+                &copy; <span id="currentYear"></span> Aqua Harvest Solutions. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> <!-- Placeholder -->
+            </div>
         </div>
     </footer>
+    <!-- Footer End -->
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

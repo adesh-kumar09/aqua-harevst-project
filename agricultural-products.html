@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Products | Aqua Harvest</title> <!-- Changed Title -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon -->
+    <link rel="icon" href="images/Favicon img.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- Navbar Section (Same as residential) -->
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/Aqua_harvest-removebg-preview.png" alt="Aqua Harvest Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"> <a class="nav-link" href="index.html">Home</a> </li>
+                    <li class="nav-item dropdown hover-dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false"> Usage </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
+                            <li><a class="dropdown-item" href="residential.html">Residential Area</a></li>
+                            <li><a class="dropdown-item" href="commercial.html">Commercial Area</a></li>
+                            <li><a class="dropdown-item" href="agricultural.html">Agricultural Area</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="facts.html">Facts</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="update.html">Update</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar Section End -->
+
+    <!-- Page Header -->
+    <header class="page-header-simple py-5 text-center">
+        <div class="container">
+             <!-- Changed Header Text -->
+            <h1 class="display-5 fw-bold mb-3">Agricultural Rainwater Harvesting Products</h1>
+            <p class="lead col-lg-8 mx-auto">Solutions for irrigation, livestock, and farm water management.</p>
+        </div>
+    </header>
+    <!-- Page Header End -->
+
+    <main class="py-5">
+        <div class="container">
+
+            <!-- Filter/Sort Controls -->
+            <section class="filter-controls mb-4 p-3 bg-light rounded shadow-sm">
+                <form id="productFilterForm">
+                    <div class="row g-3 align-items-end">
+                        <div class="col-lg col-md-6">
+                            <label for="productSearchInput" class="form-label">Search</label>
+                            <input type="search" class="form-control form-control-sm" id="productSearchInput"
+                                placeholder="Search by name...">
+                        </div>
+                        <!-- *** CHANGED CATEGORIES FOR AGRICULTURE *** -->
+                        <div class="col-lg col-md-6">
+                            <label for="productCategoryFilter" class="form-label">Category</label>
+                            <select class="form-select form-select-sm" id="productCategoryFilter">
+                                <option value="all" selected>All Categories</option>
+                                <option value="bulk-storage">Bulk Storage</option>
+                                <option value="pre-filtration">Pre-Filtration</option>
+                                <option value="irrigation-pump">Irrigation Pumps</option>
+                                <option value="large-piping">Large Piping</option>
+                                <option value="distribution">Distribution & Fittings</option>
+                            </select>
+                        </div>
+                        <!-- *** END CHANGED CATEGORIES *** -->
+                        <div class="col-lg col-md-6">
+                            <label for="productSortFilter" class="form-label">Sort by</label>
+                            <select class="form-select form-select-sm" id="productSortFilter">
+                                <option value="default" selected>Default</option>
+                                <option value="price-asc">Price: Low to High</option>
+                                <option value="price-desc">Price: High to Low</option>
+                                <option value="name-asc">Name: A to Z</option>
+                                <option value="name-desc">Name: Z to A</option>
+                            </select>
+                        </div>
+                        <div class="col-lg-auto col-md-6">
+                            <button type="submit" class="btn btn-sm btn-primary w-100">Apply Filters</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <!-- Filter/Sort Controls End -->
+
+            <!-- Product Grid -->
+            <section class="products-grid">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4" id="productListRow">
+
+                    <!-- Card 1: Very Large Tank -->
+                    <div class="col product-col">
+                        <!-- Note data-category matches new filter option value -->
+                        <div class="product-card h-100" data-category="bulk-storage"
+                            data-name="10,000 Gallon Corrugated Steel Tank" data-price="1680000.00">
+                            <img src="images/10k steel.jpg" class="card-img-top product-image"
+                                alt="10,000 Gallon Corrugated Steel Tank">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title mb-1 product-name">10,000 Gallon Corrugated Steel Tank</h5>
+                                <p class="card-text small text-muted mb-2 category-tag">Bulk Storage</p>
+                                <p class="card-text description flex-grow-1">Massive water storage capacity ideal for large farms and irrigation needs. Corrugated galvanized steel construction with a durable liner ensures strength and longevity. Requires site preparation and professional assembly.</p>
+                                <p class="card-text price fw-bold mb-3">PKR 1,680,000</p>
+                                <button type="button" class="btn btn-sm btn-outline-primary mt-auto view-details-btn"
+                                    data-bs-toggle="modal" data-bs-target="#productDetailModal">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Coarse Filter -->
+                    <div class="col product-col">
+                        <div class="product-card h-100" data-category="pre-filtration"
+                            data-name="High-Capacity Basket Pre-Filter" data-price="56000.00">
+                            <img src="images/high basket.jpg" class="card-img-top product-image"
+                                alt="High-Capacity Basket Pre-Filter">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title mb-1 product-name">High-Capacity Basket Pre-Filter</h5>
+                                <p class="card-text small text-muted mb-2 category-tag">Pre-Filtration</p>
+                                <p class="card-text description flex-grow-1">Designed to handle large volumes of water and remove significant debris like leaves, twigs, and coarse sediment before water enters the main storage. Features a removable, easy-to-clean basket. Reduces load on downstream filters.</p>
+                                <p class="card-text price fw-bold mb-3">PKR 56,000</p>
+                                <button type="button" class="btn btn-sm btn-outline-primary mt-auto view-details-btn"
+                                    data-bs-toggle="modal" data-bs-target="#productDetailModal">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Irrigation Pump -->
+                    <div class="col product-col">
+                        <div class="product-card h-100" data-category="irrigation-pump"
+                            data-name="High-Volume Irrigation Pump (5 HP)" data-price="224000.00">
+                            <img src="images/irrigation pump.jpg" class="card-img-top product-image"
+                                alt="High-Volume Irrigation Pump">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title mb-1 product-name">High-Volume Irrigation Pump (5 HP)</h5>
+                                <p class="card-text small text-muted mb-2 category-tag">Irrigation Pumps</p>
+                                <p class="card-text description flex-grow-1">Powerful 5 horsepower pump capable of delivering large volumes of water at sufficient pressure for extensive drip or sprinkler irrigation systems. Durable construction suitable for agricultural environments.</p>
+                                <p class="card-text price fw-bold mb-3">PKR 224,000</p>
+                                <button type="button" class="btn btn-sm btn-outline-primary mt-auto view-details-btn"
+                                    data-bs-toggle="modal" data-bs-target="#productDetailModal">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Large Pipe -->
+                    <div class="col product-col">
+                        <div class="product-card h-100" data-category="large-piping"
+                            data-name="8-Inch HDPE Conveyance Pipe (per meter)" data-price="11200.00">
+                            <img src="images/hdpe.jpg" class="card-img-top product-image"
+                                alt="8-Inch HDPE Conveyance Pipe">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title mb-1 product-name">8-Inch HDPE Conveyance Pipe (per meter)</h5>
+                                <p class="card-text small text-muted mb-2 category-tag">Large Piping</p>
+                                <p class="card-text description flex-grow-1">High-Density Polyethylene pipe with a large 8-inch diameter, ideal for main water conveyance lines in agricultural systems. Flexible, durable, and resistant to corrosion. Priced per meter.</p>
+                                <p class="card-text price fw-bold mb-3">PKR 11,200 / meter</p>
+                                <button type="button" class="btn btn-sm btn-outline-primary mt-auto view-details-btn"
+                                    data-bs-toggle="modal" data-bs-target="#productDetailModal">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Distribution Fitting -->
+                    <div class="col product-col">
+                        <div class="product-card h-100" data-category="distribution"
+                            data-name="Irrigation Dripper Emitter (Pack of 100)" data-price="5600.00">
+                            <img src="images/driper.jpg" class="card-img-top product-image"
+                                alt="Irrigation Dripper Emitter">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title mb-1 product-name">Irrigation Dripper Emitter (Pack of 100)</h5>
+                                <p class="card-text small text-muted mb-2 category-tag">Distribution & Fittings</p>
+                                <p class="card-text description flex-grow-1">Pressure-compensating drippers designed for efficient drip irrigation systems. Delivers a consistent flow rate directly to plant roots, minimizing water waste. Sold in packs of 100.</p>
+                                <p class="card-text price fw-bold mb-3">PKR 5,600</p>
+                                <button type="button" class="btn btn-sm btn-outline-primary mt-auto view-details-btn"
+                                    data-bs-toggle="modal" data-bs-target="#productDetailModal">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6: Stock Watering Trough -->
+                     <div class="col product-col">
+                        <div class="product-card h-100" data-category="distribution"
+                            data-name="Automatic Livestock Water Trough (100L)" data-price="28000.00">
+                            <img src="images/auto livestock.jpg" class="card-img-top product-image"
+                                alt="Automatic Livestock Water Trough">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title mb-1 product-name">Automatic Livestock Water Trough (100L)</h5>
+                                <p class="card-text small text-muted mb-2 category-tag">Distribution & Fittings</p>
+                                <p class="card-text description flex-grow-1">Durable 100-liter water trough for livestock, featuring an automatic float valve to maintain a constant water level when connected to your rainwater storage system. Ensures animals have consistent access to water.</p>
+                                <p class="card-text price fw-bold mb-3">PKR 28,000</p>
+                                <button type="button" class="btn btn-sm btn-outline-primary mt-auto view-details-btn"
+                                    data-bs-toggle="modal" data-bs-target="#productDetailModal">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div> <!-- End Product Grid Row -->
+
+                <!-- Message shown when no products match filters -->
+                <div id="noProductsMessage" class="text-center py-5" style="display: none;">
+                    <i class="fas fa-search fa-3x text-muted mb-3"></i>
+                    <p class="lead text-muted">No products found matching your criteria.</p>
+                </div>
+            </section>
+            <!-- Product Grid End -->
+
+        </div>
+    </main>
+
+    <!-- Product Detail Modal (Structure is identical) -->
+    <div class="modal fade" id="productDetailModal" tabindex="-1" aria-labelledby="productDetailModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="productDetailModalLabel">Product Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-0">
+                    <div class="row g-4">
+                        <div class="col-md-5 text-center">
+                            <img src="images/placeholder.jpg" id="modalProductImage" class="img-fluid rounded"
+                                alt="Product Image">
+                        </div>
+                        <div class="col-md-7 d-flex flex-column">
+                            <h4 id="modalProductName" class="mb-1">Product Name</h4>
+                            <p class="text-muted small mb-2" id="modalProductCategory">Category: N/A</p>
+                            <h5 class="mb-3 fw-bold" id="modalProductPrice">PKR 0</h5>
+                            <p id="modalProductDescription" class="mb-auto">Product description goes here...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Product Detail Modal -->
+
+
+    <!-- Footer -->
+    <footer class="footer-section pt-5 pb-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Column 1: Brand/About -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <a class="navbar-brand mb-3 d-inline-block" href="index.html">
+                        <img src="images/Aqua_harvest-removebg-preview.png" alt="Aqua Harvest Logo" height="60">
+                    </a>
+                    <p class="footer-text">Providing sustainable rainwater harvesting solutions for a greener future in Pakistan.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li> <!-- Placeholder Link -->
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services/Usage -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Usage Areas</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="residential.html">Residential</a></li>
+                        <li><a href="commercial.html">Commercial</a></li>
+                        <li><a href="agricultural.html">Agricultural</a></li>
+                        <li><a href="education.html">Education Center</a></li>
+                        <li><a href="update.html">Updates</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Info -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Contact Us</h5>
+                    <ul class="list-unstyled footer-contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Korangi Industrial Area, Karachi, Pakistan</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+922131234567">+92 21 31234567</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@aquaharvest.pk">info@aquaharvest.pk</a></li>
+                        <li><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="text-center footer-bottom-text">
+                &copy; <span id="currentYear"></span> Aqua Harvest Solutions. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> <!-- Placeholder -->
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="app.js"></script> <!-- Uses the SAME app.js -->
+</body>
+
+</html>

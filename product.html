@@ -11,19 +11,16 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Global Custom CSS (Your main site styles) -->
+    <!-- Global Custom CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- REMOVED Page-Specific CSS Link -->
-    <!-- <link rel="stylesheet" href="products_overview.css"> -->
-
     <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/Favicon img.png" type="image/x-icon">
 
 </head>
 <body>
 
-    <!-- Navbar Section (Standardized - Ensure 'Products' link points here and is active) -->
+    <!-- Navbar Section -->
     <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -40,9 +37,10 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
                             <li><a class="dropdown-item" href="residential.html">Residential Area</a></li>
                             <li><a class="dropdown-item" href="commercial.html">Commercial Area</a></li>
+                            <li><a class="dropdown-item" href="agricultural.html">Agricultural Area</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link active" href="product.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="product.html">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="facts.html">Facts</a></li>
                     <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
@@ -52,6 +50,7 @@
             </div>
         </div>
     </nav>
+    <!-- Navbar Section End -->
 
     <!-- Page Header -->
     <header class="products-hero-overview text-white d-flex align-items-center">
@@ -60,6 +59,7 @@
             <p class="lead col-lg-8 mx-auto animate-on-load animate-delay-1">Explore our range of systems designed for residential, commercial, and agricultural needs.</p>
         </div>
     </header>
+    <!-- Page Header End -->
 
     <main>
 
@@ -72,91 +72,143 @@
 
                     <!-- Residential Systems Card -->
                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch" id="residential">
-                        <div class="card product-card h-100 fade-in-on-scroll">
-                            <img src="images/product-cat-residential.jpg" class="card-img-top" alt="Residential Rainwater System">
+                        <div class="card product-card h-100 fade-in-on-scroll text-center">
+                            <img src="images/Resedential Hero.jpg" class="card-img-top" alt="Residential Rainwater System">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><i class="fas fa-home me-2"></i>Residential Systems</h5>
                                 <p class="card-text flex-grow-1">Perfect for homeowners looking to save water on gardening, laundry, and toilet flushing. Systems range from simple barrels to fully integrated solutions.</p>
-                                <a href="residential-product.html" class="btn btn-outline-primary mt-auto stretched-link">View Residential Options</a>
                                 <!-- Link to a specific residential detail page if you have one -->
+                                <a href="residential-product.html" class="btn btn-outline-primary mt-auto stretched-link">View Residential Products</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Commercial Systems Card -->
                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch" id="commercial">
-                        <div class="card product-card h-100 fade-in-on-scroll animate-delay-1">
-                            <img src="images/product-cat-commercial.jpg" class="card-img-top" alt="Commercial Rainwater System">
+                        <div class="card product-card h-100 fade-in-on-scroll animate-delay-1 text-center">
+                            <img src="images/Comercial Hero.jpg" class="card-img-top" alt="Commercial Rainwater System">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><i class="fas fa-building me-2"></i>Commercial Systems</h5>
                                 <p class="card-text flex-grow-1">Scalable solutions for businesses, schools, and facilities to reduce operating costs, manage stormwater, and meet sustainability goals.</p>
-                                <a href="#" class="btn btn-outline-primary mt-auto stretched-link">Explore Commercial Solutions</a>
                                 <!-- Link to a specific commercial detail page -->
+                                <a href="commercial-products.html" class="btn btn-outline-primary mt-auto stretched-link">View Commercial Products</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Agricultural Use Card -->
                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch" id="agricultural">
-                        <div class="card product-card h-100 fade-in-on-scroll animate-delay-2">
-                            <img src="images/product-cat-agricultural.jpg" class="card-img-top" alt="Agricultural Rainwater Harvesting">
+                        <div class="card product-card h-100 fade-in-on-scroll animate-delay-2 text-center">
+                            <img src="images/Agriculutral hero.jpg" class="card-img-top" alt="Agricultural Rainwater Harvesting">
                             <div class="card-body d-flex flex-column">
-                                <h5 class="card-title"><i class="fas fa-tractor me-2"></i>Agricultural Use</h5>
+                                <h5 class="card-title"><i class="fas fa-tractor me-2"></i>Agricultural Systems</h5>
                                 <p class="card-text flex-grow-1">Large-capacity storage and distribution systems designed for irrigation, livestock watering, and other farm needs, ensuring water security.</p>
-                                <a href="#" class="btn btn-outline-primary mt-auto stretched-link">See Agricultural Systems</a>
                                 <!-- Link to a specific agricultural detail page -->
+                                <a href="agricultural-products.html" class="btn btn-outline-primary mt-auto stretched-link">View Agricultural Products</a>
                             </div>
                         </div>
                     </div>
 
                     <!-- Custom Design Card -->
                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch" id="custom">
-                        <div class="card product-card h-100 fade-in-on-scroll animate-delay-3">
-                            <img src="images/product-cat-custom.jpg" class="card-img-top" alt="Custom Rainwater System Design">
+                        <div class="card product-card h-100 fade-in-on-scroll animate-delay-1 text-center">
+                            <img src="images/Education Hero.jpg" class="card-img-top" alt="Custom Rainwater System Design">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><i class="fas fa-drafting-compass me-2"></i>Custom Design & Consultation</h5>
                                 <p class="card-text flex-grow-1">Have unique requirements? Our experts can design and implement a bespoke rainwater harvesting system tailored to your specific site and needs.</p>
-                                <a href="contact_v4.html?subject=Custom%20Design%20Inquiry" class="btn btn-outline-primary mt-auto stretched-link">Request Consultation</a>
+                                <a href="contact.html?subject=Custom%20Design%20Inquiry" class="btn btn-outline-primary mt-auto stretched-link">Request Consultation</a>
                             </div>
                         </div>
                     </div>
 
-                     <!-- Add more cards if needed -->
-
-                </div> <!-- / .row -->
-            </div> <!-- / .container -->
-        </section>
-
-        <!-- Optional: Add a CTA section if desired -->
-         <section class="cta-home py-5 text-center text-white fade-in-on-scroll">
-            <div class="container">
-                <h2 class="display-5 fw-bold mb-3">Ready to Start Harvesting?</h2>
-                <p class="lead mb-4 col-lg-8 mx-auto">Contact our specialists today for expert advice and a free quote tailored to your needs.</p>
-                <a href="contact_v4.html" class="btn btn-light btn-lg px-5 py-3 fw-semibold shadow">Get Your Free Quote</a>
+                </div>
             </div>
         </section>
+        <!-- Products Grid Section End -->
+
+        <!-- CTA Section -->
+         <section class="cta-home py-5 text-center text-white fade-in-on-scroll">
+            <div class="container">
+                <h2 class="display-5 fw-bold mb-3">Find the Right Solution?</h2>
+                <p class="lead mb-4 col-lg-8 mx-auto">Contact our specialists today for expert advice and a free quote tailored to your needs.</p>
+                <a href="contact.html" class="btn btn-light btn-lg px-5 py-3 fw-semibold shadow">Get Your Free Quote</a>
+            </div>
+        </section>
+        <!-- CTA Section End -->
 
     </main>
 
     <!-- Scroll to Top Button -->
     <a href="#" id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
+    <!-- Scroll to Top Button End -->
 
     <!-- Footer -->
-    <footer class="footer-home py-4">
-        <div class="container text-center">
-             <p class="mb-2">
-                <a href="index.html" class="mx-2">Home</a>|
-                <a href="#" class="mx-2">Privacy Policy</a>|
-                <a href="contact_v4.html" class="mx-2">Contact</a>
-            </p>
-            <p class="mb-0 small">&copy; <span id="currentYear"></span> Aqua Harvest Solutions. All Rights Reserved.</p>
+    <footer class="footer-section pt-5 pb-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Column 1: Brand/About -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <a class="navbar-brand mb-3 d-inline-block" href="index.html">
+                        <img src="images/Aqua_harvest-removebg-preview.png" alt="Aqua Harvest Logo" height="60">
+                    </a>
+                    <p class="footer-text">Providing sustainable rainwater harvesting solutions for a greener future in Pakistan.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li> <!-- Placeholder Link -->
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services/Usage -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Usage Areas</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="residential.html">Residential</a></li>
+                        <li><a href="commercial.html">Commercial</a></li>
+                        <li><a href="agricultural.html">Agricultural</a></li>
+                        <li><a href="education.html">Education Center</a></li>
+                        <li><a href="update.html">Updates</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Info -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Contact Us</h5>
+                    <ul class="list-unstyled footer-contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Korangi Industrial Area, Karachi, Pakistan</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+922131234567">+92 21 31234567</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@aquaharvest.pk">info@aquaharvest.pk</a></li>
+                        <li><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="text-center footer-bottom-text">
+                &copy; <span id="currentYear"></span> Aqua Harvest Solutions. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> <!-- Placeholder -->
+            </div>
         </div>
     </footer>
+    <!-- Footer End -->
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <!-- Global Custom JS (Use the final version) -->
+    <!-- Global Custom JS -->
     <script src="app.js"></script>
 
 </body>

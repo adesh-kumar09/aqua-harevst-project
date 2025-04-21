@@ -12,15 +12,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Global Custom CSS -->
-    <link rel="stylesheet" href="style.css"> <!-- All CSS rules should be in this file -->
+    <link rel="stylesheet" href="style.css">
 
     <!-- Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/Favicon img.png" type="image/x-icon">
 
 </head>
 <body>
 
-    <!-- Navbar Section (Standardized - Agriculture link active) -->
+    <!-- Navbar Section -->
     <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="index.html">
@@ -37,31 +37,33 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
                             <li><a class="dropdown-item" href="residential.html">Residential Area</a></li>
                             <li><a class="dropdown-item" href="commercial.html">Commercial Area</a></li>
-                            <li><a class="dropdown-item active" aria-current="page" href="agriculture.html">Agricultural Area</a></li> <!-- Set Active -->
+                            <li><a class="dropdown-item active" aria-current="page" href="agricultural.html">Agricultural Area</a></li>
                         </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="product.html">Products</a></li>
                     <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
                     <li class="nav-item"><a class="nav-link" href="facts.html">Facts</a></li>
-                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq-agriculture">FAQ</a></li>
                     <li class="nav-item"><a class="nav-link" href="update.html">Update</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
+    <!-- Navbar Section End -->
 
-    <!-- Page Header (Uses .page-header-agriculture class - CSS will be updated) -->
+    <!-- Page Header -->
     <header class="page-header-agriculture text-white d-flex align-items-center">
         <div class="container text-center">
-            <h1 class="display-5 fw-bold mb-3 animate-on-load">Rainwater Harvesting for Agriculture</h1>
+            <h1 class="display-5 fw-bold mb-3 animate-on-load">Agricultural Rainwater Harvesting</h1>
             <p class="lead col-lg-9 mx-auto animate-on-load animate-delay-1">Securing water resources for sustainable farming and increased yields.</p>
         </div>
     </header>
+    <!-- Page Header End -->
 
     <main>
 
-        <!-- Section 1: Introduction -->
+        <!-- Introduction -->
         <section id="intro-agriculture" class="py-5">
             <div class="container">
                 <div class="row align-items-center">
@@ -72,13 +74,14 @@
                         <a href="#agri-methods" class="btn btn-outline-primary mt-3">Explore Methods</a>
                     </div>
                     <div class="col-lg-6 order-lg-2 text-center fade-in-on-scroll animate-delay-1">
-                        <img src="images/agri-intro.jpg" alt="Farm field with irrigation system" class="img-fluid rounded shadow-sm">
+                        <img src="images/Farm Field Irrigation.jpg" alt="Farm field with irrigation system" class="img-fluid rounded shadow-sm">
                     </div>
                 </div>
             </div>
         </section>
+        <!-- Introduction End -->
 
-        <!-- Section 2: Key Benefits for Agriculture -->
+        <!-- Key Benefits -->
         <section id="benefits-agriculture" class="py-5 bg-light">
             <div class="container">
                 <h2 class="section-heading text-center mb-5">Key Benefits for Farmers</h2>
@@ -121,15 +124,16 @@
                 </div>
             </div>
         </section>
+        <!-- Key Benefits End -->
 
-        <!-- Section 3: Common Agricultural RWH Methods -->
+        <!-- Common Methods -->
         <section id="agri-methods" class="py-5">
             <div class="container">
                 <h2 class="section-heading text-center mb-5">Common Agricultural RWH Methods</h2>
                 <div class="row g-4">
                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
-                        <div class="card method-card h-100 fade-in-on-scroll animate-delay-1">
-                            <img src="images/agri-method-pond.jpg" class="card-img-top" alt="Farm pond collecting water">
+                        <div class="card method-card h-100 fade-in-on-scroll animate-delay-1 text-center">
+                            <img src="images/farm pond collecting].jpg" class="card-img-top" alt="Farm pond collecting water">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><i class="fas fa-water me-2"></i>Farm Ponds / Tanks</h5>
                                 <p class="card-text flex-grow-1">Excavated ponds or constructed tanks collect surface runoff from fields or channels. Often lined to prevent seepage, used for irrigation or livestock.</p>
@@ -137,8 +141,8 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
-                        <div class="card method-card h-100 fade-in-on-scroll animate-delay-2">
-                            <img src="images/agri-method-checkdam.jpg" class="card-img-top" alt="Small check dam in a gully">
+                        <div class="card method-card h-100 fade-in-on-scroll animate-delay-2 text-center">
+                            <img src="images/small check dam gully.jpg" class="card-img-top" alt="Small check dam in a gully">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><i class="fas fa-dam me-2"></i>Check Dams / Gully Plugs</h5>
                                 <p class="card-text flex-grow-1">Small barriers built across gullies or streams to slow water flow, trap sediment, and increase water infiltration into the soil and groundwater.</p>
@@ -146,46 +150,20 @@
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
-                        <div class="card method-card h-100 fade-in-on-scroll animate-delay-3">
-                            <img src="images/agri-method-rooftop.jpg" class="card-img-top" alt="Rainwater collection from a barn roof">
+                        <div class="card method-card h-100 fade-in-on-scroll animate-delay-3 text-center">
+                            <img src="images/barn roof.jpg" class="card-img-top" alt="Rainwater collection from a barn roof">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title"><i class="fas fa-warehouse me-2"></i>Rooftop Harvesting (Farm Buildings)</h5>
                                 <p class="card-text flex-grow-1">Collecting rainwater from the roofs of barns, sheds, and other farm structures into tanks for livestock watering, equipment washing, or small-scale irrigation.</p>
                             </div>
                         </div>
                     </div>
-                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
-                        <div class="card method-card h-100 fade-in-on-scroll animate-delay-1">
-                            <img src="images/agri-method-bunding.jpg" class="card-img-top" alt="Contour bunds on a sloping field">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title"><i class="fas fa-layer-group me-2"></i>Contour Bunding / Terracing</h5>
-                                <p class="card-text flex-grow-1">Creating earthen ridges or stone walls along the contours of sloping land to slow runoff, prevent soil erosion, and increase water absorption.</p>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
-                        <div class="card method-card h-100 fade-in-on-scroll animate-delay-2">
-                            <img src="images/agri-method-percolation.jpg" class="card-img-top" alt="Percolation tank near agricultural fields">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title"><i class="fas fa-arrow-down-short-wide me-2"></i>Percolation Tanks</h5>
-                                <p class="card-text flex-grow-1">Similar to farm ponds but specifically designed with permeable beds to maximize the recharge of groundwater aquifers.</p>
-                            </div>
-                        </div>
-                    </div>
-                     <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
-                        <div class="card method-card h-100 fade-in-on-scroll animate-delay-3">
-                            <img src="images/agri-method-irrigation.jpg" class="card-img-top" alt="Drip irrigation system connected to a water tank">
-                            <div class="card-body d-flex flex-column">
-                                <h5 class="card-title"><i class="fas fa-hand-holding-droplet me-2"></i>Integration with Efficient Irrigation</h5>
-                                <p class="card-text flex-grow-1">Combining stored rainwater with efficient methods like drip irrigation or sprinklers ensures the harvested water is used effectively for crops.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div> <!-- / .row -->
-            </div> <!-- / .container -->
+                </div>
+            </div>
         </section>
+        <!-- Common Methods End -->
 
-        <!-- *** NEW Section 4: Applications in Agriculture *** -->
+        <!-- Applications -->
         <section id="agri-uses" class="py-5 bg-light">
             <div class="container">
                 <h2 class="section-heading text-center mb-5">Applications on the Farm</h2>
@@ -245,51 +223,52 @@
                         </div>
                     </div>
                 </div>
-                 <p class="text-center text-muted small mt-5 fst-italic">*Note: Water quality requirements vary by application. Basic filtration is often sufficient for irrigation/washing, but livestock/aquaculture may need more attention.</p>
+                 <p class="text-center text-muted small mt-5 fst-italic">Note: Water quality requirements vary by application. Basic filtration is often sufficient for irrigation/washing, but livestock/aquaculture may need more attention.</p>
             </div>
         </section>
+        <!-- Applications End -->
 
-        <!-- Section 5: Steps to Implement Farm RWH (Was Considerations) -->
-        <section id="agri-steps" class="py-5"> <!-- Renamed ID -->
+        <!-- Implementation Steps -->
+        <section id="agri-steps" class="py-5">
             <div class="container">
                 <h2 class="section-heading text-center mb-5">Steps to Implement Farm RWH</h2>
                  <div class="row justify-content-center">
                     <div class="col-lg-9">
                         <p class="text-center text-muted mb-4">Implementing rainwater harvesting on a farm requires careful planning. Follow these key steps:</p>
-                        <ol class="list-group list-group-flush numbered-steps-list"> <!-- Reusing numbered list style -->
+                        <ol class="list-group list-group-flush numbered-steps-list">
                             <li class="list-group-item fade-in-on-scroll animate-delay-1">
                                 <div>
-                                    <span class="fw-bold">1. Assess Water Needs & Supply:</span> Estimate crop/livestock water demand vs. potential rainwater supply based on catchment area and local rainfall data.
+                                    <strong>1. Assess Water Needs & Supply:</strong> Estimate crop/livestock water demand vs. potential rainwater supply based on catchment area and local rainfall data.
                                 </div>
                             </li>
                             <li class="list-group-item fade-in-on-scroll animate-delay-2">
                                 <div>
-                                    <span class="fw-bold">2. Site Analysis:</span> Evaluate topography, soil type, available space, and potential locations for ponds, dams, or tanks.
+                                    <strong>2. Site Analysis:</strong> Evaluate topography, soil type, available space, and potential locations for ponds, dams, or tanks.
                                 </div>
                             </li>
                             <li class="list-group-item fade-in-on-scroll animate-delay-3">
                                 <div>
-                                    <span class="fw-bold">3. Choose Appropriate Methods:</span> Select the most suitable RWH techniques (ponds, check dams, rooftop, etc.) based on site conditions and water needs.
+                                    <strong>3. Choose Appropriate Methods:</strong> Select the most suitable RWH techniques (ponds, check dams, rooftop, etc.) based on site conditions and water needs.
                                 </div>
                             </li>
                             <li class="list-group-item fade-in-on-scroll animate-delay-1">
                                 <div>
-                                    <span class="fw-bold">4. Design & Engineering:</span> Develop detailed plans for construction, including sizing of components, materials, and necessary permits.
+                                    <strong>4. Design & Engineering:</strong> Develop detailed plans for construction, including sizing of components, materials, and necessary permits.
                                 </div>
                             </li>
                              <li class="list-group-item fade-in-on-scroll animate-delay-2">
                                 <div>
-                                    <span class="fw-bold">5. Construction & Installation:</span> Build or install the chosen system components according to the design specifications.
+                                    <strong>5. Construction & Installation:</strong> Build or install the chosen system components according to the design specifications.
                                 </div>
                             </li>
                              <li class="list-group-item fade-in-on-scroll animate-delay-3">
                                 <div>
-                                    <span class="fw-bold">6. Integrate Distribution & Use:</span> Connect storage to irrigation systems (drip, sprinkler) or watering points. Install pumps if needed.
+                                    <strong>6. Integrate Distribution & Use:</strong> Connect storage to irrigation systems (drip, sprinkler) or watering points. Install pumps if needed.
                                 </div>
                             </li>
                              <li class="list-group-item fade-in-on-scroll animate-delay-1">
                                 <div>
-                                    <span class="fw-bold">7. Plan for Maintenance:</span> Establish a regular schedule for cleaning channels, desilting ponds, checking filters, and inspecting the system.
+                                    <strong>7. Plan for Maintenance:</strong> Establish a regular schedule for cleaning channels, desilting ponds, checking filters, and inspecting the system.
                                 </div>
                             </li>
                         </ol>
@@ -297,9 +276,10 @@
                 </div>
             </div>
         </section>
+        <!-- Implementation Steps End -->
 
-        <!-- *** NEW Section 6: Case Study (Optional Placeholder) *** -->
-        <section id="casestudy-agriculture" class="py-5 bg-light d-none"> <!-- Hidden by default -->
+        <!-- Case Study (Optional Placeholder) -->
+        <section id="casestudy-agriculture" class="py-5 bg-light d-none">
             <div class="container">
                 <h2 class="section-heading text-center mb-5">Agricultural Success Story</h2>
                 <div class="row g-4 align-items-center">
@@ -318,13 +298,13 @@
                 </div>
             </div>
         </section>
+        <!-- Case Study End -->
 
-        <!-- *** NEW Section 7: Agricultural FAQs *** -->
+        <!-- Agricultural FAQs -->
         <section id="faq-agriculture" class="py-5">
             <div class="container">
                 <h2 class="text-center mb-5 section-heading">Agricultural FAQs</h2>
                 <div class="accordion col-lg-8 mx-auto" id="faqAccordionAgriculture">
-                    <!-- FAQ Item 1 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingAgriOne">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAgriOne" aria-expanded="false" aria-controls="collapseAgriOne">
@@ -337,7 +317,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- FAQ Item 2 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingAgriTwo">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAgriTwo" aria-expanded="false" aria-controls="collapseAgriTwo">
@@ -350,7 +329,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- FAQ Item 3 -->
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingAgriThree">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAgriThree" aria-expanded="false" aria-controls="collapseAgriThree">
@@ -363,8 +341,7 @@
                             </div>
                         </div>
                     </div>
-                     <!-- FAQ Item 4 -->
-                    <div class="accordion-item">
+                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingAgriFour">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAgriFour" aria-expanded="false" aria-controls="collapseAgriFour">
                                 Can RWH completely replace my existing irrigation source?
@@ -372,44 +349,96 @@
                         </h2>
                         <div id="collapseAgriFour" class="accordion-collapse collapse" aria-labelledby="headingAgriFour" data-bs-parent="#faqAccordionAgriculture">
                             <div class="accordion-body small text-muted">
-                                In most cases, RWH serves as a valuable *supplemental* source, especially in areas with distinct rainy and dry seasons. Relying solely on RWH depends entirely on rainfall reliability, storage capacity, and crop water requirements. It's often best used conjunctively with other sources.
+                                In most cases, RWH serves as a valuable <strong>supplemental</strong> source, especially in areas with distinct rainy and dry seasons. Relying solely on RWH depends entirely on rainfall reliability, storage capacity, and crop water requirements. It's often best used conjunctively with other sources.
                             </div>
                         </div>
                     </div>
                 </div>
-                 <!-- more faq button -->
                  <div class="text-center mt-4">
                     <a href="faq.html" class="btn btn-outline-primary faq-more-btn">View More FAQs</a>
                 </div>
-                <!-- END BUTTON -->
             </div>
         </section>
+        <!-- Agricultural FAQs End -->
 
-        <!-- Optional CTA -->
+        <!-- CTA -->
         <section class="cta-home py-5 text-center text-white fade-in-on-scroll">
             <div class="container">
-                <h2 class="display-5 fw-bold mb-3">Ready to Boost Your Farm's Water Security?</h2>
+                <h2 class="display-5 fw-bold mb-3">Boost Your Farm's Water Security?</h2>
                 <p class="lead mb-4 col-lg-8 mx-auto">Discuss your specific agricultural needs with our rainwater harvesting specialists.</p>
                 <a href="contact.html" class="btn btn-light btn-lg px-5 py-3 fw-semibold shadow">Get Expert Advice</a>
             </div>
         </section>
+        <!-- CTA End -->
 
     </main>
 
     <!-- Scroll to Top Button -->
     <a href="#" id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></a>
+    <!-- Scroll to Top Button End -->
 
     <!-- Footer -->
-    <footer class="footer-home py-4">
-        <div class="container text-center">
-             <p class="mb-2">
-                <a href="index.html" class="mx-2">Home</a>|
-                <a href="#" class="mx-2">Privacy Policy</a>|
-                <a href="contact.html" class="mx-2">Contact</a>
-            </p>
-            <p class="mb-0 small">&copy; <span id="currentYear"></span> Aqua Harvest Solutions. All Rights Reserved.</p>
+    <footer class="footer-section pt-5 pb-4">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Column 1: Brand/About -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <a class="navbar-brand mb-3 d-inline-block" href="index.html">
+                        <img src="images/Aqua_harvest-removebg-preview.png" alt="Aqua Harvest Logo" height="60">
+                    </a>
+                    <p class="footer-text">Providing sustainable rainwater harvesting solutions for a greener future in Pakistan.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li> <!-- Placeholder Link -->
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Services/Usage -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Usage Areas</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="residential.html">Residential</a></li>
+                        <li><a href="commercial.html">Commercial</a></li>
+                        <li><a href="agricultural.html">Agricultural</a></li>
+                        <li><a href="education.html">Education Center</a></li>
+                        <li><a href="update.html">Updates</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Info -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Contact Us</h5>
+                    <ul class="list-unstyled footer-contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Korangi Industrial Area, Karachi, Pakistan</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+922131234567">+92 21 31234567</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@aquaharvest.pk">info@aquaharvest.pk</a></li>
+                        <li><i class="fas fa-clock"></i> Mon - Sat: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="text-center footer-bottom-text">
+                &copy; <span id="currentYear"></span> Aqua Harvest Solutions. All Rights Reserved. | <a href="privacy.html">Privacy Policy</a> <!-- Placeholder -->
+            </div>
         </div>
     </footer>
+    <!-- Footer End -->
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

@@ -1,148 +1,188 @@
-/* --- START OF CONSOLIDATED CSS --- */
-
 /* ============================== */
-/* --- General Styles Start --- */
+/* --- General Styles --- */
 /* ============================== */
 :root {
-    /* Primary color set - using a clear, professional blue */
-    --theme-primary: #3498DB; /* Main theme blue */
-    --theme-primary-darker: #2980B9; /* Darker shade */
-    --theme-primary-darkest: #1A5276; /* Deepest blue */
+    /* Primary color set */
+    --theme-primary: #3498DB;
+    --theme-primary-darker: #2980B9;
+    --theme-primary-darkest: #1A5276;
 
     /* Component specific */
     --navbar-bg: var(--theme-primary);
     --footer-bg: var(--theme-primary-darkest);
+    /* Using darkest for main footer bg */
 
     /* Supporting colors */
-    --light-bg: #f7f9fa; /* Slightly off-white */
-    --light-gray-border: #dfe4e8; /* Subtle border color */
+    --light-bg: #f7f9fa;
+    --light-gray-border: #dfe4e8;
     --text-on-dark: #ffffff;
-    --text-on-light: #333; /* Standard dark text */
-    --text-muted-light: #6c757d; /* Bootstrap's default muted color */
+    --text-on-light: #333;
+    --text-muted-light: #6c757d;
 
-    /* Bootstrap color overrides (optional but good for consistency) */
+    /* Bootstrap color overrides */
     --bs-primary: var(--theme-primary);
     --bs-primary-rgb: 52, 152, 219;
-    --bs-primary-bg-subtle: #ddeffd; /* Lighter blue background */
+    --bs-primary-bg-subtle: #ddeffd;
     --bs-primary-text-emphasis: var(--theme-primary-darker);
     --bs-body-color: var(--text-on-light);
     --bs-secondary-color: var(--text-muted-light);
     --bs-link-color: var(--theme-primary-darker);
     --bs-link-hover-color: var(--theme-primary-darkest);
-    --bs-border-color: var(--light-gray-border); /* Consistent border color */
+    --bs-border-color: var(--light-gray-border);
 }
 
 body {
-    padding-top: 70px; /* Adjust based on final navbar height (50px logo + padding) */
+    padding-top: 66px;
+    /* Adjusted based on 50px logo + padding */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: var(--text-on-light); /* Use variable */
+    color: var(--text-on-light);
     background-color: #ffffff;
-    overflow-x: hidden !important; /* Force prevent horizontal scrollbar */
-    -webkit-font-smoothing: antialiased; /* Smoother fonts */
+    overflow-x: hidden !important;
+    -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 16px; /* Base font size */
+    font-size: 16px;
 }
 
-/* Ensure core layout elements & rows don't cause overflow */
-.container, .container-fluid, .row {
+/* Ensure core layout elements don't cause overflow */
+.container,
+.container-fluid,
+.row {
     max-width: 100%;
-    margin-left: auto; /* Ensure centered */
-    margin-right: auto; /* Ensure centered */
-    /* padding-left: 12px; */ /* Let Bootstrap handle padding */
-    /* padding-right: 12px; */
+    margin-left: auto;
+    margin-right: auto;
 }
-/* Override Bootstrap default padding if needed */
-.container, .container-fluid {
+
+.container,
+.container-fluid {
     padding-left: 15px;
     padding-right: 15px;
 }
+
 .row {
     margin-left: -15px;
     margin-right: -15px;
 }
-.row > * { /* Apply padding to columns */
+
+.row>* {
     padding-left: 15px;
     padding-right: 15px;
 }
 
-/* Ensure images within content columns don't cause overflow */
 img.img-fluid {
     max-width: 100%;
     height: auto;
-    display: block; /* Prevents potential bottom space */
+    display: block;
 }
 
 main {
-    overflow: hidden; /* Prevent content within main from causing scroll issues */
+    overflow: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 600;
-    color: var(--theme-primary-darkest); /* Default heading color */
-    margin-bottom: 16px; /* Default bottom margin */
+    color: var(--theme-primary-darkest);
+    margin-bottom: 16px;
 }
-h1 { font-size: 40px; }
-h2 { font-size: 32px; }
-h3 { font-size: 28px; }
-h4 { font-size: 24px; }
-h5 { font-size: 20px; }
-h6 { font-size: 16px; }
 
-/* Force left alignment and full width for text blocks within columns */
-.container .row > [class^="col-"] p,
-.container .row > [class^="col-"] ul,
-.container .row > [class^="col-"] ol,
-.container .row > [class^="col-"] dl {
-    text-align: left !important; /* Force left alignment */
-    max-width: 100% !important; /* Ensure it uses column width */
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+/* Limit forced left alignment to specific text elements */
+.container .row>[class^="col-"]>p,
+.container .row>[class^="col-"]>ul,
+.container .row>[class^="col-"]>ol,
+.container .row>[class^="col-"]>dl {
+    text-align: left;
+    /* Default left alignment */
+    max-width: 100%;
     width: 100%;
     margin-left: 0;
     margin-right: 0;
 }
-.container .row > [class^="col-"] ul,
-.container .row > [class^="col-"] ol {
-    padding-left: 20px; /* Add default indent for lists */
+
+.container .row>[class^="col-"]>ul,
+.container .row>[class^="col-"]>ol {
+    padding-left: 20px;
 }
 
-/* Helper classes for theme text color */
-.text-primary-darker { color: var(--theme-primary-darker) !important; }
-.text-primary-darkest { color: var(--theme-primary-darkest) !important; }
+/* Helper classes */
+.text-primary-darker {
+    color: var(--theme-primary-darker) !important;
+}
+
+.text-primary-darkest {
+    color: var(--theme-primary-darkest) !important;
+}
 
 /* ============================== */
-/* --- General Styles End --- */
+/* --- Global Components ---*/
 /* ============================== */
 
-
-/* ============================== */
-/* --- Global Components Start ---*/
-/* ============================== */
-
-/* Section Heading - ALWAYS CENTERED */
+/* Section Heading */
 .section-heading {
     margin-bottom: 35px;
     font-weight: 700;
     color: var(--theme-primary-darkest);
-    text-align: center !important; /* Force center alignment */
+    text-align: center !important;
     position: relative;
     padding-bottom: 10px;
 }
+
 .section-heading::after {
     content: '';
     display: block;
     width: 60px;
     height: 3px;
     background-color: var(--theme-primary);
-    margin: 8px auto 0 !important; /* Force center alignment */
+    margin: 8px auto 0 !important;
 }
-/* REMOVED .section-heading.text-start rules */
 
-/* Numbered List Styling (Used on Home, Res, Com, Edu) */
-.numbered-list, .numbered-steps-list { /* Target both classes */
+.section-heading.text-start {
+    /* Allow left alignment override */
+    text-align: left !important;
+}
+
+.section-heading.text-start::after {
+    margin: 8px 0 0 0 !important;
+    /* Align underline left */
+}
+
+
+/* Numbered List Styling */
+.numbered-list,
+.numbered-steps-list {
     counter-reset: step-counter;
     list-style-type: none;
-    padding-left: 0 !important; /* Override Bootstrap list padding */
-    text-align: left !important; /* Ensure list itself is left aligned */
+    padding-left: 0 !important;
+    text-align: left !important;
 }
+
 .numbered-list .list-group-item,
 .numbered-steps-list .list-group-item {
     border: none;
@@ -151,184 +191,214 @@ h6 { font-size: 16px; }
     background-color: transparent;
     display: flex;
     align-items: flex-start;
-    text-align: left !important; /* Ensure text inside is left-aligned */
+    text-align: left !important;
 }
+
 .numbered-list .list-group-item:last-child,
 .numbered-steps-list .list-group-item:last-child {
     border-bottom: none;
 }
-/* The Number Circle */
+
 .numbered-list .list-group-item::before,
 .numbered-steps-list .list-group-item::before {
     counter-increment: step-counter;
     content: counter(step-counter);
-    background-color: var(--theme-primary-darker); /* Circle background */
-    color: var(--text-on-dark); /* Number color */
+    background-color: var(--theme-primary-darker);
+    color: var(--text-on-dark);
     font-weight: bold;
-    border-radius: 50%; /* Makes it a circle */
+    border-radius: 50%;
     width: 30px;
     height: 30px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     margin-right: 15px;
-    flex-shrink: 0; /* Prevent shrinking */
-    margin-top: 2px; /* Align with text */
+    flex-shrink: 0;
+    margin-top: 2px;
 }
-/* The Step Title */
+
 .numbered-list .list-group-item .fw-bold,
 .numbered-steps-list .list-group-item .fw-bold {
-    color: var(--theme-primary-darker); /* Step title color */
+    color: var(--theme-primary-darker);
     margin-bottom: 5px;
     display: block;
 }
-/* The Step Description Text Container */
-.numbered-list .list-group-item > div,
-.numbered-steps-list .list-group-item > div {
+
+.numbered-list .list-group-item>div,
+.numbered-steps-list .list-group-item>div {
     flex-grow: 1;
 }
 
-/* System Cards (Used on Res/Com) */
+/* System Cards */
 .system-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--light-gray-border);
     height: 100%;
-    background-color: #fff; /* Ensure background */
-    text-align: left; /* Ensure card text is left aligned */
+    background-color: #fff;
+    text-align: left;
 }
+
 .system-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1) !important;
 }
+
 .system-card .card-img-top {
     height: 200px;
     object-fit: cover;
 }
+
 .system-card .card-title {
     color: var(--theme-primary-darkest);
 }
+
 .system-card .card-title i {
     color: var(--theme-primary-darker);
     margin-right: 8px;
 }
 
-/* Use Items (Used on Res/Com/Edu) */
+/* Use Items */
 .use-item {
     background-color: #fff;
     transition: background-color 0.3s ease;
     border-color: var(--light-gray-border) !important;
     height: 100%;
-    text-align: left; /* Ensure text is left aligned */
+    text-align: left;
 }
+
 .use-item:hover {
     background-color: var(--light-bg);
 }
+
 .use-item i {
     margin-top: 5px;
 }
+
 .use-item h5.use-title {
     color: var(--theme-primary-darkest);
 }
 
-/* Benefit Cards (Used on Home/Res/Com) */
-/* These are card sections, centering is generally okay */
-.benefits-home .benefit-card, /* Homepage */
-#benefits-residential .benefit-card, /* Residential */
-#benefits-commercial .benefit-card { /* Commercial */
+/* Benefit Cards */
+.benefits-home .benefit-card,
+#benefits-residential .benefit-card,
+#benefits-commercial .benefit-card,
+#benefits-agriculture .benefit-card {
+    /* Added agriculture */
     background-color: #fff;
     border: 1px solid var(--light-gray-border);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
-    border-radius: 8px; /* Ensure consistent rounding */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Consistent shadow */
-    text-align: center; /* Keep card content centered */
-}
-.benefits-home .benefit-card:hover,
-#benefits-residential .benefit-card:hover,
-#benefits-commercial .benefit-card:hover {
-    transform: translateY(-10px); /* Consistent hover */
-    box-shadow: 0 12px 25px rgba(41, 128, 185, 0.18); /* Consistent hover shadow */
-}
-.benefits-home .benefit-icon, /* Homepage */
-#benefits-residential .benefit-icon, /* Residential */
-#benefits-commercial .benefit-icon { /* Commercial */
-    color: var(--theme-primary-darker);
-    font-size: 48px !important; /* Consistent icon size */
-    margin-bottom: 16px; /* Ensure space below icon */
-}
-#benefits-residential .benefit-icon i, /* Ensure icon hover works */
-#benefits-commercial .benefit-icon i {
-    transition: transform 0.3s ease;
-}
-#benefits-residential .benefit-card:hover .benefit-icon i,
-#benefits-commercial .benefit-card:hover .benefit-icon i {
-    transform: scale(1.1);
-}
-.benefits-home .card-title, /* Homepage */
-#benefits-residential h5.benefit-title, /* Residential */
-#benefits-commercial h5.benefit-title { /* Commercial */
-    color: var(--theme-primary-darkest);
-    margin-top: 0; /* Reset margin if icon has margin-bottom */
-    margin-bottom: 8px; /* Space below title */
-    font-weight: 600; /* Consistent weight */
-}
-.benefits-home .card-text, /* Homepage */
-#benefits-residential .benefit-card p, /* Residential */
-#benefits-commercial .benefit-card p { /* Commercial */
-    color: var(--text-muted-light);
-    font-size: 15px; /* Consistent text size */
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    /* Keep card content centered */
 }
 
-/* FAQ Accordion (Used on all pages) */
-.accordion-item {
-    border: 1px solid var(--light-gray-border);
-    margin-bottom: 10px; /* Space between items */
-    border-radius: 6px; /* Approx 0.375rem */
-    overflow: hidden; /* Ensure content stays within rounded borders */
+.benefits-home .benefit-card:hover,
+#benefits-residential .benefit-card:hover,
+#benefits-commercial .benefit-card:hover,
+#benefits-agriculture .benefit-card:hover {
+    /* Added agriculture */
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(41, 128, 185, 0.18);
 }
-.accordion-header {
-    margin-bottom: 0; /* Remove default margin */
-}
-.accordion-button {
-    font-weight: 600;
-    text-align: left; /* Ensure button text is left aligned */
-    font-size: 16px;
-}
-.accordion-button:focus {
-    box-shadow: none;
-    border-color: transparent; /* Remove focus border */
-}
-.accordion-button:not(.collapsed) {
+
+.benefits-home .benefit-icon,
+#benefits-residential .benefit-icon,
+#benefits-commercial .benefit-icon,
+#benefits-agriculture .benefit-icon {
+    /* Added agriculture */
     color: var(--theme-primary-darker);
-    background-color: var(--bs-primary-bg-subtle);
-    box-shadow: none; /* Remove inset shadow */
+    font-size: 48px !important;
+    margin-bottom: 16px;
 }
-.accordion-button::after { /* Default Bootstrap icon */ }
-.accordion-body {
-    background-color: #fff; /* Ensure body background */
-    text-align: left; /* Ensure body text is left aligned */
+
+#benefits-residential .benefit-icon i,
+#benefits-commercial .benefit-icon i,
+#benefits-agriculture .benefit-icon i {
+    /* Added agriculture */
+    transition: transform 0.3s ease;
+}
+
+#benefits-residential .benefit-card:hover .benefit-icon i,
+#benefits-commercial .benefit-card:hover .benefit-icon i,
+#benefits-agriculture .benefit-card:hover .benefit-icon i {
+    /* Added agriculture */
+    transform: scale(1.1);
+}
+
+.benefits-home .benefit-title,
+/* Updated selector */
+#benefits-residential h5.benefit-title,
+#benefits-commercial h5.benefit-title,
+#benefits-agriculture h5.benefit-title {
+    /* Added agriculture */
+    color: var(--theme-primary-darkest);
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.benefits-home .benefit-card p,
+/* Updated selector */
+#benefits-residential .benefit-card p,
+#benefits-commercial .benefit-card p,
+#benefits-agriculture .benefit-card p {
+    /* Added agriculture */
+    color: var(--text-muted-light);
     font-size: 15px;
 }
 
-/* FAQ More Button Styling */
+/* FAQ Accordion */
+.accordion-item {
+    border: 1px solid var(--light-gray-border);
+    margin-bottom: 10px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.accordion-header {
+    margin-bottom: 0;
+}
+
+.accordion-button {
+    font-weight: 600;
+    text-align: left;
+    font-size: 16px;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.accordion-button:not(.collapsed) {
+    color: var(--theme-primary-darker);
+    background-color: var(--bs-primary-bg-subtle);
+    box-shadow: none;
+}
+
+.accordion-body {
+    background-color: #fff;
+    text-align: left;
+    font-size: 15px;
+}
+
+/* FAQ More Button */
 .faq-more-btn {
     padding: 8px 20px;
     font-size: 15px;
     font-weight: 500;
-    border-width: 2px; /* Match other outline buttons */
+    border-width: 2px;
 }
+
 .faq-more-btn:hover {
     background-color: var(--theme-primary-darker);
     color: var(--text-on-dark);
 }
 
 /* ============================== */
-/* --- Global Components End --- */
-/* ============================== */
-
-
-/* ============================== */
-/* --- Navbar Start --- */
+/* --- Navbar --- */
 /* ============================== */
 .navbar {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -339,13 +409,12 @@ h6 { font-size: 16px; }
     padding-bottom: 8px;
 }
 
-/* Container remains relative for potential future use, but brand is static */
 .navbar .container {
     position: relative;
 }
 
 .navbar-brand img {
-    height: 50px; /* Standardized height */
+    height: 50px;
     margin-right: 10px;
     vertical-align: middle;
 }
@@ -353,13 +422,14 @@ h6 { font-size: 16px; }
 .navbar-brand {
     font-weight: bold;
     font-size: 22px;
-    color: var(--text-on-dark) !important; /* Default state */
+    color: var(--text-on-dark) !important;
     margin-left: 0;
     position: static;
     transform: none;
     left: auto;
     top: auto;
 }
+
 .navbar-brand:hover {
     opacity: 0.9;
 }
@@ -368,93 +438,96 @@ h6 { font-size: 16px; }
     font-size: 16px;
     padding: 10px 15px !important;
     color: rgba(255, 255, 255, 0.9) !important;
-    transition: color 0.2s ease, background-color 0.2s ease; /* Added background transition */
-    border-radius: 4px; /* Subtle rounding on hover */
+    transition: color 0.2s ease, background-color 0.2s ease;
+    border-radius: 4px;
 }
+
 .nav-link:hover,
 .nav-link.active {
     color: var(--text-on-dark) !important;
-    background-color: rgba(255, 255, 255, 0.1); /* Subtle background on hover/active */
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .navbar-toggler {
     border-color: rgba(255, 255, 255, 0.4);
 }
+
 .navbar-toggler:focus {
-    box-shadow: none; /* Remove focus ring */
+    box-shadow: none;
 }
+
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.9%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* Dropdown Styles */
-.dropdown-menu { /* Base style for all dropdowns */
-    margin-top: 0; /* Align directly below nav item */
+.dropdown-menu {
+    margin-top: 0;
     border-radius: 0 0 5px 5px;
     border: none;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
     background-color: #ffffff;
     padding-top: 5px;
     padding-bottom: 5px;
 }
+
 .dropdown-item {
     color: var(--text-on-light);
     padding: 8px 20px;
     font-size: 15px;
     transition: background-color 0.2s ease, color 0.2s ease;
-    text-align: left; /* Ensure dropdown items are left aligned */
+    text-align: left;
 }
+
 .dropdown-item:hover,
-.dropdown-item.active { /* Style active/hover item in dropdown */
+.dropdown-item.active {
     background-color: var(--theme-primary-darker);
     color: var(--text-on-dark);
 }
+
 .dropdown-divider {
     border-top: 1px solid var(--light-gray-border);
 }
 
-/* Desktop Hover Dropdown Styles & Logo Margin */
+/* Desktop Hover Dropdown */
 @media (min-width: 992px) {
     .navbar-brand {
-        margin-left: 40px; /* Increased left margin for logo on desktop */
-        position: static; /* Ensure static positioning */
+        margin-left: 15px;
+        /* Consistent margin */
+        position: static;
         transform: none;
         left: auto;
         top: auto;
     }
 
-    /* CSS-based hover effect for desktop */
     .hover-dropdown .dropdown-menu {
-        display: block; /* Use block but control with opacity/visibility */
+        display: block;
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s; /* Delay hiding */
-        pointer-events: none; /* Prevent interaction when hidden */
-        margin-top: 0; /* Ensure no extra space */
+        transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s;
+        pointer-events: none;
+        margin-top: 0;
     }
-    .hover-dropdown:hover > .dropdown-menu {
+
+    .hover-dropdown:hover>.dropdown-menu {
         opacity: 1;
         visibility: visible;
-        transition-delay: 0s; /* Remove delay for showing */
-        pointer-events: auto; /* Allow interaction */
+        transition-delay: 0s;
+        pointer-events: auto;
     }
-    /* Keep active nav link highlighted even when dropdown is open */
-     .nav-item.dropdown.hover-dropdown:hover > .nav-link.active {
-         background-color: rgba(255, 255, 255, 0.1);
-     }
+
+    .nav-item.dropdown.hover-dropdown:hover>.nav-link.active {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
 }
-/* ============================== */
-/* --- Navbar End --- */
-/* ============================== */
-
 
 /* ============================== */
-/* --- Home Page Start --- */
+/* --- Home Page --- */
 /* ============================== */
 
 /* Hero Section */
 .hero-home {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Hero Image (4) edit.jpg') no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Hero\ Image.jpg') no-repeat center center;
     background-size: cover;
     padding: 180px 0;
     min-height: 640px;
@@ -463,11 +536,13 @@ h6 { font-size: 16px; }
     justify-content: center;
     color: var(--text-on-dark);
 }
+
 .hero-home h1 {
     font-size: 58px;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-    color: var(--text-on-dark); /* Ensure white */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    color: var(--text-on-dark);
 }
+
 .hero-home .lead {
     font-size: 22px;
     font-weight: 300;
@@ -475,30 +550,35 @@ h6 { font-size: 16px; }
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    color: rgba(255, 255, 255, 0.95); /* Ensure light */
+    color: rgba(255, 255, 255, 0.95);
 }
+
 .hero-home .btn {
     padding: 12px 30px;
     font-size: 17px;
     border-radius: 30px;
     transition: all 0.3s ease;
-    margin-top: 16px; /* Add space above buttons */
+    margin-top: 16px;
 }
+
 .hero-home .btn-primary {
     background-color: var(--theme-primary-darker);
     border-color: var(--theme-primary-darker);
     color: var(--text-on-dark);
 }
+
 .hero-home .btn-primary:hover {
     background-color: var(--theme-primary);
     border-color: var(--theme-primary);
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(41, 128, 185, 0.3);
 }
+
 .hero-home .btn-outline-light {
     border-width: 2px;
     color: var(--text-on-dark);
 }
+
 .hero-home .btn-outline-light:hover {
     background-color: var(--text-on-dark);
     color: var(--theme-primary-darker);
@@ -512,12 +592,14 @@ h6 { font-size: 16px; }
     padding-top: 80px;
     padding-bottom: 80px;
 }
+
 .intro-home img {
     max-height: 420px;
     object-fit: cover;
-    border-radius: 8px; /* Added rounding */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Added subtle shadow */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .intro-home .btn-outline-primary {
     color: var(--theme-primary-darker);
     border-color: var(--theme-primary-darker);
@@ -526,29 +608,30 @@ h6 { font-size: 16px; }
     padding: 10px 25px;
     transition: all 0.3s ease;
 }
+
 .intro-home .btn-outline-primary:hover {
     background-color: var(--theme-primary-darker);
     color: var(--text-on-dark);
     transform: translateY(-2px);
 }
+
 .intro-home .text-muted {
     color: var(--text-muted-light) !important;
-    font-size: 16px; /* Standard text size */
+    font-size: 16px;
     line-height: 1.7;
-    text-align: left !important; /* Ensure left aligned */
+    text-align: left !important;
 }
-.intro-home .text-muted.fs-5 {
-    font-size: 18px !important; /* Approx 1.15rem */
-}
-/* Heading is centered by default .section-heading */
 
-/* How It Works Section (Homepage) */
+.intro-home .text-muted.fs-5 {
+    font-size: 18px !important;
+}
+
+/* How It Works Section */
 .how-it-works-home {
     background-color: #ffffff;
     padding-top: 80px;
     padding-bottom: 80px;
 }
-/* Heading is centered by default .section-heading */
 
 /* Video Section */
 .video-home {
@@ -556,48 +639,55 @@ h6 { font-size: 16px; }
     padding-top: 80px;
     padding-bottom: 80px;
 }
+
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
+    /* 16:9 */
     height: 0;
     overflow: hidden;
-    max-width: 850px; /* Limit max width */
+    max-width: 850px;
     margin: 0 auto;
     border-radius: 10px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
+
 .video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    border: 0; /* Remove default border */
+    border: 0;
 }
+
 .video-home .text-muted {
     color: var(--text-muted-light) !important;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    text-align: center; /* Center align text below video */
+    text-align: center;
 }
 
-/* Call to Action (CTA) Section (Homepage & Reused) */
+/* Call to Action (CTA) Section */
 .cta-home {
     background-color: var(--theme-primary-darker);
     color: var(--text-on-dark);
     padding: 70px 0;
 }
+
 .cta-home h2 {
     color: var(--text-on-dark);
     font-weight: 700;
     margin-bottom: 15px;
 }
+
 .cta-home .lead {
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 30px;
     font-size: 18px;
 }
+
 .cta-home .btn-light {
     color: var(--theme-primary-darker);
     font-weight: 600;
@@ -609,59 +699,201 @@ h6 { font-size: 16px; }
     border: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .cta-home .btn-light:hover {
-    background-color: #f8f9fa; /* Slightly off-white hover */
+    background-color: #f8f9fa;
     color: var(--theme-primary-darkest);
     transform: translateY(-2px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* ============================== */
-/* --- Home Page End --- */
-/* ============================== */
-
-
 /* ================================== */
-/* --- Page Headers Start --- */
+/* --- Page Headers --- */
 /* ================================== */
-/* Base style for page headers (Res, Com, Edu) */
 .page-header-residential,
 .page-header-commercial,
-.page-header-education {
-    padding: 96px 0; /* Base padding */
+.page-header-education,
+.page-header-update,
+.page-header-facts,
+.page-header-agriculture,
+.page-header-faq,
+.page-header-simple,
+.products-hero-overview,
+.contact-hero-v4 {
+    padding: 96px 0;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     border-bottom: 5px solid var(--theme-primary);
-    display: flex; /* Enable flex for vertical alignment */
-    align-items: center; /* Vertically center content */
-    min-height: 350px; /* Ensure a minimum height */
-    color: var(--text-on-dark); /* Ensure text is white */
+    display: flex;
+    align-items: center;
+    min-height: 350px;
+    color: var(--text-on-dark);
 }
+
 .page-header-residential h1,
 .page-header-commercial h1,
-.page-header-education h1 {
-    color: var(--text-on-dark); /* Ensure white */
+.page-header-education h1,
+.page-header-update h1,
+/* Added */
+.page-header-facts h1,
+/* Added */
+.page-header-agriculture h1,
+/* Added */
+.page-header-faq h1,
+/* Added */
+.products-hero-overview h1,
+/* Added */
+.contact-hero-v4 h1 {
+    /* Added */
+    color: var(--text-on-dark);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
 .page-header-residential p.lead,
 .page-header-commercial p.lead,
-.page-header-education p.lead {
-    color: rgba(255, 255, 255, 0.95); /* Ensure light */
+.page-header-education p.lead,
+.page-header-update p.lead,
+/* Added */
+.page-header-facts p.lead,
+/* Added */
+.page-header-agriculture p.lead,
+/* Added */
+.page-header-faq p.lead,
+/* Added */
+.products-hero-overview p.lead,
+/* Added */
+.contact-hero-v4 p.lead {
+    /* Added */
+    color: rgba(255, 255, 255, 0.95);
 }
+
 /* Specific Backgrounds */
 .page-header-residential {
-    background: linear-gradient(rgba(26, 82, 118, 0.75), rgba(15, 48, 72, 0.85)), url('images/residential-header-bg.jpg') center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Resedential\ Hero.jpg') no-repeat center center;
     background-size: cover;
+    padding: 180px 0;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-on-dark);
 }
+
 .page-header-commercial {
-    background: linear-gradient(rgba(26, 82, 118, 0.75), rgba(15, 48, 72, 0.85)), url('images/commercial-header-bg.jpg') center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Comercial\ Hero.jpg') no-repeat center center;
     background-size: cover;
+    padding: 180px 0;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-on-dark);
 }
+
 .page-header-education {
-    background: linear-gradient(rgba(20, 80, 110, 0.8), rgba(10, 40, 60, 0.9)), url('images/education-header-bg.jpg') center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Education\ Hero.jpg') no-repeat center center;
     background-size: cover;
+    padding: 180px 0;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-on-dark);
 }
+
+.page-header-update {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Hero\ Image.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 180px 0;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-on-dark);
+}
+
+.page-header-facts {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Hero\ Image.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 180px 0;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-on-dark);
+}
+
+.page-header-agriculture {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Agriculutral\ hero.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 180px 0;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-on-dark);
+}
+
+.page-header-faq {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Hero\ Image.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 180px 0;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-on-dark);
+}
+
+.products-hero-overview {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Hero\ Image.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 180px 0;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-on-dark);
+    padding: 70px 0;
+}
+
+.contact-hero-v4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/Hero\ Image.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 180px 0;
+    min-height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-on-dark);
+}
+
+/* Simplified Header */
+.page-header-simple {
+    background-color: var(--light-bg);
+    border-bottom: 1px solid var(--light-gray-border);
+    /* Lighter border */
+    min-height: auto;
+    /* Remove min-height */
+    padding: 48px 0;
+    /* Reduced padding */
+    color: var(--text-on-light);
+    /* Dark text */
+}
+
+.page-header-simple h1 {
+    color: var(--theme-primary-darkest);
+    text-shadow: none;
+    font-size: 36px;
+}
+
+.page-header-simple p {
+    color: var(--text-muted-light);
+    font-size: 16px;
+}
+
+
 /* Page Header Buttons (Res & Com) */
 .page-header-residential .btn,
 .page-header-commercial .btn {
@@ -669,261 +901,923 @@ h6 { font-size: 16px; }
     font-size: 16px;
     border-radius: 30px;
     transition: all 0.3s ease;
-    margin-top: 16px; /* Add space above buttons */
+    margin-top: 16px;
 }
+
 .page-header-residential .btn-primary,
 .page-header-commercial .btn-primary {
     background-color: var(--theme-primary-darker);
     border-color: var(--theme-primary-darker);
     color: var(--text-on-dark);
 }
+
 .page-header-residential .btn-primary:hover,
 .page-header-commercial .btn-primary:hover {
     background-color: var(--theme-primary);
     border-color: var(--theme-primary);
     transform: translateY(-2px);
 }
+
 .page-header-residential .btn-outline-light,
 .page-header-commercial .btn-outline-light {
     border-width: 2px;
     color: var(--text-on-dark);
 }
+
 .page-header-residential .btn-outline-light:hover,
 .page-header-commercial .btn-outline-light:hover {
     background-color: var(--text-on-dark);
     color: var(--theme-primary-darker);
     transform: translateY(-2px);
 }
-/* ================================== */
-/* --- Page Headers End --- */
-/* ================================== */
-
 
 /* ================================== */
-/* --- Residential Page Start --- */
+/* --- Specific Page Styles --- */
 /* ================================== */
-/* Heading is centered by default .section-heading */
+
+/* --- Residential Page --- */
 #intro-residential p {
-    text-align: left !important; /* Ensure paragraphs are left aligned */
+    text-align: left !important;
 }
-/* Heading is centered by default .section-heading */
+
 #steps-residential img {
     border-radius: 8px;
 }
-/* ================================== */
-/* --- Residential Page End --- */
-/* ================================== */
 
-
-/* ============================== */
-/* --- Commercial Page Start --- */
-/* ============================== */
-/* Heading is centered by default .section-heading */
+/* --- Commercial Page --- */
 #intro-commercial p {
-    text-align: left !important; /* Ensure paragraphs are left aligned */
+    text-align: left !important;
 }
-/* Heading is centered by default .section-heading */
+
 #steps-commercial img {
     border-radius: 8px;
 }
-/* ============================== */
-/* --- Commercial Page End --- */
-/* ============================== */
 
-
-/* ============================== */
-/* --- Education Page Start --- */
-/* ============================== */
-
-/* Heading is centered by default .section-heading */
+/* --- Education Page --- */
 #edu-what-is p {
-    text-align: left !important; /* Ensure paragraphs are left aligned */
+    text-align: left !important;
 }
 
-/* Heading is centered by default .section-heading */
 #edu-diy p {
-    text-align: left !important; /* Ensure paragraphs are left aligned */
+    text-align: left !important;
 }
 
-/* Heading is centered by default .section-heading */
-#edu-quality p, #edu-quality ul {
-    text-align: left !important; /* Ensure paragraphs/lists are left aligned */
+#edu-quality p,
+#edu-quality ul {
+    text-align: left !important;
 }
 
-/* Heading is centered by default .section-heading */
 #edu-planning .list-group-item {
     background-color: transparent;
     padding-left: 0;
     padding-right: 0;
-    text-align: left !important; /* Ensure list items are left aligned */
+    text-align: left !important;
 }
+
 #edu-planning .list-group-item i {
     width: 24px;
 }
 
-/* Styling for definition lists used in Components section */
 .edu-definitions dt {
     font-weight: 600;
     color: var(--theme-primary-darker);
-    margin-top: 16px; /* Space between items */
+    margin-top: 16px;
     margin-bottom: 4px;
-    display: flex; /* Align icon and text */
+    display: flex;
     align-items: center;
-    text-align: left !important; /* Ensure left aligned */
-}
-.edu-definitions dt i {
-    width: 20px; /* Ensure consistent icon spacing */
-    text-align: center;
-    margin-right: 8px; /* Space between icon and text */
-}
-.edu-definitions dd {
-    margin-left: 28px; /* Indent description under icon+title */
-    font-size: 15px; /* Slightly smaller description text */
-    color: var(--text-muted-light);
-    text-align: left !important; /* Ensure left aligned */
+    text-align: left !important;
 }
 
-/* Styling for Use Lists */
+.edu-definitions dt i {
+    width: 20px;
+    text-align: center;
+    margin-right: 8px;
+}
+
+.edu-definitions dd {
+    margin-left: 28px;
+    font-size: 15px;
+    color: var(--text-muted-light);
+    text-align: left !important;
+}
+
 .edu-use-list li {
     margin-bottom: 8px;
     display: flex;
-    align-items: flex-start; /* Align icon top */
-    font-size: 16px; /* Standard text size */
-    text-align: left !important; /* Ensure left aligned */
-}
-.edu-use-list li i {
-    margin-top: 3px; /* Align icon slightly */
-    width: 20px; /* Consistent icon spacing */
-    flex-shrink: 0; /* Prevent icon shrinking */
+    align-items: flex-start;
+    font-size: 16px;
+    text-align: left !important;
 }
 
-/* Styling for points in Importance/Maintenance sections */
-/* These are card-like, centering is okay */
+.edu-use-list li i {
+    margin-top: 3px;
+    width: 20px;
+    flex-shrink: 0;
+}
+
 .edu-point {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid var(--light-gray-border); /* Add border */
-    height: 100%; /* Ensure equal height */
-    text-align: center; /* Center content */
+    border: 1px solid var(--light-gray-border);
+    height: 100%;
+    text-align: center;
 }
+
 .edu-point:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Styling for Component Cards */
-/* These are card-like, centering is okay */
 .component-card {
-    background-color: #fff; /* Ensure white background */
+    background-color: #fff;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid var(--light-gray-border); /* Add border */
-    height: 100%; /* Ensure equal height */
-    text-align: center; /* Center content */
+    border: 1px solid var(--light-gray-border);
+    height: 100%;
+    text-align: center;
 }
+
 .component-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(41, 128, 185, 0.15); /* Use theme color shadow */
+    box-shadow: 0 6px 12px rgba(41, 128, 185, 0.15);
 }
 
-/* Styling for Mistake Cards */
-/* These are card-like, centering is okay */
 .mistake-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid var(--bs-danger-border-subtle); /* Use Bootstrap variable */
-    height: 100%; /* Ensure equal height */
-    text-align: center; /* Center content */
-}
-.mistake-card:hover {
-    transform: scale(1.03); /* Slight scale effect */
-    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.2); /* Reddish shadow */
+    border: 1px solid var(--bs-danger-border-subtle);
+    height: 100%;
+    text-align: center;
 }
 
-/* Styling for the Calculator Box */
-.calculator-box {
-    box-shadow: 0 4px 10px rgba(0,0,0,0.07);
-    max-width: 100%; /* Allow calculator to use full column width */
-    width: 100%; /* Explicitly set width */
-    padding: 24px; /* Approx 1.5rem */
-    border-radius: 8px; /* Added rounding */
+.mistake-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.2);
 }
+
+.calculator-box {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+    max-width: 100%;
+    width: 100%;
+    padding: 24px;
+    border-radius: 8px;
+}
+
 #calculationResult {
     color: var(--theme-primary-darkest);
     transition: opacity 0.3s ease-in-out;
-    font-weight: 600; /* Make result bold */
-    min-height: 30px; /* Ensure space for text */
-}
-#edu-quality img, #edu-diy img, #edu-what-is img {
-    border-radius: 8px; /* Added rounding */
+    font-weight: 600;
+    min-height: 30px;
 }
 
-/* ============================== */
-/* --- Education Page End --- */
-/* ============================== */
+#edu-quality img,
+#edu-diy img,
+#edu-what-is img {
+    border-radius: 8px;
+}
 
+/* --- Contact Page V4 --- */
+.contact-main-v4 {
+    background-color: #fff;
+}
+
+.form-container-v4 {
+    background-color: #fff;
+    border-radius: 8px;
+    border: 1px solid var(--light-gray-border);
+}
+
+.info-container-v4 .info-icon {
+    font-size: 24px;
+    color: var(--theme-primary-darker);
+    width: 30px;
+    text-align: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.info-container-v4 .info-title {
+    color: var(--theme-primary-darkest);
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.info-container-v4 .info-text {
+    color: var(--text-muted-light);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+.info-container-v4 .info-text a {
+    color: var(--text-muted-light);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.info-container-v4 .info-text a:hover {
+    color: var(--theme-primary-darker);
+    text-decoration: underline;
+}
+
+#contactFormV4 .form-label {
+    font-weight: 500;
+    color: #495057;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+#contactFormV4 .form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 11px 16px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+#contactFormV4 .form-control:focus {
+    border-color: var(--theme-primary);
+    box-shadow: 0 0 0 3px rgba(var(--bs-primary-rgb), 0.2);
+}
+
+#contactFormV4 textarea.form-control {
+    min-height: 120px;
+}
+
+#contactFormV4 button[type="submit"] {
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 12px 24px;
+    background-color: var(--theme-primary-darker);
+    border-color: var(--theme-primary-darker);
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+#contactFormV4 button[type="submit"]:hover {
+    background-color: var(--theme-primary-darkest);
+    border-color: var(--theme-primary-darkest);
+}
+
+.map-wrapper-v4 {
+    position: relative;
+    overflow: hidden;
+    height: 450px;
+    border-radius: 8px;
+}
+
+.map-wrapper-v4 iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+#modalIcon i {
+    font-size: 64px;
+}
+
+#modalIcon .fa-check-circle {
+    color: var(--bs-success);
+}
+
+#modalIcon .fa-times-circle {
+    color: var(--bs-danger);
+}
+
+#responseModalLabel {
+    color: var(--theme-primary-darkest);
+}
+
+/* --- Products Overview Page --- */
+.products-grid {
+    background-color: #fff;
+}
+
+.product-card {
+    border: 1px solid var(--light-gray-border);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    overflow: hidden;
+    height: 100%;
+    /* Added */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card .card-img-top {
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--light-gray-border);
+}
+
+.product-card .card-body {
+    padding: 20px;
+}
+
+.product-card .card-title {
+    color: var(--theme-primary-darkest);
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.product-card .card-title i {
+    color: var(--theme-primary-darker);
+    margin-top: -2px;
+    margin-right: 8px;
+    /* Added */
+}
+
+.product-card .card-text {
+    color: var(--text-muted-light);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.product-card .btn-outline-primary {
+    border-width: 2px;
+    font-weight: 500;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.product-card .btn-outline-primary:hover {
+    background-color: var(--theme-primary-darker);
+    color: var(--text-on-dark);
+}
+
+/* --- Update Page --- */
+.update-card {
+    border: 1px solid var(--light-gray-border);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    overflow: hidden;
+    text-align: left;
+    height: 100%;
+    /* Added */
+}
+
+.update-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.update-card .card-img-top {
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--light-gray-border);
+}
+
+.update-card .card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* Allow button push down */
+}
+
+.update-card .card-title {
+    color: var(--theme-primary-darkest);
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.update-card .card-title i {
+    margin-right: 8px;
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+}
+
+.update-card .card-text.summary {
+    color: var(--text-muted-light);
+    font-size: 15px;
+    line-height: 1.6;
+    flex-grow: 1;
+    /* Push button down */
+}
+
+.update-card .card-text.details {
+    color: var(--text-muted-light);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.update-card .card-text.small {
+    margin-bottom: 12px;
+    font-style: italic;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    /* Smaller meta */
+}
+
+.update-card .card-text.small i {
+    margin-top: -2px;
+    margin-right: 5px;
+    /* Space after icon */
+}
+
+.update-card .btn[data-bs-toggle="collapse"] {
+    border-width: 1px;
+    font-weight: 500;
+    padding: 6px 12px;
+    font-size: 13px;
+    margin-top: auto;
+    /* Align button bottom */
+}
+
+.update-card .btn[data-bs-toggle="collapse"]:hover {
+    background-color: var(--theme-primary-darker);
+    color: var(--text-on-dark);
+}
+
+.update-card .collapse.show .details {
+    margin-top: 12px;
+}
+
+/* --- Facts Page --- */
+.fact-item {
+    background-color: var(--bs-primary-bg-subtle);
+    border-left: 5px solid var(--theme-primary-darker);
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+    padding: 16px;
+    border-radius: 6px;
+}
+
+.fact-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 15px rgba(var(--bs-primary-rgb), 0.15);
+}
+
+.fact-item i {
+    color: var(--theme-primary-darker);
+    opacity: 0.8;
+}
+
+.method-card {
+    border: 1px solid var(--light-gray-border);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    overflow: hidden;
+    height: 100%;
+}
+
+.method-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.method-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--light-gray-border);
+}
+
+.method-card .card-title {
+    color: var(--theme-primary-darkest);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.method-card .card-title i {
+    color: var(--theme-primary-darker);
+    margin-right: 8px;
+    width: 20px;
+    text-align: center;
+}
+
+.method-card .card-text {
+    color: var(--text-muted-light);
+    font-size: 15px;
+}
+
+.myth-fact-card {
+    border: 1px solid var(--light-gray-border);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.myth-section {
+    background-color: var(--bs-danger-bg-subtle);
+    padding: 16px 20px;
+    border-bottom: 1px dashed var(--bs-danger-border-subtle);
+}
+
+.myth-section .myth-title {
+    font-weight: 600;
+    color: var(--bs-danger-text-emphasis);
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.myth-section .myth-title i {
+    color: var(--bs-danger);
+    margin-right: 8px;
+    width: 20px;
+    text-align: center;
+}
+
+.fact-section {
+    background-color: var(--bs-success-bg-subtle);
+    padding: 16px 20px;
+    flex-grow: 1;
+}
+
+.fact-section .fact-title {
+    font-weight: 600;
+    color: var(--bs-success-text-emphasis);
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.fact-section .fact-title i {
+    color: var(--bs-success);
+    margin-right: 8px;
+    width: 20px;
+    text-align: center;
+}
+
+.fact-section p {
+    font-size: 15px;
+    color: var(--bs-success-text-emphasis);
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* --- Agriculture Page --- */
+#agri-methods .method-card .card-title i {
+    color: var(--theme-primary-darker);
+}
+
+#agri-uses .use-item i {
+    color: var(--theme-primary);
+}
+
+#agri-steps .numbered-steps-list .list-group-item::before {
+    background-color: var(--theme-primary);
+    color: white;
+}
+
+#agri-steps .numbered-steps-list .fw-bold {
+    color: var(--theme-primary-darkest);
+}
+
+/* --- FAQ Page --- */
+#faqAccordionMain .accordion-item {
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+}
+
+#faqAccordionMain .accordion-item:first-of-type {
+    border-top: 1px solid var(--bs-accordion-border-color);
+}
+
+#faqAccordionMain .accordion-item:last-of-type {
+    border-bottom: 1px solid var(--bs-accordion-border-color);
+}
+
+#faqAccordionMain .accordion-button {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--theme-primary-darkest);
+}
+
+#faqAccordionMain .accordion-button:not(.collapsed) {
+    background-color: var(--bs-primary-bg-subtle);
+    color: var(--theme-primary-darkest);
+    box-shadow: none;
+}
+
+#faqAccordionMain .accordion-button:focus {
+    box-shadow: 0 0 0 4px rgba(var(--bs-primary-rgb), 0.25);
+    border-color: rgba(var(--bs-primary-rgb), 0.25);
+    z-index: 3;
+}
+
+#faqAccordionMain .accordion-body {
+    text-align: left !important;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+#faqAccordionMain .accordion-body ul {
+    padding-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+#faqAccordionMain .accordion-body li {
+    margin-bottom: 5px;
+}
+
+#faqAccordionMain .accordion-body a {
+    font-weight: 500;
+}
+
+.maintenance-card {
+    border: 1px solid var(--light-gray-border);
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.maintenance-card img {
+    border-bottom: 1px solid var(--light-gray-border);
+}
+
+.maintenance-card .maintenance-card-body {
+    padding: 20px;
+}
+
+.maintenance-card .card-title {
+    color: var(--theme-primary-darkest);
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.maintenance-card .card-text {
+    color: var(--text-muted-light);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.maintenance-card .maintenance-tip-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.maintenance-card .maintenance-tip-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 18px;
+}
+
+.maintenance-card .maintenance-tip-item:last-child {
+    margin-bottom: 0;
+}
+
+.maintenance-card .maintenance-tip-item i {
+    color: var(--theme-primary-darker);
+    font-size: 18px;
+    width: 25px;
+    text-align: center;
+    margin-right: 12px;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.maintenance-card .maintenance-tip-item h6.tip-title {
+    font-weight: 600;
+    color: var(--theme-primary-darkest);
+    margin-bottom: 3px;
+    font-size: 15px;
+}
+
+.maintenance-card .maintenance-tip-item p {
+    font-size: 14px;
+    color: var(--text-muted-light);
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* --- Product Listing Page --- */
+.filter-controls .form-label {
+    margin-bottom: 4px;
+    font-size: 13px;
+    color: var(--text-muted-light);
+}
+
+.filter-controls .form-control-sm,
+.filter-controls .form-select-sm {
+    font-size: 14px;
+}
+
+.filter-controls .btn-sm {
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+.pagination .page-link {
+    color: var(--theme-primary-darker);
+    border-color: var(--light-gray-border);
+}
+
+.pagination .page-link:hover {
+    color: var(--theme-primary-darkest);
+    background-color: var(--light-bg);
+    border-color: var(--light-gray-border);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--theme-primary);
+    border-color: var(--theme-primary);
+    color: var(--text-on-dark);
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #adb5bd;
+    background-color: transparent;
+    border-color: var(--light-gray-border);
+}
 
 /* ============================== */
-/* --- Animation Styles Start --- */
+/* --- Animation Styles --- */
 /* ============================== */
-/* Initial state for elements that fade in */
 .fade-in-on-scroll {
     opacity: 0;
-    transform: translateY(20px); /* Start slightly lower */
+    transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    will-change: opacity, transform; /* Optimize animation */
+    will-change: opacity, transform;
 }
-/* Add delays using utility classes */
-.fade-in-on-scroll.animate-delay-1 { transition-delay: 0.1s; }
-.fade-in-on-scroll.animate-delay-2 { transition-delay: 0.2s; }
-.fade-in-on-scroll.animate-delay-3 { transition-delay: 0.3s; }
 
-/* State when element is intersecting (visible) */
+.fade-in-on-scroll.animate-delay-1 {
+    transition-delay: 0.1s;
+}
+
+.fade-in-on-scroll.animate-delay-2 {
+    transition-delay: 0.2s;
+}
+
+.fade-in-on-scroll.animate-delay-3 {
+    transition-delay: 0.3s;
+}
+
 .fade-in-on-scroll.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Simple animation for header elements on load */
 .animate-on-load {
     opacity: 0;
     animation: fadeInLoad 0.8s ease-out forwards;
-    will-change: opacity, transform; /* Optimize animation */
+    will-change: opacity, transform;
 }
-.animate-on-load.animate-delay-1 { animation-delay: 0.2s; }
+
+.animate-on-load.animate-delay-1 {
+    animation-delay: 0.2s;
+}
 
 @keyframes fadeInLoad {
-    from { opacity: 0; transform: translateY(15px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-/* ============================== */
-/* --- Animation Styles End --- */
-/* ============================== */
-
 
 /* ============================== */
-/* --- Footer Styles Start --- */
+/* --- Footer --- */
 /* ============================== */
-.footer-home { /* Standardized footer class */
+.footer-section {
     background-color: var(--footer-bg);
     color: rgba(255, 255, 255, 0.8);
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 50px;
+    /* Increased padding */
+    padding-bottom: 25px;
+    /* Reduced bottom padding */
     font-size: 15px;
 }
-.footer-home a {
-    color: rgba(255, 255, 255, 0.9);
-    text-decoration: none;
-    transition: color 0.2s ease;
+
+.footer-section .navbar-brand img {
+    filter: brightness(0) invert(1);
+    /* Make logo white */
+    opacity: 0.9;
 }
-.footer-home a:hover {
+
+.footer-heading {
+    font-weight: 600;
     color: var(--text-on-dark);
-    text-decoration: underline;
+    margin-bottom: 18px;
+    /* Space below heading */
+    font-size: 17px;
+    /* Slightly larger heading */
+    text-transform: uppercase;
+    /* Optional: Uppercase headings */
+    letter-spacing: 0.5px;
+    /* Optional: Letter spacing */
 }
-/* ============================== */
-/* --- Footer Styles End --- */
-/* ============================== */
 
+.footer-links li {
+    margin-bottom: 10px;
+    /* Space between links */
+}
+
+.footer-links a,
+.footer-contact-info a,
+.footer-bottom-text a {
+    color: rgba(255, 255, 255, 0.85);
+    /* Slightly brighter link color */
+    text-decoration: none;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+    /* Added padding transition */
+}
+
+.footer-links a:hover,
+.footer-contact-info a:hover,
+.footer-bottom-text a:hover {
+    color: var(--text-on-dark);
+    text-decoration: none;
+    /* Remove underline */
+    padding-left: 5px;
+    /* Indent on hover */
+}
+
+.footer-contact-info li {
+    margin-bottom: 12px;
+    /* Space between contact items */
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-contact-info i {
+    width: 20px;
+    /* Icon alignment */
+    margin-right: 10px;
+    /* Space after icon */
+    margin-top: 3px;
+    /* Align icon */
+    color: var(--theme-primary);
+    /* Use theme color for icons */
+    flex-shrink: 0;
+}
+
+.social-icons a.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-on-dark);
+    margin-right: 8px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    font-size: 16px;
+}
+
+.social-icons a.social-icon:hover {
+    background-color: var(--theme-primary);
+    color: var(--text-on-dark);
+    transform: translateY(-2px);
+}
+
+.footer-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.footer-bottom-text {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-bottom-text a {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+.footer-bottom-text a:hover {
+    color: var(--text-on-dark);
+    padding-left: 0;
+    /* No indent for bottom links */
+    text-decoration: underline;
+    /* Underline bottom links on hover */
+}
 
 /* ============================== */
-/* --- Scroll Button Start --- */
+/* --- Scroll Button --- */
 /* ============================== */
 #scrollToTopBtn {
     position: fixed;
@@ -937,7 +1831,7 @@ h6 { font-size: 16px; }
     border-radius: 50%;
     cursor: pointer;
     font-size: 24px;
-    line-height: 1; /* Ensure icon is centered */
+    line-height: 1;
     text-align: center;
     text-decoration: none;
     opacity: 0;
@@ -955,136 +1849,216 @@ h6 { font-size: 16px; }
     background-color: var(--theme-primary);
     transform: scale(1.05);
 }
-/* ============================== */
-/* --- Scroll Button End --- */
-/* ============================== */
-
 
 /* ============================== */
-/* --- Responsive Start --- */
+/* --- Responsive --- */
 /* ============================== */
 
-/* Navbar adjustment base for tablets and below */
+/* Navbar adjustment base */
 @media (max-width: 991.98px) {
     body {
-        padding-top: 66px; /* Adjust if navbar height changes (50px logo + padding) */
+        padding-top: 66px;
     }
 
-    /* Add small left margin for logo on mobile */
     .navbar-brand {
-        margin-left: 15px; /* Adjust as needed */
-        position: static; /* Revert to default flow */
+        margin-left: 15px;
+        position: static;
         transform: none;
         left: auto;
         top: auto;
         z-index: auto;
     }
-    /* Revert toggler adjustments */
+
     .navbar-toggler {
-        margin-left: 0; /* Revert margin */
-        position: static; /* Revert position */
+        margin-left: 0;
+        position: static;
         z-index: auto;
     }
 
     .navbar-nav {
         text-align: center;
-        background-color: var(--navbar-bg); /* Match navbar background */
+        background-color: var(--navbar-bg);
         padding-bottom: 10px;
-        margin-top: 10px; /* Space below toggler */
-        border-radius: 0 0 5px 5px; /* Round bottom corners */
+        margin-top: 10px;
+        border-radius: 0 0 5px 5px;
     }
+
     .nav-link:hover,
     .nav-link.active {
-        background-color: rgba(255, 255, 255, 0.15); /* Slightly stronger hover on mobile */
+        background-color: rgba(255, 255, 255, 0.15);
     }
 
-    /* --- REMOVED MOBILE DROPDOWN OVERRIDE --- */
-    /* The CSS block that started with: */
-    /* .navbar-collapse.show .dropdown-menu { ... !important; } */
-    /* has been removed to let Bootstrap JS handle dropdown visibility. */
+    /* Mobile Dropdown Items */
+    .navbar-collapse .dropdown-menu {
+        background-color: transparent !important;
+        border: 0 !important;
+        box-shadow: none !important;
+        padding: 5px 0 !important;
+        margin-top: 0 !important;
+        position: static !important;
+        float: none !important;
+        width: auto !important;
+    }
 
-    /* Style dropdown items within the collapsed mobile menu */
-     .navbar-collapse .dropdown-menu {
-         background-color: transparent !important;
-         border: 0 !important;
-         box-shadow: none !important;
-         padding: 5px 0 !important;
-         margin-top: 0 !important;
-         position: static !important; /* Ensure it flows within the collapse */
-         float: none !important;
-         width: auto !important;
-     }
-     .navbar-collapse .dropdown-item {
-         color: rgba(255, 255, 255, 0.85) !important;
-         text-align: center !important;
-         padding: 10px 15px !important;
-         background-color: transparent !important;
-     }
-     .navbar-collapse .dropdown-item:hover,
-     .navbar-collapse .dropdown-item.active {
-         background-color: rgba(255, 255, 255, 0.15) !important;
-         color: var(--text-on-dark) !important;
-     }
-     .navbar-collapse .dropdown-divider {
-         border-color: rgba(255, 255, 255, 0.2) !important;
-         margin: 8px 16px !important;
-     }
+    .navbar-collapse .dropdown-item {
+        color: rgba(255, 255, 255, 0.85) !important;
+        text-align: center !important;
+        padding: 10px 15px !important;
+        background-color: transparent !important;
+    }
+
+    .navbar-collapse .dropdown-item:hover,
+    .navbar-collapse .dropdown-item.active {
+        background-color: rgba(255, 255, 255, 0.15) !important;
+        color: var(--text-on-dark) !important;
+    }
+
+    .navbar-collapse .dropdown-divider {
+        border-color: rgba(255, 255, 255, 0.2) !important;
+        margin: 8px 16px !important;
+    }
 }
 
-/* Larger Screens Video Container */
+/* Larger Screens Video */
 @media (min-width: 992px) {
     .video-container {
         max-width: 750px;
+    }
+
+    /* Sticky Maintenance Card on FAQ page */
+    .maintenance-card.sticky-top {
+        top: 90px;
+        z-index: 1019;
     }
 }
 
 /* Tablet and below */
 @media (max-width: 991.98px) {
-    h1 { font-size: 36px; }
-    h2 { font-size: 28px; }
-    h3 { font-size: 24px; }
-    h4 { font-size: 20px; }
-    h5 { font-size: 18px; }
+    h1 {
+        font-size: 36px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    h5 {
+        font-size: 18px;
+    }
 
     .hero-home {
         padding: 120px 0;
         min-height: 450px;
     }
+
     .hero-home h1 {
         font-size: 42px;
     }
+
     .hero-home .lead {
         font-size: 18px;
     }
 
-    /* Headings are centered by default */
-
+    /* Page Headers */
     .page-header-residential,
     .page-header-commercial,
-    .page-header-education {
+    .page-header-education,
+    .page-header-update,
+    .page-header-facts,
+    .page-header-agriculture,
+    .page-header-faq,
+    .products-hero-overview,
+    .contact-hero-v4 {
         padding: 64px 0;
         min-height: 300px;
     }
+
     .page-header-residential h1,
     .page-header-commercial h1,
-    .page-header-education h1 {
+    .page-header-education h1,
+    .page-header-update h1,
+    .page-header-facts h1,
+    .page-header-agriculture h1,
+    .page-header-faq h1,
+    .products-hero-overview h1,
+    .contact-hero-v4 h1 {
         font-size: 40px;
+    }
+
+    .page-header-simple {
+        padding: 40px 0;
+    }
+
+    .page-header-simple h1 {
+        font-size: 32px;
+    }
+
+    /* Contact Page Info Stack */
+    .info-container-v4 {
+        margin-top: 40px;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .map-wrapper-v4 {
+        height: 400px;
+    }
+
+    /* Product Listing Filters Stack */
+    .filter-controls form>.row>div:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .filter-controls form .text-end {
+        text-align: left !important;
+    }
+
+    .filter-controls form button[type="submit"] {
+        width: auto !important;
+    }
+
+    /* FAQ Maintenance Card Stack */
+    .maintenance-card {
+        margin-top: 40px;
+    }
+
+    /* Footer text center */
+    .footer-section .text-md-start {
+        text-align: center !important;
     }
 }
 
 /* Mobile landscape and below */
 @media (max-width: 767.98px) {
-    h1 { font-size: 32px; }
-    h2 { font-size: 26px; }
-    h3 { font-size: 22px; }
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
 
     .hero-home {
         padding: 100px 0;
         min-height: 400px;
     }
+
     .hero-home h1 {
         font-size: 36px;
     }
+
     /* Stack columns and add space below images */
     .intro-home img,
     .how-it-works-home img,
@@ -1093,144 +2067,219 @@ h6 { font-size: 16px; }
     #intro-commercial img,
     #steps-commercial img,
     #edu-what-is img,
-    #edu-components img, /* This is the diagram below component cards */
+    #edu-components img,
     #edu-quality img,
-    #edu-diy img {
-         margin-bottom: 30px;
-     }
-    /* Adjust order for stacked image/text sections */
-    .how-it-works-home .order-lg-2, /* Image */
-    #steps-residential .order-lg-2, /* Image */
-    #steps-commercial .order-lg-2, /* Image */
-    #edu-diy .order-lg-2, /* Image */
-    #edu-quality .col-lg-6:last-child { /* Image column */
+    #edu-diy img,
+    #agri-steps img {
+        /* Added agri */
+        margin-bottom: 30px;
+    }
+
+    /* Adjust order for stacked image/text */
+    .how-it-works-home .order-lg-2,
+    #steps-residential .order-lg-2,
+    #steps-commercial .order-lg-2,
+    #edu-diy .order-lg-2,
+    #edu-quality .col-lg-6:last-child,
+    #agri-steps .order-lg-2 {
+        /* Added agri */
         order: 1 !important;
     }
-     .how-it-works-home .order-lg-1, /* Text */
-     #steps-residential .order-lg-1, /* Text */
-     #steps-commercial .order-lg-1, /* Text */
-     #edu-diy .order-lg-1, /* Text */
-     #edu-quality .col-lg-6:first-child { /* Text column */
+
+    .how-it-works-home .order-lg-1,
+    #steps-residential .order-lg-1,
+    #steps-commercial .order-lg-1,
+    #edu-diy .order-lg-1,
+    #edu-quality .col-lg-6:first-child,
+    #agri-steps .order-lg-1 {
+        /* Added agri */
         order: 2 !important;
     }
-    /* Note: edu-components diagram doesn't need reordering as it's below the cards */
 
     .section-heading {
         font-size: 28px;
     }
+
     /* Add space between stacked cards/items */
-    .benefits-home .col-md-6:not(:last-child),
-    #benefits-residential .col-md-6:not(:last-child),
-    #benefits-commercial .col-md-6:not(:last-child),
-    #systems-residential .col-md-6:not(:last-child),
-    #systems-commercial .col-md-6:not(:last-child),
-    #edu-why-important .col-md-6:not(:last-child),
-    #edu-components .col-md-6:not(:last-child),
-    #edu-mistakes .col-md-6:not(:last-child),
-    #edu-maintenance .col-md-6:not(:last-child),
-    #uses-residential .col-md-6:not(:last-child),
-    #uses-commercial .col-md-6:not(:last-child),
-    #edu-uses .col-md-6:not(:last-child),
-    #rwh-news .col-md-6:not(:last-child), /* Updated ID */
-    #rwh-policies .col-md-6:not(:last-child), /* Added */
-    #rwh-market .col-md-6:not(:last-child) { /* Added */
-         margin-bottom: 25px; /* Add space below stacked columns */
+    .benefits-home .col-md-6,
+    #benefits-residential .col-md-6,
+    #benefits-commercial .col-md-6,
+    #benefits-agriculture .col-md-6,
+    /* Added agri */
+    #systems-residential .col-md-6,
+    #systems-commercial .col-md-6,
+    #edu-why-important .col-md-6,
+    #edu-components .col-md-6,
+    #edu-mistakes .col-md-6,
+    #edu-maintenance .col-md-6,
+    #uses-residential .col-md-6,
+    #uses-commercial .col-md-6,
+    #edu-uses .col-md-6,
+    #agri-uses .col-md-6,
+    /* Added agri */
+    #rwh-news .col-md-6,
+    #rwh-policies .col-md-6,
+    #rwh-market .col-md-6,
+    #interesting-methods .col-md-6,
+    /* Added facts */
+    #myth-vs-fact .col-lg-6,
+    /* Added facts */
+    .products-grid .col-md-6 {
+        /* Added products */
+        margin-bottom: 25px;
     }
+
+    /* Ensure last item doesn't have bottom margin (optional, handled by row usually) */
+    .row>.col-md-6:last-child {
+        margin-bottom: 0;
+    }
+
+    .row>.col-lg-6:last-child {
+        margin-bottom: 0;
+    }
+
+
     .cta-home {
         padding: 60px 0;
     }
+
     .cta-home h2 {
         font-size: 28px;
     }
-     .cta-home .lead {
+
+    .cta-home .lead {
         font-size: 17px;
     }
-    .system-card .card-img-top {
+
+    .system-card .card-img-top,
+    .product-card .card-img-top,
+    .update-card .card-img-top,
+    .method-card .card-img-top {
+        /* Added method */
         height: 180px;
+    }
+
+    .contact-hero-v4 {
+        padding: 50px 0;
+    }
+
+    .form-container-v4 {
+        padding: 24px !important;
+    }
+
+    .map-wrapper-v4 {
+        height: 350px;
     }
 }
 
 /* Small mobile devices */
 @media (max-width: 575.98px) {
     body {
-        padding-top: 66px; /* Match tablet padding top */
-        font-size: 15px; /* Slightly smaller base font */
+        padding-top: 66px;
+        font-size: 15px;
     }
-    h1 { font-size: 28px; }
-    h2 { font-size: 24px; }
-    h3 { font-size: 20px; }
-    h4 { font-size: 18px; }
-    h5 { font-size: 16px; }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
 
     .hero-home {
         padding: 80px 0;
         min-height: 350px;
     }
+
     .hero-home h1 {
         font-size: 30px;
     }
-     .hero-home .lead {
+
+    .hero-home .lead {
         font-size: 16px;
     }
+
     .hero-home .btn {
         font-size: 15px;
         padding: 10px 25px;
-        display: block; /* Stack buttons */
+        display: block;
         width: 80%;
         max-width: 280px;
-        margin: 10px auto 0 !important; /* Center and add space, override me-2 */
+        margin: 10px auto 0 !important;
     }
-     .hero-home .btn:first-of-type {
-         margin-top: 15px !important; /* Add initial top margin */
-     }
+
+    .hero-home .btn:first-of-type {
+        margin-top: 15px !important;
+    }
 
     /* Stack hero buttons on Res/Com pages */
     .page-header-residential .btn,
     .page-header-commercial .btn {
-        display: block; /* Make buttons block level */
-        width: 80%; /* Limit width */
-        max-width: 300px; /* Optional max width */
-        margin-left: auto !important; /* Center */
-        margin-right: auto !important; /* Center */
-        margin-bottom: 10px; /* Add space between stacked buttons */
-        margin-top: 0; /* Reset top margin */
+        display: block;
+        width: 80%;
+        max-width: 300px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-bottom: 10px;
+        margin-top: 0;
     }
-     .page-header-residential .btn:last-child,
-     .page-header-commercial .btn:last-child {
-        margin-bottom: 0; /* Remove bottom margin from last button */
+
+    .page-header-residential .btn:last-child,
+    .page-header-commercial .btn:last-child {
+        margin-bottom: 0;
     }
-     /* Remove horizontal margin specifically */
-     .page-header-residential .btn.me-2,
-     .page-header-commercial .btn.me-2 {
-        margin-right: auto !important; /* Override me-2 */
+
+    .page-header-residential .btn.me-md-2,
+    .page-header-commercial .btn.me-md-2 {
+        margin-right: auto !important;
     }
-     .page-header-residential .btn.ms-2,
-     .page-header-commercial .btn.ms-2 {
-        margin-left: auto !important; /* Override ms-2 if used */
+
+    .page-header-residential .btn.ms-md-2,
+    .page-header-commercial .btn.ms-md-2 {
+        margin-left: auto !important;
     }
 
     .section-heading {
         font-size: 24px;
     }
-    /* Reduce padding on sections for small screens */
-    section { /* Target all sections */
-        padding-top: 48px !important; /* Approx 3rem */
+
+    /* Reduce section padding */
+    section {
+        padding-top: 48px !important;
         padding-bottom: 48px !important;
     }
+
     .cta-home {
-        padding: 50px 15px !important; /* Add horizontal padding */
+        padding: 50px 15px !important;
     }
+
     .cta-home h2 {
         font-size: 24px;
     }
-     .cta-home .lead {
+
+    .cta-home .lead {
         font-size: 16px;
     }
+
     .cta-home .btn-light {
         font-size: 16px;
         padding: 10px 30px;
     }
-    /* Adjust numbered list appearance */
+
+    /* Numbered list */
     .numbered-list .list-group-item::before,
     .numbered-steps-list .list-group-item::before {
         width: 25px;
@@ -1238,982 +2287,390 @@ h6 { font-size: 16px; }
         font-size: 14px;
         margin-right: 10px;
     }
-    .footer-home {
+
+    /* Footer */
+    .footer-section {
         padding-top: 30px;
-        padding-bottom: 30px;
+        padding-bottom: 20px;
         font-size: 14px;
+        text-align: center;
+        /* Center all footer text */
     }
+
+    .footer-heading {
+        margin-bottom: 12px;
+        font-size: 16px;
+    }
+
+    .footer-links li {
+        margin-bottom: 8px;
+    }
+
+    .footer-contact-info li {
+        margin-bottom: 10px;
+        justify-content: center;
+        /* Center contact items */
+    }
+
+    .footer-contact-info i {
+        margin-top: 2px;
+    }
+
+    .social-icons {
+        margin-bottom: 15px;
+        /* Space below icons */
+    }
+
+    /* Scroll Button */
     #scrollToTopBtn {
-        bottom: 20px; /* Closer to bottom */
+        bottom: 20px;
         right: 20px;
         padding: 8px 14px;
         font-size: 20px;
     }
+
+    /* Page Headers */
     .page-header-residential,
     .page-header-commercial,
-    .page-header-education {
+    .page-header-education,
+    .page-header-update,
+    .page-header-facts,
+    .page-header-agriculture,
+    .page-header-faq,
+    .products-hero-overview,
+    .contact-hero-v4 {
         padding: 48px 0;
         min-height: 280px;
     }
-     .page-header-residential h1,
-     .page-header-commercial h1,
-     .page-header-education h1 {
+
+    .page-header-residential h1,
+    .page-header-commercial h1,
+    .page-header-education h1,
+    .page-header-update h1,
+    .page-header-facts h1,
+    .page-header-agriculture h1,
+    .page-header-faq h1,
+    .products-hero-overview h1,
+    .contact-hero-v4 h1 {
         font-size: 32px;
     }
 
-    /* Ensure calculator box uses available width */
-    #edu-planning .calculator-box {
-        padding: 20px; /* Approx 1.25rem */
+    .page-header-simple {
+        padding: 30px 0;
     }
+
+    .page-header-simple h1 {
+        font-size: 28px;
+    }
+
+    /* Calculator */
+    #edu-planning .calculator-box {
+        padding: 20px;
+    }
+
     #edu-planning .form-label {
         font-size: 14px;
     }
-}
-/* ============================== */
-/* --- Responsive End --- */
-/* ============================== */
 
-/* --- CONTACT PAGE V4 STYLES START --- */
+    /* FAQ Accordion */
+    #faqAccordionMain {
+        width: 100%;
+    }
 
-.contact-hero-v4 {
-    background: linear-gradient(rgba(26, 82, 118, 0.75), rgba(15, 48, 72, 0.85)), url('images/contact-header-bg.jpg') center center no-repeat; /* Use an appropriate background */
-    background-size: cover;
-    color: var(--text-on-dark);
-    padding: 70px 0; /* Adjusted padding */
-    border-bottom: 4px solid var(--theme-primary);
-}
-.contact-hero-v4 h1 {
-    color: var(--text-on-dark);
-    font-weight: 700;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-}
-.contact-hero-v4 p.lead {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 18px; /* Converted from 1.15rem */
-    font-weight: 300;
+    /* Maintenance Card */
+    .maintenance-card .card-title {
+        font-size: 17px;
+    }
+
+    .maintenance-card .card-text {
+        font-size: 14px;
+    }
+
+    .maintenance-card .maintenance-tip-item h6.tip-title {
+        font-size: 14px;
+    }
+
+    .maintenance-card .maintenance-tip-item p {
+        font-size: 13px;
+    }
+
+    .maintenance-card .maintenance-tip-item i {
+        font-size: 16px;
+        width: 20px;
+        margin-right: 10px;
+    }
+
+    /* Update/Method/Product Card Images */
+    .update-card .card-img-top,
+    .method-card .card-img-top,
+    .product-card .card-img-top {
+        height: 160px;
+    }
+
+    /* Myth/Fact Cards */
+    #myth-vs-fact .col-lg-6 {
+        margin-bottom: 24px;
+    }
+
+    #myth-vs-fact .col-lg-6:last-child {
+        margin-bottom: 0;
+    }
 }
 
-.contact-main-v4 {
-    background-color: #fff; /* Clean white background */
+/* --- Benefit Card Icon Size Override for Agriculture --- */
+#benefits-agriculture .benefit-icon {
+    font-size: 36px !important; /* Reduced size - Adjust as needed */
+    /* Keep !important to override the general rule */
 }
 
-.form-container-v4 {
-    background-color: #fff; /* Explicit white background */
-    border-radius: 8px;
-    border: 1px solid var(--light-gray-border); /* Added border for visibility */
+:root {
+    --theme-primary: #3498DB;
+    --theme-primary-darker: #2980B9;
+    --theme-primary-darkest: #1A5276;
+    --light-bg: #f7f9fa;
+    --light-gray-border: #dfe4e8;
+    --text-on-dark: #ffffff;
+    --text-on-light: #333;
+    --text-muted-light: #6c757d;
+    --bs-primary: var(--theme-primary);
+    --bs-primary-rgb: 52, 152, 219;
+    --bs-body-color: var(--text-on-light);
+    --bs-secondary-color: var(--text-muted-light);
+    --bs-link-color: var(--theme-primary-darker);
+    --bs-link-hover-color: var(--theme-primary-darkest);
+    --bs-border-color: var(--light-gray-border);
 }
 
-.info-container-v4 .info-item {
-    /* Styling for each contact detail block */
+body {
+    padding-top: 56px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text-on-light);
+    background-color: #ffffff;
+    overflow-x: hidden !important;
+    font-size: 16px;
 }
-.info-container-v4 .info-icon {
-    font-size: 24px; /* Converted from 1.5rem */
-    color: var(--theme-primary-darker);
-    width: 30px; /* Alignment width */
-    text-align: center;
-    flex-shrink: 0;
-    margin-top: 2px; /* Converted from 0.15rem */
+
+img.img-fluid { max-width: 100%; height: auto; display: block; }
+main { overflow: hidden; }
+h1, h2, h3, h4, h5, h6 { font-weight: 600; color: var(--theme-primary-darkest); }
+
+h1 { font-size: 40px; }
+h2 { font-size: 32px; }
+h3 { font-size: 28px; }
+h4 { font-size: 24px; }
+h5 { font-size: 20px; }
+h6 { font-size: 16px; }
+
+.page-header-simple {
+    background-color: var(--light-bg);
+    border-bottom: 1px solid var(--light-gray-border);
+    padding: 48px 0;
 }
-.info-container-v4 .info-title {
+.page-header-simple h1 {
     color: var(--theme-primary-darkest);
-    margin-bottom: 4px; /* Converted from 0.25rem */
-    font-weight: 600;
-    font-size: 17px; /* Converted from 1.05rem */
+    text-shadow: none;
+    font-size: 40px;
 }
-.info-container-v4 .info-text {
+.page-header-simple p {
     color: var(--text-muted-light);
-    font-size: 15px; /* Converted from 0.95rem */
-    line-height: 1.6;
-    margin-bottom: 0;
+    font-size: 18px;
 }
-.info-container-v4 .info-text a {
+
+.filter-controls .form-label {
+    margin-bottom: 4px;
+    font-size: 13px;
     color: var(--text-muted-light);
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-.info-container-v4 .info-text a:hover {
-    color: var(--theme-primary-darker);
-    text-decoration: underline;
-}
-
-#contactFormV4 .form-label {
     font-weight: 500;
-    color: #495057; /* Standard label color */
-    margin-bottom: 5px; /* Converted from 0.3rem */
-    font-size: 14px; /* Converted from 0.9rem */
 }
-#contactFormV4 .form-control {
-    border-radius: 5px;
-    border: 1px solid #ced4da;
-    padding: 11px 16px; /* Converted from 0.7rem 1rem */
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+.filter-controls .form-control-sm,
+.filter-controls .form-select-sm {
+    font-size: 14px;
 }
-#contactFormV4 .form-control:focus {
-    border-color: var(--theme-primary);
-    box-shadow: 0 0 0 3px rgba(var(--bs-primary-rgb), 0.2); /* Converted from 0.2rem */
-}
-#contactFormV4 textarea.form-control {
-    min-height: 120px; /* Adjust height */
-}
-#contactFormV4 button[type="submit"] {
-    font-weight: 500;
-    border-radius: 5px;
-    padding: 12px 24px; /* Converted from 0.75rem 1.5rem */
-    background-color: var(--theme-primary-darker);
-    border-color: var(--theme-primary-darker);
-    transition: background-color 0.2s ease, border-color 0.2s ease;
-}
-#contactFormV4 button[type="submit"]:hover {
-    background-color: var(--theme-primary-darkest);
-    border-color: var(--theme-primary-darkest);
+.filter-controls .btn-sm {
+    padding: 6px 13px;
+    font-size: 14px;
 }
 
-.map-section-v4 {
-    /* background-color: var(--light-bg); */ /* Already set in HTML */
-}
-.map-wrapper-v4 {
-    position: relative;
-    overflow: hidden;
-    height: 450px; /* Default map height */
-    border-radius: 8px;
-}
-.map-wrapper-v4 iframe {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    border: 0;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 991.98px) {
-    .info-container-v4 {
-        margin-top: 40px; /* Converted from 2.5rem - Add space above info when stacked */
-        padding-left: 0 !important; /* Reset padding */
-    }
-    .map-wrapper-v4 {
-        height: 400px;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .contact-hero-v4 {
-        padding: 50px 0;
-    }
-    .form-container-v4 {
-        padding: 24px !important; /* Converted from 1.5rem */
-    }
-     .map-wrapper-v4 {
-        height: 350px;
-    }
-}
-
-/* Modal Icon Styling (If not already global) */
-#modalIcon i { font-size: 64px; /* Converted from 4rem */ }
-#modalIcon .fa-check-circle { color: var(--bs-success); }
-#modalIcon .fa-times-circle { color: var(--bs-danger); }
-#responseModalLabel { color: var(--theme-primary-darkest); }
-
-/* --- CONTACT PAGE V4 STYLES END --- */
-
-
-/* ===================================== */
-/* --- PRODUCTS OVERVIEW PAGE STYLES --- */
-/* ===================================== */
-
-.products-hero-overview {
-    padding: 70px 0; /* Adjust padding */
-    background: linear-gradient(rgba(30, 90, 130, 0.8), rgba(15, 45, 70, 0.9)), url('images/product-hero-bg.jpg') center center no-repeat; /* Use relevant background */
-    background-size: cover;
-    color: var(--text-on-dark);
-    border-bottom: 4px solid var(--theme-primary);
-}
-.products-hero-overview h1 {
-    color: var(--text-on-dark);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-}
-.products-hero-overview p.lead {
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 300;
-    font-size: 18px; /* Adjust size */
-}
-
-.products-grid {
-    background-color: #fff; /* Or var(--light-bg) if preferred */
-}
+.products-grid { }
 
 .product-card {
     border: 1px solid var(--light-gray-border);
     border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #fff; /* Ensure card background is white */
-    overflow: hidden; /* Ensure image rounding is clipped */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    background-color: #fff;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 .product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
 .product-card .card-img-top {
-    height: 220px; /* Fixed height for images */
-    object-fit: cover; /* Cover the area */
+    height: 180px;
+    object-fit: cover;
     border-bottom: 1px solid var(--light-gray-border);
 }
 
 .product-card .card-body {
-    padding: 20px; /* Consistent padding */
+    padding: 16px;
+    flex-grow: 1;
 }
 
 .product-card .card-title {
     color: var(--theme-primary-darkest);
     font-weight: 600;
-    margin-bottom: 12px; /* Space below title */
-    font-size: 18px; /* Adjust title size */
-    display: flex; /* Align icon and title */
-    align-items: center;
-}
-.product-card .card-title i {
-    color: var(--theme-primary-darker);
-    margin-top: -2px; /* Fine-tune icon alignment */
+    font-size: 16px;
+    line-height: 1.3;
 }
 
-.product-card .card-text {
+.product-card .category-tag {
+    font-size: 13px;
+    font-style: italic;
     color: var(--text-muted-light);
-    font-size: 15px; /* Adjust text size */
-    line-height: 1.6;
-    margin-bottom: 16px; /* Space above button */
 }
 
-.product-card .btn-outline-primary {
-    border-width: 2px;
-    font-weight: 500;
-    padding: 8px 16px;
+.product-card .description {
+    color: var(--text-muted-light);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.product-card .price {
+    color: var(--theme-primary-darkest);
+    font-size: 18px;
+}
+
+.product-card .btn {
+    font-size: 14px;
+    padding: 5px 13px;
+}
+
+#noProductsMessage {
+    display: none;
+}
+
+#modalProductImage {
+    max-height: 350px;
+    object-fit: contain;
+}
+.modal-header, .modal-footer {
+    border: none;
+}
+
+.footer-section {
+    background-color: var(--theme-primary-darkest);
+    color: rgba(255, 255, 255, 0.8);
+    padding-top: 48px;
+    padding-bottom: 24px;
     font-size: 14px;
 }
-.product-card .btn-outline-primary:hover {
-    background-color: var(--theme-primary-darker);
-    color: var(--text-on-dark);
+.footer-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 32px;
+    margin-bottom: 24px;
 }
+.footer-bottom-text { color: rgba(255, 255, 255, 0.7); }
+.footer-bottom-text a { color: rgba(255, 255, 255, 0.8); font-weight: 500; text-decoration: none; }
+.footer-bottom-text a:hover { color: var(--text-on-dark); text-decoration: underline; }
 
-/* Responsive Adjustments for Products Overview */
-@media (max-width: 991.98px) {
-    .products-hero-overview {
-        padding: 60px 0;
-    }
-    .product-card .card-img-top {
-        height: 200px;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .products-hero-overview h1 {
-        font-size: 32px; /* Adjust heading size */
-    }
-    .products-hero-overview p.lead {
-        font-size: 16px;
-    }
-     /* Ensure cards stack with margin (handled by g-4 in HTML row) */
-}
-
-/* ===================================== */
-/* --- PRODUCTS OVERVIEW PAGE END --- */
-/* ===================================== */
-
-
-/* ============================== */
-/* --- Update Page Styles Start --- */
-/* ============================== */
-
-/* Page Header for Update Page */
-.page-header-update {
-    /* Use an appropriate background image */
-    background: linear-gradient(rgba(26, 82, 118, 0.75), rgba(15, 48, 72, 0.85)), url('images/update-header-bg.jpg') center center no-repeat;
-    background-size: cover;
-    padding: 96px 0; /* Base padding */
-    color: var(--text-on-dark); /* Ensure text is white */
-    display: flex; /* Enable flex for vertical alignment */
-    align-items: center; /* Vertically center content */
-    min-height: 350px; /* Ensure a minimum height */
-    border-bottom: 5px solid var(--theme-primary);
-}
-.page-header-update h1 {
-    color: var(--text-on-dark); /* Ensure white */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-.page-header-update p.lead {
-    color: rgba(255, 255, 255, 0.95); /* Ensure light */
-}
-
-/* Update Card Styling (Used for News, Policies, Market Trends) */
-.update-card {
-    border: 1px solid var(--light-gray-border);
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #fff; /* Ensure card background is white */
-    overflow: hidden; /* Ensure image rounding is clipped */
-    text-align: left; /* Ensure text is left-aligned */
-}
-.update-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.update-card .card-img-top {
-    height: 180px; /* Fixed height for images */
-    object-fit: cover; /* Cover the area */
-    border-bottom: 1px solid var(--light-gray-border);
-}
-
-.update-card .card-body {
-    padding: 20px; /* Consistent padding */
-}
-
-.update-card .card-title {
-    color: var(--theme-primary-darkest);
-    font-weight: 600;
-    margin-bottom: 8px; /* Space below title */
-    font-size: 18px; /* Adjust title size */
-    /* Added display flex for icon alignment */
-    display: flex;
-    align-items: center;
-}
-/* Style for icons within card titles (Policies/Market) */
-.update-card .card-title i {
-    margin-right: 8px; /* Space between icon and title text */
-    font-size: 16px; /* Slightly smaller icon */
-    width: 20px; /* Ensure consistent width */
-    text-align: center;
-}
-
-.update-card .card-text.summary { /* Style for initial summary */
-    color: var(--text-muted-light);
-    font-size: 15px; /* Adjust text size */
-    line-height: 1.6;
-    /* Removed margin-bottom to let flex-grow work better */
-}
-
-.update-card .card-text.details { /* Style for collapsed details */
-    color: var(--text-muted-light);
-    font-size: 14px; /* Slightly smaller for details */
-    line-height: 1.6;
-    margin-bottom: 16px; /* Space above button when expanded */
-}
-
-
-.update-card .card-text.small { /* Style for metadata */
-     margin-bottom: 12px; /* Adjust space below metadata */
-     font-style: italic;
-     display: flex; /* Align icon and text */
-     align-items: center;
-}
-.update-card .card-text.small i {
-    margin-top: -2px; /* Fine-tune icon alignment */
-}
-
-
-.update-card .btn[data-bs-toggle="collapse"] { /* Style for the collapse button */
-    border-width: 1px; /* Thinner border for details button */
-    font-weight: 500;
-    padding: 6px 12px; /* Smaller padding */
-    font-size: 13px; /* Smaller font size */
-    /* Removed stretched-link as it's now a button */
-}
-.update-card .btn[data-bs-toggle="collapse"]:hover {
-    background-color: var(--theme-primary-darker);
-    color: var(--text-on-dark);
-}
-
-/* Add margin between summary and details when expanded */
-.update-card .collapse.show .details {
-    margin-top: 12px;
-}
-
-
-/* ============================== */
-/* --- Update Page Styles End --- */
-/* ============================== */
-
-/* --- Additions to Responsive Styles --- */
-
-/* Add .page-header-update to existing page header rules */
-@media (max-width: 991.98px) {
-    .page-header-residential,
-    .page-header-commercial,
-    .page-header-education,
-    .page-header-update { /* Added */
-        padding: 64px 0;
-        min-height: 300px;
-    }
-    .page-header-residential h1,
-    .page-header-commercial h1,
-    .page-header-education h1,
-    .page-header-update h1 { /* Added */
-        font-size: 40px;
-    }
-}
-
-@media (max-width: 767.98px) {
-    /* Add .update-card to selectors for image height adjustment if needed */
-    .system-card .card-img-top,
-    .product-card .card-img-top,
-    .update-card .card-img-top { /* Added */
-        height: 180px;
-    }
-
-    /* Add .update-card parent column to selectors for stacking margin */
-     .benefits-home .col-md-6:not(:last-child),
-     #benefits-residential .col-md-6:not(:last-child),
-     #benefits-commercial .col-md-6:not(:last-child),
-     #systems-residential .col-md-6:not(:last-child),
-     #systems-commercial .col-md-6:not(:last-child),
-     #edu-why-important .col-md-6:not(:last-child),
-     #edu-components .col-md-6:not(:last-child),
-     #edu-mistakes .col-md-6:not(:last-child),
-     #edu-maintenance .col-md-6:not(:last-child),
-     #uses-residential .col-md-6:not(:last-child),
-     #uses-commercial .col-md-6:not(:last-child),
-     #edu-uses .col-md-6:not(:last-child),
-     #rwh-news .col-md-6:not(:last-child), /* Updated ID */
-     #rwh-policies .col-md-6:not(:last-child), /* Added */
-     #rwh-market .col-md-6:not(:last-child) { /* Added */
-         margin-bottom: 25px; /* Add space below stacked columns */
-     }
-}
-
-@media (max-width: 575.98px) {
-    .page-header-residential,
-    .page-header-commercial,
-    .page-header-education,
-    .page-header-update { /* Added */
-        padding: 48px 0;
-        min-height: 280px;
-    }
-     .page-header-residential h1,
-     .page-header-commercial h1,
-     .page-header-education h1,
-     .page-header-update h1 { /* Added */
-        font-size: 32px;
-    }
-    .update-card .card-img-top {
-        height: 160px; /* Slightly smaller image on smallest screens */
-    }
-}
- /* End  */
-
- /* ============================== */
- /* --- Facts Page Styles Start --- */
- /* ============================== */
- 
- .page-header-facts {
-     background: linear-gradient(rgba(20, 80, 110, 0.8), rgba(10, 40, 60, 0.9)), url('images/facts-header-bg.jpg') center center no-repeat;
-     background-size: cover;
-     padding: 96px 0;
-     color: var(--text-on-dark);
-     display: flex;
-     align-items: center;
-     min-height: 350px;
-     border-bottom: 5px solid var(--theme-primary);
- }
- .page-header-facts h1 {
-     color: var(--text-on-dark);
-     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
- }
- .page-header-facts p.lead {
-     color: rgba(255, 255, 255, 0.95);
- }
- 
- /* --- "Did You Know?" Section --- */
- .fact-item {
-     background-color: var(--bs-primary-bg-subtle); /* Light blue background */
-     border-left: 5px solid var(--theme-primary-darker);
-     transition: transform 0.2s ease-out, box-shadow 0.2s ease-out; /* Added transition */
-     padding: 1rem; /* Ensure padding */
-     border-radius: 6px; /* Add rounding */
- }
- .fact-item:hover { /* Added hover effect */
-      transform: scale(1.03);
-      box-shadow: 0 5px 15px rgba(var(--bs-primary-rgb), 0.15);
- }
- .fact-item i {
-     color: var(--theme-primary-darker);
-     opacity: 0.8;
- }
- 
- /* --- "Interesting Methods" Section --- */
- .method-card { /* Style similar to update/product cards */
-     border: 1px solid var(--light-gray-border);
-     border-radius: 8px;
-     transition: transform 0.3s ease, box-shadow 0.3s ease;
-     background-color: #fff;
-     overflow: hidden;
-     height: 100%; /* Ensure cards match height */
- }
- .method-card:hover {
-     transform: translateY(-5px);
-     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
- }
- .method-card .card-img-top {
-     height: 200px;
-     object-fit: cover;
-     border-bottom: 1px solid var(--light-gray-border);
- }
- .method-card .card-title {
-      color: var(--theme-primary-darkest);
-      font-weight: 600;
-      display: flex; /* Align icon */
-      align-items: center;
- }
-  .method-card .card-title i {
-      color: var(--theme-primary-darker); /* Icon color */
-      margin-right: 8px;
-      width: 20px; /* Ensure consistent icon width */
-      text-align: center;
-  }
-  .method-card .card-text {
-     color: var(--text-muted-light);
-     font-size: 15px;
- }
- 
- /* --- Myth vs Fact Section (Card Redesign) --- */
- .myth-fact-card {
-     border: 1px solid var(--light-gray-border);
-     border-radius: 8px;
-     overflow: hidden; /* Clip background colors */
-     height: 100%; /* Ensure cards in a row match height */
-     background-color: #fff; /* Base background */
-     display: flex; /* Use flexbox for column layout */
-     flex-direction: column; /* Stack myth and fact vertically */
- }
- .myth-section {
-     background-color: var(--bs-danger-bg-subtle); /* Light red background */
-     padding: 1rem 1.25rem;
-     border-bottom: 1px dashed var(--bs-danger-border-subtle);
- }
- .myth-section .myth-title {
-     font-weight: 600;
-     color: var(--bs-danger-text-emphasis);
-     font-size: 1.05rem;
-     display: flex;
-     align-items: center;
-     margin-bottom: 0; /* Remove margin if it's just the title */
- }
-  .myth-section .myth-title i {
-      color: var(--bs-danger);
-      margin-right: 8px;
-      width: 20px; /* Consistent width */
-      text-align: center;
-  }
- 
- .fact-section {
-     background-color: var(--bs-success-bg-subtle); /* Light green background */
-     padding: 1rem 1.25rem;
-     flex-grow: 1; /* Allow fact section to fill remaining space */
- }
- .fact-section .fact-title {
-     font-weight: 600;
-     color: var(--bs-success-text-emphasis);
-     font-size: 1.05rem;
-     display: flex;
-     align-items: center;
-     margin-bottom: 0.5rem; /* Space before fact text */
- }
- .fact-section .fact-title i {
-     color: var(--bs-success);
-     margin-right: 8px;
-      width: 20px; /* Consistent width */
-      text-align: center;
- }
- .fact-section p {
-     font-size: 0.95rem;
-     color: var(--bs-success-text-emphasis);
-     margin-bottom: 0; /* Remove default paragraph margin */
-     line-height: 1.6;
- }
- 
- /* Add responsive adjustments for facts page header if needed */
- @media (max-width: 991.98px) {
-     .page-header-facts {
-         padding: 64px 0;
-         min-height: 300px;
-     }
-     .page-header-facts h1 {
-         font-size: 40px;
-     }
- }
- @media (max-width: 575.98px) {
-     .page-header-facts {
-         padding: 48px 0;
-         min-height: 280px;
-     }
-      .page-header-facts h1 {
-         font-size: 32px;
-     }
-     /* Stack myth/fact cards earlier if needed */
-     #myth-vs-fact .col-lg-6:not(:last-child) {
-          margin-bottom: 1.5rem; /* Add space when stacked */
-     }
- }
- 
- 
- /* ============================== */
- /* --- Facts Page Styles End --- */
- /* ============================== */
- 
-/* =================================== */
-/* --- Agriculture Page Styles Start --- */
-/* =================================== */
-
-.page-header-agriculture {
-    /* Use the primary theme gradient and border */
-    background: linear-gradient(rgba(20, 80, 110, 0.8), rgba(10, 40, 60, 0.9)), url('images/agri-header-bg.jpg') center center no-repeat;
-    background-size: cover;
-    padding: 96px 0;
-    color: var(--text-on-dark);
-    display: flex;
-    align-items: center;
-    min-height: 350px;
-    border-bottom: 5px solid var(--theme-primary); /* Changed from green */
-}
-.page-header-agriculture h1 {
-    color: var(--text-on-dark);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-}
-.page-header-agriculture p.lead {
-    color: rgba(255, 255, 255, 0.95);
-}
-
-/* Ensure benefit card icons use the primary theme color */
-#benefits-agriculture .benefit-icon i {
-    color: var(--theme-primary-darker); /* Changed from green */
-}
-
-/* Ensure method card icons use the primary theme color */
-#agri-methods .method-card .card-title i {
-     color: var(--theme-primary-darker);
-}
-
-/* Ensure use item icons use the primary theme color */
-#agri-uses .use-item i {
-    color: var(--theme-primary); /* Or var(--theme-primary-darker) */
-}
-
-
-/* Style for the steps list using the primary theme color */
-/* Updated ID selector to #agri-steps */
-#agri-steps .numbered-steps-list .list-group-item::before {
-    background-color: var(--theme-primary); /* Changed from green */
-    color: white; /* Ensure number is visible */
-}
-#agri-steps .numbered-steps-list .fw-bold {
-    color: var(--theme-primary-darkest); /* Changed from green */
-}
-
-
-/* Add responsive adjustments for agriculture page header (Keep these) */
-@media (max-width: 991.98px) {
-    .page-header-agriculture {
-        padding: 64px 0;
-        min-height: 300px;
-    }
-    .page-header-agriculture h1 {
-        font-size: 40px;
-    }
-}
-@media (max-width: 575.98px) {
-    .page-header-agriculture {
-        padding: 48px 0;
-        min-height: 280px;
-    }
-     .page-header-agriculture h1 {
-        font-size: 32px;
-    }
-    /* Adjust list padding/margins on small screens if needed */
-    #agri-steps .list-group-item { /* Updated ID */
-        padding-left: 0;
-        padding-right: 0;
-    }
-}
-
-/* ================================= */
-/* --- Agriculture Page Styles End --- */
-/* ================================= */
-
-
- 
-/* ============================== */
-/* --- FAQ Page Styles Start --- */
-/* ============================== */
-
-/* --- FAQ Page Header --- */
-.page-header-faq {
-    /* Use an appropriate background image */
-    background: linear-gradient(rgba(20, 80, 110, 0.8), rgba(10, 40, 60, 0.9)), url('images/faq-header-bg.jpg') center center no-repeat;
-    background-size: cover;
-    padding: 96px 0; /* Base padding */
-    color: var(--text-on-dark); /* Ensure text is white */
-    display: flex; /* Enable flex for vertical alignment */
-    align-items: center; /* Vertically center content */
-    min-height: 350px; /* Ensure a minimum height */
-    border-bottom: 5px solid var(--theme-primary);
-}
-.page-header-faq h1 {
-    color: var(--text-on-dark); /* Ensure white */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-.page-header-faq p.lead {
-    color: rgba(255, 255, 255, 0.95); /* Ensure light */
-}
-
-/* --- FAQ Accordion Specific Styles --- */
-/* (Add only if you need to override global accordion styles) */
-#faqAccordionMain .accordion-item {
-    /* Example: Add slightly more margin between items if needed */
-    /* margin-bottom: 10px; */
-    border-radius: 0; /* Remove default radius if preferred */
-    border-left: 0;
-    border-right: 0;
-}
-#faqAccordionMain .accordion-item:first-of-type {
-    border-top: 1px solid var(--bs-accordion-border-color); /* Ensure top border */
-}
-#faqAccordionMain .accordion-item:last-of-type {
-     border-bottom: 1px solid var(--bs-accordion-border-color); /* Ensure bottom border */
-}
-
-#faqAccordionMain .accordion-button {
-    font-weight: 600; /* Make question slightly bolder */
-    font-size: 1rem;
-    color: var(--theme-primary-darkest);
-}
-#faqAccordionMain .accordion-button:not(.collapsed) {
-    background-color: var(--bs-primary-bg-subtle); /* Light blue when open */
-    color: var(--theme-primary-darkest);
-    box-shadow: none; /* Remove default focus shadow */
-}
-#faqAccordionMain .accordion-button:focus {
-     box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25); /* Bootstrap focus style */
-     border-color: rgba(var(--bs-primary-rgb), 0.25);
-     z-index: 3;
-}
-
-#faqAccordionMain .accordion-body {
-    text-align: left !important; /* Ensure left alignment */
-    font-size: 0.9rem; /* Adjust answer font size if needed */
-    line-height: 1.6;
-}
-#faqAccordionMain .accordion-body ul {
-    padding-left: 20px; /* Ensure list indentation */
-    margin-top: 10px;
-    margin-bottom: 0; /* Remove bottom margin if needed */
-}
-#faqAccordionMain .accordion-body li {
-    margin-bottom: 5px;
-}
-#faqAccordionMain .accordion-body a {
-    font-weight: 500; /* Make links slightly bolder */
-}
-
-
-/* --- FAQ Page - Maintenance Card --- */
-.maintenance-card {
-    border: 1px solid var(--light-gray-border);
-    border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    overflow: hidden; /* Clip image corners */
-}
-
-/* Sticky positioning for the card on larger screens */
-@media (min-width: 992px) {
-    .maintenance-card.sticky-top {
-        top: 90px; /* Adjust based on navbar height + desired spacing */
-        z-index: 1019; /* Below navbar */
-    }
-}
-
-.maintenance-card img {
-    /* Image takes full width of card */
-    border-bottom: 1px solid var(--light-gray-border);
-}
-
-.maintenance-card .maintenance-card-body {
-    padding: 20px; /* Padding inside the card body */
-}
-
-.maintenance-card .card-title {
-    color: var(--theme-primary-darkest);
-    font-weight: 600;
-    margin-bottom: 12px;
-    font-size: 18px;
-    text-align: center; /* Center the card title */
-}
-
-.maintenance-card .card-text {
-    color: var(--text-muted-light);
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 20px; /* Space before the list */
-    text-align: center; /* Center intro text */
-}
-
-.maintenance-card .maintenance-tip-list {
-    list-style: none;
-    padding-left: 0;
-    margin-bottom: 0; /* Remove default bottom margin */
-}
-
-.maintenance-card .maintenance-tip-item {
-    display: flex;
-    align-items: flex-start; /* Align icon top */
-    margin-bottom: 18px; /* Space between items */
-}
-.maintenance-card .maintenance-tip-item:last-child {
-    margin-bottom: 0; /* Remove margin from last item */
-}
-
-.maintenance-card .maintenance-tip-item i {
-    color: var(--theme-primary-darker);
-    font-size: 18px; /* Icon size */
-    width: 25px; /* Alignment width */
-    text-align: center;
-    margin-right: 12px; /* Space between icon and text */
-    margin-top: 3px; /* Align icon slightly */
-    flex-shrink: 0; /* Prevent icon shrinking */
-}
-
-.maintenance-card .maintenance-tip-item h6.tip-title {
-    font-weight: 600;
-    color: var(--theme-primary-darkest);
-    margin-bottom: 3px;
-    font-size: 15px; /* Slightly smaller title */
-}
-
-.maintenance-card .maintenance-tip-item p {
-    font-size: 14px; /* Smaller description */
-    color: var(--text-muted-light);
-    line-height: 1.5;
-    margin-bottom: 0;
-}
-
-/* --- FAQ Page Responsive Adjustments --- */
-@media (max-width: 991.98px) {
-    /* Header */
-    .page-header-faq {
-        padding: 64px 0;
-        min-height: 300px;
-    }
-    .page-header-faq h1 {
-        font-size: 40px;
-    }
-    /* Stack the maintenance card below FAQs */
-    .maintenance-card {
-        margin-top: 40px; /* Add space above card when stacked */
-    }
-}
-@media (max-width: 575.98px) {
-    /* Header */
-    .page-header-faq {
-        padding: 48px 0;
-        min-height: 280px;
-    }
-     .page-header-faq h1 {
-        font-size: 32px;
-    }
-    /* Reduce accordion width slightly on mobile if needed */
-    #faqAccordionMain {
-        width: 100%; /* Use full width within container padding */
-    }
-    /* Adjust card text/icon size on very small screens if needed */
-    .maintenance-card .card-title { font-size: 17px; }
-    .maintenance-card .card-text { font-size: 14px; }
-    .maintenance-card .maintenance-tip-item h6.tip-title { font-size: 14px; }
-    .maintenance-card .maintenance-tip-item p { font-size: 13px; }
-    .maintenance-card .maintenance-tip-item i { font-size: 16px; width: 20px; margin-right: 10px; }
-}
-
-/* ============================== */
-/* --- FAQ Page Styles End --- */
-/* ============================== */
-
-/* ======================================== */
-/* --- Product Listing Page Styles Start --- */
-/* ======================================== */
-
-/* Simplified Page Header */
-.page-header-simple {
-    /* Simple styling, no background image */
-    background-color: var(--light-bg); /* Or #fff if preferred */
-}
-.page-header-simple h1 {
-    color: var(--theme-primary-darkest);
-    text-shadow: none; /* Remove shadow */
-    font-size: 36px; /* Adjust size */
-}
-.page-header-simple p {
-    color: var(--text-muted-light);
-    font-size: 16px;
-}
-
-/* Filter Controls Bar */
-.filter-controls {
-    /* Styles for the container holding filters */
-}
-.filter-controls .form-label {
-    margin-bottom: 4px; /* Smaller margin for small labels */
-    font-size: 13px; /* Smaller label text */
-    color: var(--text-muted-light);
-}
-.filter-controls .form-control-sm,
-.filter-controls .form-select-sm {
-    font-size: 14px; /* Adjust input/select font size */
-}
-.filter-controls .btn-sm {
-    padding: 6px 12px; /* Adjust button padding */
-    font-size: 14px; /* Adjust button font size */
-}
-
-/* Ensure product card styles are present (from product.html) */
-/* .product-card { ... } */
-/* .product-card:hover { ... } */
-/* .product-card .card-img-top { ... } */
-/* etc. */
-
-/* Pagination Styling (Optional Tweaks) */
-.pagination .page-link {
-    color: var(--theme-primary-darker);
-    border-color: var(--light-gray-border);
-}
-.pagination .page-link:hover {
-    color: var(--theme-primary-darkest);
-    background-color: var(--light-bg);
-    border-color: var(--light-gray-border);
-}
-.pagination .page-item.active .page-link {
-    background-color: var(--theme-primary);
-    border-color: var(--theme-primary);
-    color: var(--text-on-dark);
-}
-.pagination .page-item.disabled .page-link {
-    color: #adb5bd; /* Lighter gray for disabled */
-    background-color: transparent;
-    border-color: var(--light-gray-border);
-}
-
-/* Responsive Adjustments for Filters */
 @media (max-width: 991.98px) {
     .filter-controls form > .row > div:not(:last-child) {
-         margin-bottom: 10px; /* Add space between stacked filter elements */
+        margin-bottom: 12px;
     }
-    .filter-controls form .text-end {
-        text-align: left !important; /* Align button left when stacked */
+    .filter-controls form button[type="submit"] {
+        width: 100% !important;
     }
-     .filter-controls form button[type="submit"] {
-        width: auto !important; /* Allow button to size naturally when stacked */
-    }
+    h1 { font-size: 36px; }
+    h2 { font-size: 28px; }
+    h3 { font-size: 24px; }
+    h4 { font-size: 20px; }
+    h5 { font-size: 18px; }
+    .page-header-simple h1 { font-size: 32px; }
 }
 
-/* ======================================== */
-/* --- Product Listing Page Styles End --- */
-/* ======================================== */
+@media (max-width: 767.98px) {
+    .page-header-simple h1 { font-size: 32px; }
+    .page-header-simple p { font-size: 16px; }
+    .product-card .card-img-top { height: 160px; }
+    h1 { font-size: 32px; }
+    h2 { font-size: 26px; }
+    h3 { font-size: 22px; }
+}
+
+@media (max-width: 575.98px) {
+    body { padding-top: 56px; }
+    .page-header-simple { padding: 32px 0; }
+    .page-header-simple h1 { font-size: 28px; }
+    .product-card .card-title { font-size: 15px; }
+    .product-card .description { font-size: 13px; }
+    .product-card .price { font-size: 16px; }
+    h1 { font-size: 28px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 20px; }
+    h4 { font-size: 18px; }
+    h5 { font-size: 16px; }
+}
 
 
-/* --- END OF CONSOLIDATED CSS --- */
+.policy-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.policy-section h2 {
+    margin-bottom: 20px;
+    color: var(--theme-primary-darkest);
+    font-size: 28px; /* Adjust heading size */
+}
+.policy-section h3 {
+    color: var(--theme-primary-darker);
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 20px; /* Adjust subheading size */
+}
+.policy-section p, .policy-section ul {
+    color: var(--text-muted-light);
+    line-height: 1.7;
+}
+.policy-section ul {
+    padding-left: 20px;
+}
+.policy-section li {
+    margin-bottom: 8px;
+}
+
+.value-icon {
+    font-size: 24px; /* Adjust icon size */
+    color: var(--theme-primary); /* Use theme color */
+    margin-bottom: 8px;
+}
+.about-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.about-section h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--theme-primary-darkest);
+}
+.about-section h3 {
+    color: var(--theme-primary-darker);
+    margin-bottom: 15px;
+    font-size: 22px; /* Adjust subheading size */
+}
+.about-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.lead{
+    font-style: italic;
+}
+/* --- Benefit Card Icon Size Override for Agriculture --- */
+#benefits-agriculture .benefit-icon {
+    font-size: 15px !important; /* Reduced size - Adjust as needed */
+    /* Keep !important to override the general rule */
+}
